@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#123b5d">
+  <meta name="description" content="依据2026新版人教版六年级数学上册整理的重点、方法与题型学习手册。">
+  <title>六年级数学上册｜重点方法学习手册</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink:#152739; --muted:#607282; --navy:#123b5d; --blue:#176b87;
+      --cyan:#dff4f4; --paper:#f4f7f9; --card:#fff; --line:#d9e3e9;
+      --gold:#e6a22b; --coral:#d85b46; --green:#278267; --shadow:0 12px 34px rgba(24,55,75,.09);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.72}
+    button,input,select{font:inherit} button{cursor:pointer} a{color:inherit}
+    .skip{position:fixed;left:12px;top:-60px;z-index:20;background:#fff;padding:10px 14px;border-radius:8px}.skip:focus{top:12px}
+    .topbar{position:sticky;top:0;z-index:10;background:rgba(18,59,93,.97);color:#fff;box-shadow:0 3px 16px rgba(12,39,58,.18)}
+    .top-inner{max-width:1500px;margin:auto;min-height:68px;padding:10px 24px;display:flex;align-items:center;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:max-content}.brand-mark{width:42px;height:42px;border-radius:13px;background:#fff;color:var(--navy);display:grid;place-items:center;font-weight:900}.brand strong{display:block;font-size:1.05rem}.brand small{display:block;color:#c9dfeb;font-size:.76rem}
+    .mode-switch{margin-left:auto;display:flex;padding:3px;background:rgba(255,255,255,.12);border-radius:12px}.mode-switch button{min-height:40px;border:0;border-radius:9px;padding:7px 14px;background:transparent;color:#d8e8f1}.mode-switch button.active{background:#fff;color:var(--navy);font-weight:700}
+    .top-action{min-height:42px;border:1px solid rgba(255,255,255,.35);border-radius:10px;background:transparent;color:#fff;padding:8px 13px}.top-action:hover{background:rgba(255,255,255,.12)}
+    .layout{max-width:1500px;margin:auto;display:grid;grid-template-columns:285px minmax(0,1fr);gap:24px;padding:24px}
+    .side{position:sticky;top:92px;align-self:start;max-height:calc(100vh - 112px);overflow:auto;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow)}
+    .progress-head{display:flex;align-items:center;gap:14px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+    .progress-ring{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--green) var(--progress,0%),#e8eef1 0);position:relative}.progress-ring:before{content:"";position:absolute;inset:7px;background:#fff;border-radius:50%}.progress-ring strong{position:relative;font-size:.9rem}
+    .progress-copy strong{display:block}.progress-copy span{color:var(--muted);font-size:.82rem}
+    .side h2{font-size:.86rem;color:var(--muted);margin:18px 0 7px;text-transform:uppercase;letter-spacing:.08em}.unit-nav{display:grid;gap:4px}.unit-nav button{border:0;background:transparent;text-align:left;padding:8px 10px;border-radius:8px;color:#334b5e}.unit-nav button:hover,.unit-nav button.active{background:#e8f4f7;color:var(--blue);font-weight:700}
+    .legend{display:grid;gap:7px;color:var(--muted);font-size:.83rem}.legend span{display:flex;align-items:center;gap:8px}.dot{width:9px;height:9px;border-radius:50%;display:inline-block}.dot.core{background:var(--coral)}.dot.new{background:var(--blue)}.dot.extend{background:var(--gold)}
+    main{min-width:0}.dashboard{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(310px,.75fr);gap:18px;margin-bottom:20px}
+    .panel{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
+    .overview{padding:25px;background:linear-gradient(135deg,#123b5d 0%,#176b87 72%,#248e93 100%);color:#fff;border:0;overflow:hidden;position:relative}.overview:after{content:"";position:absolute;width:240px;height:240px;border:46px solid rgba(255,255,255,.07);border-radius:50%;right:-96px;bottom:-118px}
+    .eyebrow{margin:0 0 4px;color:#c6e5ec;font-size:.82rem;font-weight:700;letter-spacing:.08em}.overview h1{font-size:clamp(1.65rem,3vw,2.5rem);line-height:1.2;margin:0 0 12px;max-width:760px}.overview p{max-width:760px;margin:0;color:#e4f1f5}.method-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-top:22px;position:relative;z-index:1}.method-step{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:11px;padding:10px}.method-step b{display:block;font-size:.78rem;color:#bce7e4}.method-step span{display:block;font-size:.9rem;margin-top:2px}
+    .focus{padding:22px}.focus h2,.section-head h2{margin:0;font-size:1.2rem}.focus-list{margin:15px 0 0;padding:0;list-style:none;display:grid;gap:11px}.focus-list li{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start}.rank{width:32px;height:32px;border-radius:10px;background:#e8f4f7;color:var(--blue);display:grid;place-items:center;font-weight:800}.focus-list b{display:block}.focus-list small{display:block;color:var(--muted)}
+    .toolbar{position:sticky;top:68px;z-index:8;padding:12px 14px;display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-bottom:20px}.search{flex:1;min-width:220px;position:relative}.search input{width:100%;min-height:44px;border:1px solid var(--line);border-radius:11px;padding:8px 12px 8px 39px;background:#f9fbfc}.search svg{position:absolute;left:13px;top:13px;width:19px;color:#6d7d89}.toolbar select,.filter-button{min-height:44px;border:1px solid var(--line);border-radius:11px;background:#fff;padding:8px 11px;color:var(--ink)}.filter-button.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:30px 2px 13px}.section-head p{margin:3px 0 0;color:var(--muted);font-size:.9rem}.result-count{white-space:nowrap;color:var(--muted);font-size:.9rem}
+    .unit-summary{padding:18px 20px;margin-bottom:13px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center}.unit-summary h3{margin:0 0 5px}.unit-summary p{margin:0;color:var(--muted)}.unit-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.tag{display:inline-flex;align-items:center;min-height:27px;border-radius:999px;padding:3px 9px;background:#eef3f6;color:#4f6575;font-size:.78rem;font-weight:650}.tag.core{background:#fff0ed;color:#a44232}.tag.new{background:#e5f4f7;color:#15637d}.tag.extend{background:#fff5dc;color:#8b640f}
+    .topic-grid{display:grid;gap:14px}.topic{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 6px 20px rgba(24,55,75,.055);overflow:hidden;scroll-margin-top:132px}.topic.hidden{display:none}.topic-head{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:13px;padding:18px 19px;align-items:start}.topic-index{width:42px;height:42px;border-radius:13px;background:#e9f4f7;color:var(--blue);display:grid;place-items:center;font-weight:900}.topic h3{margin:0;font-size:1.12rem}.topic-sub{margin:2px 0 0;color:var(--muted);font-size:.88rem}.ratings{display:flex;gap:13px;margin-top:9px;flex-wrap:wrap}.rating{font-size:.78rem;color:var(--muted)}.stars{color:var(--gold);letter-spacing:-1px}.topic-actions{display:flex;gap:7px}.icon-btn{width:42px;height:42px;border:1px solid var(--line);border-radius:11px;background:#fff;color:#587080;display:grid;place-items:center}.icon-btn:hover,.icon-btn.on{color:var(--coral);border-color:#efb3aa;background:#fff6f4}.expand-btn{width:auto;padding:0 13px}.topic-body{display:none;border-top:1px solid var(--line);padding:0 19px 20px}.topic.open .topic-body{display:block}.method-card{margin:18px 0 14px;border-left:4px solid var(--blue);background:#edf7f8;border-radius:0 13px 13px 0;padding:15px 16px}.method-card h4{margin:0 0 9px;color:var(--navy)}.method-list{margin:0;padding-left:21px;display:grid;gap:5px}.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:13px 0}.mini{border:1px solid var(--line);border-radius:13px;padding:13px 14px}.mini h4{font-size:.85rem;margin:0 0 5px;color:var(--muted)}.mini p{margin:0}.mistake{border-color:#f0c9c1;background:#fff9f7}.parent-tip{margin:12px 0}.parent-tip summary{cursor:pointer;color:var(--green);font-weight:700}.parent-tip p{margin:7px 0 0;color:var(--muted)}
+    .examples-title{display:flex;align-items:center;justify-content:space-between;margin:20px 0 9px}.examples-title h4{margin:0}.examples-title span{font-size:.8rem;color:var(--muted)}.examples{display:grid;gap:10px}.example{border:1px solid var(--line);border-radius:14px;overflow:hidden}.example-head{display:grid;grid-template-columns:auto 1fr;gap:10px;padding:13px 14px;align-items:start}.level{font-size:.72rem;border-radius:7px;padding:3px 7px;background:#edf3f6;color:#566d7d;font-weight:750}.level.mother{background:#e3f3f0;color:#196b57}.level.change{background:#fff3dc;color:#8b650d}.level.mix{background:#fff0ed;color:#a54535}.prompt{font-weight:650}.reveal-row{display:flex;flex-wrap:wrap;gap:7px;padding:0 14px 13px;margin-left:52px}.reveal-row button{min-height:36px;border:1px solid var(--line);background:#fff;border-radius:9px;padding:6px 10px;color:#40596a}.reveal-row button:hover{border-color:var(--blue);color:var(--blue)}.reveal{display:none;margin:0 14px 13px 52px;padding:11px 13px;border-radius:10px;background:#f6f9fa;color:#3e5667}.reveal.show{display:block}.reveal.answer{background:#edf8f4;color:#1d6653}.reveal b{color:var(--ink)}
+    .status-row{display:flex;align-items:center;gap:8px;margin-top:18px;padding-top:15px;border-top:1px solid var(--line)}.status-row span{margin-right:auto;color:var(--muted);font-size:.85rem}.status-row button{min-height:38px;border:1px solid var(--line);background:#fff;border-radius:10px;padding:6px 11px}.status-row button.selected{background:var(--green);color:#fff;border-color:var(--green)}
+    .empty{display:none;padding:48px;text-align:center;color:var(--muted)}.empty.show{display:block}
+    dialog{width:min(760px,calc(100% - 24px));max-height:88vh;border:0;border-radius:20px;padding:0;box-shadow:0 24px 80px rgba(15,43,61,.25)}dialog::backdrop{background:rgba(10,31,45,.55)}.dialog-head{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);padding:18px 20px;display:flex;justify-content:space-between;gap:14px;z-index:2}.dialog-head h2{margin:0}.dialog-close{border:0;background:#eef3f5;border-radius:10px;width:40px;height:40px}.dialog-body{padding:18px 20px 24px}.diagnostic-list{display:grid;gap:10px}.diagnostic-item{border:1px solid var(--line);border-radius:13px;padding:12px 13px}.diagnostic-item p{margin:0 0 8px;font-weight:650}.diagnostic-options{display:flex;gap:7px;flex-wrap:wrap}.diagnostic-options button{min-height:38px;border:1px solid var(--line);background:#fff;border-radius:9px;padding:6px 12px}.diagnostic-options button.selected[data-value="yes"]{background:#e5f5ef;color:#176e56;border-color:#8bc9b5}.diagnostic-options button.selected[data-value="maybe"]{background:#fff4dc;color:#865f08;border-color:#e7c170}.diagnostic-options button.selected[data-value="no"]{background:#fff0ed;color:#a13e2e;border-color:#e7a398}.recommendation{margin-top:16px;padding:15px;background:#edf7f8;border-radius:13px}.recommendation h3{margin:0 0 6px}.recommendation p{margin:0;color:#415c6d}
+    footer{max-width:1500px;margin:8px auto 0;padding:24px;color:#637581;font-size:.83rem;border-top:1px solid var(--line)}footer p{margin:4px 0}
+    .only-print{display:none}
+    @media(max-width:980px){.layout{grid-template-columns:1fr;padding:16px}.side{position:static;max-height:none}.unit-nav{grid-template-columns:repeat(3,1fr)}.dashboard{grid-template-columns:1fr}.toolbar{top:68px}.method-strip{grid-template-columns:repeat(5,minmax(110px,1fr));overflow:auto;padding-bottom:4px}.top-inner{padding-inline:15px}.brand small{display:none}}
+    @media(max-width:680px){body{font-size:15px}.top-inner{min-height:62px;gap:9px}.brand strong{font-size:.93rem}.brand-mark{width:38px;height:38px}.top-action{padding-inline:9px}.mode-switch button{padding-inline:9px}.layout{padding:10px}.overview,.focus{padding:19px}.unit-nav{grid-template-columns:repeat(2,1fr)}.toolbar{top:62px;padding:10px}.toolbar select{flex:1}.topic-head{grid-template-columns:auto 1fr}.topic-actions{grid-column:1/-1;justify-content:flex-end}.mini-grid{grid-template-columns:1fr}.reveal-row,.reveal{margin-left:14px}.unit-summary{grid-template-columns:1fr}.method-strip{grid-template-columns:repeat(5,118px)}.hide-mobile{display:none}}
+    @media print{.topbar,.side,.toolbar,.topic-actions,.reveal-row,.status-row,.parent-tip,.diagnostic-open{display:none!important}body{background:#fff;font-size:11pt}.layout{display:block;padding:0}.dashboard{display:block}.overview{color:#000;background:#fff;border:1px solid #aaa;box-shadow:none}.overview p,.eyebrow{color:#333}.focus{margin-top:10px}.panel,.topic{box-shadow:none;break-inside:avoid}.topic-body{display:block!important}.reveal{display:block!important;margin-left:0}.only-print{display:block}.section-head{break-after:avoid}footer{padding-inline:0}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#topics">跳到重点题型</a>
+  <header class="topbar">
+    <div class="top-inner">
+      <div class="brand"><span class="brand-mark">数</span><span><strong>六年级数学上册</strong><small>2026 新版 · 重点方法学习手册</small></span></div>
+      <div class="mode-switch" aria-label="学习视图">
+        <button type="button" class="active" data-mode="semester">按教材学</button>
+        <button type="button" data-mode="exam">期末重点</button>
+      </div>
+      <button class="top-action diagnostic-open" type="button">自评诊断</button>
+      <button class="top-action hide-mobile" type="button" onclick="window.print()">打印</button>
+    </div>
+  </header>
+  <div class="layout">
+    <aside class="side" aria-label="学习导航">
+      <div class="progress-head"><div class="progress-ring" id="progressRing" style="--progress: 0%;"><strong id="progressPct">0%</strong></div><div class="progress-copy"><strong>我的掌握进度</strong><span id="progressText">0 / 24 个方法</span></div></div>
+      <h2>按内容定位</h2><nav class="unit-nav" id="unitNav"></nav>
+      <h2>证据说明</h2><div class="legend"><span><i class="dot core"></i>教材核心＋旧卷稳定考法</span><span><i class="dot new"></i>新版教材重点，旧卷可能未覆盖</span><span><i class="dot extend"></i>综合实践或拓展提升</span></div>
+      <h2>记住这句话</h2><p style="margin:0;color:var(--muted);font-size:.86rem">不背题，先找到不变的数量关系；题目换了说法，方法仍然能用。</p>
+    </aside>
+    <main id="main">
+      <section class="dashboard" aria-labelledby="pageTitle">
+        <div class="overview panel"><p class="eyebrow">本学期学习主线</p><h1 id="pageTitle">把复杂题翻译成简单关系</h1><p>每道题都按同一条路线处理。真正需要掌握的不是某一道答案，而是下一次还能独立使用的方法。</p><div class="method-strip"><div class="method-step"><b>01 读</b><span>问题求谁？</span></div><div class="method-step"><b>02 找</b><span>标准量是谁？</span></div><div class="method-step"><b>03 画</b><span>线段图或草图</span></div><div class="method-step"><b>04 列</b><span>先写数量关系</span></div><div class="method-step"><b>05 查</b><span>估算、单位、逆算</span></div></div></div>
+        <div class="focus panel"><h2>先抓住三件事</h2><ul class="focus-list"><li><span class="rank">1</span><span><b>单位“1”</b><small>分数、百分数应用题的总开关</small></span></li><li><span class="rank">2</span><span><b>周长还是面积</b><small>圆题先判断求边界还是求大小</small></span></li><li><span class="rank">3</span><span><b>变化前的量</b><small>增长率、降低率都除以原来的量</small></span></li></ul></div>
+      </section>
+      <section class="toolbar panel" aria-label="筛选工具">
+        <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><input id="searchInput" type="search" placeholder="搜索题型、方法或关键词" aria-label="搜索"></label>
+        <select id="unitFilter" aria-label="选择单元"><option value="all">全部内容</option></select>
+        <select id="importanceFilter" aria-label="重要程度"><option value="0">全部重要度</option><option value="5">★★★★★ 必须掌握</option><option value="4">★★★★ 重点掌握</option><option value="3">★★★ 理解掌握</option><option value="2">★★ 拓展了解</option></select>
+        <button id="bookmarkFilter" class="filter-button" type="button">只看收藏</button>
+        <button id="weakFilter" class="filter-button" type="button">只看待巩固</button>
+      </section>
+      <section id="topics" aria-labelledby="topicsTitle"><div class="section-head"><div><h2 id="topicsTitle">重点题型与通用方法</h2><p id="modeDescription">按照新版教材顺序学习，适合日常同步。</p></div><span id="resultCount" class="result-count">显示 24 / 24 个方法</span></div><div id="content"></div><div id="empty" class="empty panel">没有符合当前条件的题型，请调整筛选条件。</div></section>
+    </main>
+  </div>
+  <footer><p><strong>内容依据：</strong>人民教育出版社《义务教育教科书·数学 六年级上册》（2026 秋季启用）及已收集的北京各区往年六年级上册期末试卷。</p><p>新版教材决定学习范围；往年试卷只用于分析稳定考法和易错点。样题为重新编写，仅供个人学习使用。π 按 3.14 计算，除非题目另有说明。</p><p class="only-print">打印日期：由浏览器生成。本页的答案在打印版中默认显示。</p></footer>
+  <dialog id="diagnosticDialog"><div class="dialog-head"><div><h2>“我会不会”自评诊断</h2><div style="color:var(--muted);font-size:.86rem">不用计算分数，诚实选择就能得到复习建议。</div></div><button class="dialog-close" type="button" aria-label="关闭">×</button></div><div class="dialog-body"><div id="diagnosticList" class="diagnostic-list"></div><div id="recommendation" class="recommendation"><h3>建议从哪里开始</h3><p>完成选择后，这里会显示建议。</p></div></div></dialog>
+  <script>
+    const units = [
+      {id:'position',name:'一 确定位置',pages:'课本第 1—15 页',kind:'new',summary:'用两个条件准确定位：数对看列和行，方向定位看参照点、方向和距离。'},
+      {id:'fmul',name:'二 分数乘法',pages:'课本第 16—31 页',kind:'core',summary:'从“求一个数的几分之几”出发，建立单位“1”和乘法关系。'},
+      {id:'fdiv',name:'三 分数除法',pages:'课本第 32—43 页',kind:'core',summary:'除法计算只是工具，核心是“已知一个数的几分之几，反求这个数”。'},
+      {id:'negative',name:'生活中的负数',pages:'课本第 44—47 页',kind:'new',summary:'围绕相反意义的量理解正负数，重点不是复杂运算。'},
+      {id:'circle',name:'四 圆',pages:'课本第 48—73 页',kind:'core',summary:'先分清半径与直径、周长与面积，再处理圆环和组合图形。'},
+      {id:'percent',name:'五 百分数',pages:'课本第 79—100 页',kind:'core',summary:'所有百分数应用题都围绕比较标准，也就是单位“1”。'},
+      {id:'integrated',name:'综合实践与关联',pages:'课本第 74—78、101—115 页',kind:'new',summary:'在体育、节水和数据情境中选择信息、建立模型并解释结论。'},
+      {id:'extend',name:'思维拓展',pages:'课本第 116—117 页',kind:'extend',summary:'鸽巢问题带星号，作为拓展思维学习，不列为期末主力考点。'}
+    ];
+    const topics = [
+      {id:'ordered-pairs',unit:'position',title:'用有序数对确定位置',subtitle:'先列后行；移动时只改变对应的数',importance:4,difficulty:2,evidence:'新版重点',keywords:'数对 列 行 平移 坐标 位置',method:['确定观察顺序：横向是列，纵向是行。','写成（列，行），两个数不能交换。','左右移动只改第一个数，上下移动只改第二个数。','最后把结果放回图中检查位置。'],key:'数对（a，b）表示第 a 列、第 b 行。',mistake:'把“第几行”写在前面，或移动后两个数一起改变。',parent:'让孩子先用手指出“从哪里开始数”，再写数对；会写答案但说不清列、行顺序，仍不算真正掌握。',examples:[
+        {label:'母题',kind:'mother',prompt:'点 A 的位置是（2，3），向右平移 4 格后，新位置是多少？',hint:'向右只改变表示“列”的第一个数。',steps:'第一个数加 4，第二个数不变：（2＋4，3）。',answer:'（6，3）。'},
+        {label:'变式·两次移动',kind:'change',prompt:'点 B 在（7，5），先向下 3 格，再向左 2 格，最后在哪里？',hint:'向下改第二个数，向左改第一个数。',steps:'（7，5）→（7，2）→（5，2）。',answer:'（5，2）。'},
+        {label:'变式·补顶点',kind:'mix',prompt:'一个长方形的三个顶点是（2，2）、（2，6）、（7，6），第四个顶点是多少？',hint:'同一条竖边列数相同，同一条横边行数相同。',steps:'缺少的点要与（7，6）同列、与（2，2）同行。',answer:'（7，2）。'}]},
+      {id:'direction-distance',unit:'position',title:'用方向和距离定位、描述路线',subtitle:'参照点＋方向＋距离，三个信息缺一不可',importance:4,difficulty:3,evidence:'新版重点',keywords:'方向 距离 路线 参照点 返回 角度 比例尺',method:['先圈出参照点，并画出“北”方向。','从正北或正南开始量角，写清“偏东”还是“偏西”。','再按比例尺确定距离；描述路线要分段。','返回时距离不变，方向变成完全相反。'],key:'位置描述＝参照点＋方向＋距离。',mistake:'只说方向不说距离；把“北偏东”写成“东偏北”；返回路线只换东、西而没有整体反向。',parent:'让孩子背对答案，用手臂指出方向并口述三项信息。能画、能说、能反向，才算掌握。',examples:[
+        {label:'母题',kind:'mother',prompt:'博物馆在学校北偏东 30° 方向 600 m 处。博物馆在学校的什么位置？从博物馆返回学校怎样走？',hint:'返回时把整条射线反向。',steps:'去程是北偏东 30°、600 m；相反方向是南偏西 30°，距离仍为 600 m。',answer:'博物馆在学校北偏东 30°、600 m；返回沿南偏西 30°走 600 m。'},
+        {label:'变式·分段路线',kind:'change',prompt:'小林从家向北偏西 40°走 500 m 到学校，再向正东走 800 m 到图书馆。怎样完整描述这条路线？',hint:'每一段都要重新确定参照点。',steps:'第一段以家为参照点；第二段以学校为参照点，分别说方向和距离。',answer:'从家向北偏西 40°走 500 m 到学校，再从学校向正东走 800 m 到图书馆。'},
+        {label:'变式·比例尺',kind:'mix',prompt:'图上 1 cm 表示实际 200 m。公园在学校正东 3.5 cm 处，实际距离是多少？',hint:'实际距离＝图上长度×每厘米代表的距离。',steps:'3.5×200＝700（m）。',answer:'公园在学校正东 700 m 处。'}]},
+      {id:'fraction-multiply',unit:'fmul',title:'理解并计算分数乘法',subtitle:'先判断意义，再约分计算',importance:5,difficulty:2,evidence:'教材核心＋旧卷稳定',keywords:'分数乘法 约分 乘整数 乘分数 比较大小',method:['把整数看成分母是 1 的分数。','分子乘分子、分母乘分母。','能约分时先约分，减少计算量。','结果要化成最简分数，并用大小关系检查。'],key:'一个数×分数，表示求这个数的几分之几。',mistake:'分子和分母分别相加；约分时把同一个分数的分子、分母同时除掉却没有交叉对应。',parent:'不要只问“怎么算”，还要让孩子解释这个乘法表示“谁的几分之几”。',examples:[
+        {label:'母题',kind:'mother',prompt:'计算 5/6×9/10。',hint:'先把 5 和 10、9 和 6 交叉约分。',steps:'5/10＝1/2，9/6＝3/2，所以积为（1×3）/（2×2）。',answer:'3/4。'},
+        {label:'变式·整数相乘',kind:'change',prompt:'计算 7/12×18。',hint:'把 18 和分母 12 先约分。',steps:'18/12＝3/2，所以 7×3/2＝21/2。',answer:'21/2，也就是 10 又 1/2。'},
+        {label:'变式·不计算判断',kind:'mix',prompt:'不计算，判断 8/9×3/4 与 8/9 哪个大。',hint:'一个正数乘小于 1 的数会怎样？',steps:'3/4＜1，8/9 乘 3/4 后会缩小。',answer:'8/9×3/4＜8/9。'}]},
+      {id:'fraction-mixed',unit:'fmul',title:'分数、小数混合运算与简便计算',subtitle:'先观察结构，再决定是否使用运算律',importance:4,difficulty:3,evidence:'教材核心＋旧卷常见',keywords:'混合运算 运算律 简便计算 小数 分配律',method:['先看括号和运算顺序，不急着计算。','寻找相同因数、互为倒数或可以凑整的数。','小数与分数混合时，选择更容易约分的形式。','简便方法完成后仍按原式顺序验算。'],key:'运算律是为了改变计算顺序，不改变运算关系。',mistake:'看见分数就全部通分；使用分配律时漏乘括号中的一项。',parent:'鼓励孩子在计算前先圈出“共同因数”或“能凑整的数”，形成先观察后动笔的习惯。',examples:[
+        {label:'母题',kind:'mother',prompt:'计算（5/6＋1/3）×6。',hint:'可以用乘法分配律，避免先通分。',steps:'5/6×6＋1/3×6＝5＋2。',answer:'7。'},
+        {label:'变式·提取因数',kind:'change',prompt:'计算 3/7×15/8＋3/7×1/8。',hint:'两项都有 3/7。',steps:'3/7×（15/8＋1/8）＝3/7×2。',answer:'6/7。'},
+        {label:'变式·小数混合',kind:'mix',prompt:'计算 2.4×5/8。',hint:'2.4 与 8 可以先处理，也可以把 2.4 化成 12/5。',steps:'12/5×5/8＝12/8。',answer:'1.5。'}]},
+      {id:'fraction-of-number',unit:'fmul',title:'求一个数的几分之几',subtitle:'单位“1”已知，用乘法',importance:5,difficulty:3,evidence:'教材核心＋多区高频',keywords:'单位1 求几分之几 乘法 应用题',method:['圈出“谁的几分之几”，把“谁”定为单位“1”。','确认单位“1”的具体数量已经知道。','写数量关系：单位“1”的量×对应分数＝所求量。','估算结果：分数小于 1 时，答案应比单位“1”小。'],key:'单位“1”已知：单位“1”的量×分数＝对应量。',mistake:'看到分数就用除法；没有判断分数是在说明谁和谁的关系。',parent:'让孩子先完整说出“求的是___的___”，再允许列式。',examples:[
+        {label:'母题',kind:'mother',prompt:'一条绿道长 240 km，其中山脊线占 3/8。山脊线长多少千米？',hint:'240 km 是单位“1”，它已经知道。',steps:'240×3/8＝90（km）。',answer:'90 km。'},
+        {label:'变式·换单位',kind:'change',prompt:'一本书有 72 页，小明读了全书的 5/6。他读了多少页？',hint:'全书页数是单位“1”。',steps:'72×5/6＝60（页）。',answer:'60 页。'},
+        {label:'变式·求剩余',kind:'mix',prompt:'仓库原有 150 箱货物，运走 2/5，还剩多少箱？',hint:'剩余占原来的 1－2/5。',steps:'150×（1－2/5）＝150×3/5。',answer:'90 箱。'}]},
+      {id:'fraction-chain',unit:'fmul',title:'连续求几分之几与“多（少）几分之几”',subtitle:'每一步重新确认单位“1”',importance:5,difficulty:4,evidence:'教材核心＋综合题常见',keywords:'连续 几分之几 多几分之几 少几分之几 单位1',method:['把每个分率旁边的单位“1”写出来。','连续关系按顺序相乘，不要把两个分数相加。','“多几分之几”乘（1＋分数），“少几分之几”乘（1－分数）。','每算一步都检查新的单位“1”是否改变。'],key:'关键不是分数多少，而是每个分数以谁为标准。',mistake:'把“比 A 多 1/3”理解成“是 A 的 1/3”；连续变化仍以最初数量为单位“1”。',parent:'让孩子在每条关系下写小字“以谁为1”，比多做几道题更有效。',examples:[
+        {label:'母题',kind:'mother',prompt:'种植园有 480 m²，3/4 种果树，其中 2/5 种苹果。苹果占地多少平方米？',hint:'先求果树地，再求果树地的 2/5。',steps:'480×3/4×2/5＝144（m²）。',answer:'144 m²。'},
+        {label:'变式·多几分之几',kind:'change',prompt:'芍药花期 60 天，玫瑰花期比芍药多 1/3。玫瑰花期多少天？',hint:'玫瑰是芍药的 1＋1/3。',steps:'60×（1＋1/3）＝80（天）。',answer:'80 天。'},
+        {label:'变式·连续变化',kind:'mix',prompt:'一个球从 50 m 高处落下，第一次弹起高度比原来降低 2/5，第二次又比第一次提高 1/2。第二次弹起多高？',hint:'第二次的提高以第一次弹起高度为标准。',steps:'50×（1－2/5）×（1＋1/2）＝50×3/5×3/2。',answer:'45 m。'}]},
+      {id:'fraction-division',unit:'fdiv',title:'倒数与分数除法计算',subtitle:'除以一个非零数，等于乘它的倒数',importance:5,difficulty:2,evidence:'教材核心＋旧卷稳定',keywords:'倒数 分数除法 商 大小',method:['先确认除数不为 0。','把除号改成乘号，同时只把除数变成倒数。','约分后计算并化简。','用“商×除数＝被除数”验算。'],key:'a÷b＝a×1/b（b≠0）。',mistake:'被除数和除数一起颠倒；把 0 当成有倒数。',parent:'让孩子边写边说“变的是除数”，可以有效减少机械性错误。',examples:[
+        {label:'母题',kind:'mother',prompt:'计算 5/6÷10/9。',hint:'乘 10/9 的倒数 9/10。',steps:'5/6×9/10，交叉约分后得 3/4。',answer:'3/4。'},
+        {label:'变式·除以整数',kind:'change',prompt:'计算 7/8÷7。',hint:'7 的倒数是 1/7。',steps:'7/8×1/7＝1/8。',answer:'1/8。'},
+        {label:'变式·判断商',kind:'mix',prompt:'不计算，判断 3/4÷1/2 的商比 3/4 大还是小。',hint:'除以一个小于 1 的正数，相当于分成更小的份。',steps:'除数 1/2＜1，所以商比被除数大。',answer:'商比 3/4 大；实际商为 3/2。'}]},
+      {id:'find-whole',unit:'fdiv',title:'已知一个数的几分之几，求这个数',subtitle:'单位“1”未知，用除法或方程',importance:5,difficulty:4,evidence:'教材核心＋多区高频',keywords:'反求 单位1 未知 方程 分数除法',method:['找出表示单位“1”的整体，并设为 x。','写关系：单位“1”的量×分数＝已知对应量。','用除法或方程求 x。','把结果乘回原分数，检查是否得到已知量。'],key:'单位“1”未知：对应量÷对应分数＝单位“1”的量。',mistake:'仍然使用乘法；把“剩下的分率”误写成“已读的分率”。',parent:'判断孩子是否会做，不看他背“知一求几、知几求一”，只看能否写出完整数量关系。',examples:[
+        {label:'母题',kind:'mother',prompt:'一本书已经读了 42 页，占全书的 7/9。全书多少页？',hint:'全书页数×7/9＝42。',steps:'42÷7/9＝42×9/7。',answer:'54 页。'},
+        {label:'变式·剩余量',kind:'change',prompt:'一本书读了 3/5 后还剩 80 页，全书多少页？',hint:'80 页对应的是剩下的 2/5。',steps:'80÷（1－3/5）＝80÷2/5。',answer:'200 页。'},
+        {label:'变式·比原来少',kind:'mix',prompt:'某餐馆现在每天产生厨余垃圾 120 kg，比原来少 1/4。原来每天约有多少千克？',hint:'现在是原来的 1－1/4。',steps:'120÷（1－1/4）＝120÷3/4。',answer:'160 kg。'}]},
+      {id:'fraction-equation',unit:'fdiv',title:'把复杂条件翻译成数量关系',subtitle:'先写文字关系，再列算式或方程',importance:5,difficulty:4,evidence:'教材核心＋综合应用',keywords:'数量关系 方程 几分之几 比多 比少',method:['删去情境装饰，只保留两个量和它们的关系。','把单位“1”设为 x。','按原话写等式，不急着移项。','解出后代回题意，检查对应量和大小。'],key:'文字中的“是、占、相当于”常常可以翻译为等号。',mistake:'方程列对但不知道 x 表示什么；见到“少”就直接做减法。',parent:'让孩子用一句话复述等式两边分别代表什么，能明显提升审题准确率。',examples:[
+        {label:'母题',kind:'mother',prompt:'一个数的 2/3 是 48，这个数是多少？',hint:'设这个数为 x。',steps:'2/3x＝48，所以 x＝48÷2/3。',answer:'72。'},
+        {label:'变式·少一部分',kind:'change',prompt:'一批零件完成 3/8 后还剩 50 个，这批零件共有多少个？',hint:'剩下的是总数的 5/8。',steps:'设总数为 x，（1－3/8）x＝50，5/8x＝50。',answer:'80 个。'},
+        {label:'变式·两个量互换',kind:'mix',prompt:'苹果质量是梨的 4/5，苹果有 56 kg。梨有多少千克？',hint:'梨是单位“1”。',steps:'梨的质量×4/5＝56，所以 56÷4/5。',answer:'70 kg。'}]},
+      {id:'engineering',unit:'fdiv',title:'工程、合作与相遇模型',subtitle:'总量看作“1”，用工作效率解决',importance:5,difficulty:5,evidence:'教材重点＋期末综合题',keywords:'工程 合作 效率 时间 相遇 总量1',method:['题目没有总量时，把全部任务看作“1”。','单独完成时间为 n，则每单位时间完成 1/n。','合作效率相加；完成时间＝工作总量÷合作效率。','只做若干时间时，用效率×时间求完成量。'],key:'工作总量＝工作效率×工作时间。',mistake:'把两人的完成时间直接相加或求平均；问完成一部分时仍按全部任务计算。',parent:'用“一个小时各做多少”追问，比直接教公式更容易形成模型。',examples:[
+        {label:'母题',kind:'mother',prompt:'甲队单独修完需 12 天，乙队需 18 天。两队合作几天修完？',hint:'每天分别完成全部任务的 1/12 和 1/18。',steps:'1÷（1/12＋1/18）＝1÷5/36。',answer:'36/5 天，即 7.2 天。'},
+        {label:'变式·求剩余',kind:'change',prompt:'甲单独 6 小时完成，乙单独 9 小时完成。合作 3 小时后还剩几分之几？',hint:'先求 3 小时一共完成多少。',steps:'3×（1/6＋1/9）＝3×5/18＝5/6；剩下 1－5/6。',answer:'还剩 1/6。'},
+        {label:'变式·完成量',kind:'mix',prompt:'A 机器单独 10 小时完成，B 机器单独 15 小时完成。合作 4 小时完成总任务的几分之几？',hint:'合作效率乘 4 小时。',steps:'4×（1/10＋1/15）＝4×1/6。',answer:'2/3。'}]},
+      {id:'negative-numbers',unit:'negative',title:'用正负数表示相反意义的量',subtitle:'先确定分界点，再判断方向',importance:3,difficulty:2,evidence:'新版教材覆盖',keywords:'负数 正数 0 温度 海拔 收支 相反意义',method:['先确定以什么为 0，也就是分界点。','规定一个方向为正，相反方向就是负。','比较或求变化时，可以画一条数轴。','0 既不是正数，也不是负数。'],key:'正负号表示方向或意义相反，不表示“好”和“坏”。',mistake:'认为负数一定比 0 大；忽略不同情境的正方向规定。',parent:'让孩子用温度、楼层、收支各举一例，能解释负号含义即可，不必做超纲负数运算。',examples:[
+        {label:'母题',kind:'mother',prompt:'早晨气温是－3 ℃，中午升到 5 ℃。气温升高了多少摄氏度？',hint:'从－3 到 0 先升 3，再从 0 到 5 升 5。',steps:'3＋5＝8（℃）。',answer:'升高了 8 ℃。'},
+        {label:'变式·收支',kind:'change',prompt:'账单中支出 120 元记作－120 元，随后收入 200 元。两笔合计变化多少元？',hint:'收入为正，支出为负。',steps:'－120＋200＝80。',answer:'合计增加 80 元。'},
+        {label:'变式·海拔差',kind:'mix',prompt:'吐鲁番盆地最低点海拔约－154.31 m，珠穆朗玛峰海拔 8848.86 m，两地海拔相差多少米？',hint:'从最低点到海平面是 154.31 m，再从海平面向上 8848.86 m。',steps:'154.31＋8848.86＝9003.17（m）。',answer:'9003.17 m。'}]},
+      {id:'circle-basics',unit:'circle',title:'圆、半径、直径与扇形',subtitle:'圆心定位置，半径定大小',importance:4,difficulty:2,evidence:'教材核心＋旧卷常见',keywords:'圆 圆心 半径 直径 扇形 对称轴 圆心角',method:['先确认线段是否经过圆心、两端是否在圆上。','同一圆中 d＝2r，所有半径相等。','一条弧和两条半径围成扇形。','圆有无数条对称轴，每条直径所在直线都是对称轴。'],key:'圆心决定位置，半径决定大小。',mistake:'把任意弦都当作直径；认为圆心角相同但半径不同的扇形一样大。',parent:'让孩子边指图边说定义，不必背长句；能判断反例比只会背概念更重要。',examples:[
+        {label:'母题',kind:'mother',prompt:'一个圆的半径是 3.5 cm，它的直径是多少厘米？',hint:'直径是半径的 2 倍。',steps:'3.5×2＝7（cm）。',answer:'7 cm。'},
+        {label:'变式·决定因素',kind:'change',prompt:'两个圆的半径相同、圆心不同，它们的大小和位置有什么关系？',hint:'半径管大小，圆心管位置。',steps:'半径相同所以大小相同；圆心不同所以位置不同。',answer:'大小相同，位置不同。'},
+        {label:'变式·扇形比较',kind:'mix',prompt:'在同一个圆中，圆心角分别为 60° 和 120° 的两个扇形，哪个更大？',hint:'同圆中半径相同，只需比较圆心角。',steps:'120° 是 60° 的 2 倍，对应扇形也更大。',answer:'120° 的扇形更大，面积是另一个的 2 倍。'}]},
+      {id:'circumference',unit:'circle',title:'圆的周长：顺求、反求与半圆边界',subtitle:'求边界长度，公式 C＝πd＝2πr',importance:5,difficulty:3,evidence:'教材核心＋多区高频',keywords:'周长 直径 半径 反求 半圆 边界',method:['先判断题目求的是一圈的长度。','统一半径或直径后代入公式。','反求直径用 C÷π，反求半径再÷2。','半圆周长要加直径，不能只算半个圆周。'],key:'“绕一圈、边缘、围栏、滚一周”通常在求周长。',mistake:'把半径直接代入 πd；半圆边界漏掉直径。',parent:'让孩子在图上用手沿边界走一圈，先确定哪些线段要算，再写公式。',examples:[
+        {label:'母题',kind:'mother',prompt:'一个圆的直径是 8 cm，周长是多少厘米？',hint:'已知直径，用 C＝πd。',steps:'3.14×8＝25.12（cm）。',answer:'25.12 cm。'},
+        {label:'变式·反求半径',kind:'change',prompt:'一个圆的周长是 31.4 m，它的半径是多少米？',hint:'先用周长除以 π 求直径。',steps:'31.4÷3.14＝10（m），10÷2＝5（m）。',answer:'5 m。'},
+        {label:'变式·半圆边界',kind:'mix',prompt:'一个半圆的半径是 4 cm，它的周长是多少厘米？',hint:'半个圆周加一条直径。',steps:'3.14×4＋2×4＝12.56＋8。',answer:'20.56 cm。'}]},
+      {id:'circle-area',unit:'circle',title:'圆的面积：顺求与反求',subtitle:'求圆面大小，公式 S＝πr²',importance:5,difficulty:3,evidence:'教材核心＋旧卷稳定',keywords:'圆面积 半径平方 反求 周长求面积',method:['先判断求的是圆面的大小。','无论已知什么，先得到半径 r。','平方的是半径，不是 π，也不是直径。','用面积单位作答，并用正方形面积估算。'],key:'面积只认半径：S＝πr²。',mistake:'把 2r 写成 r²；已知直径时不除以 2；把周长单位写成面积单位。',parent:'让孩子先单独写“r＝___”，再写面积公式，可减少大部分代入错误。',examples:[
+        {label:'母题',kind:'mother',prompt:'圆形喷灌装置的射程是 6 m，它最多能喷灌多少平方米？',hint:'射程就是半径。',steps:'3.14×6²＝3.14×36。',answer:'113.04 m²。'},
+        {label:'变式·已知直径',kind:'change',prompt:'圆形茶几直径 10 dm，桌面面积是多少平方分米？',hint:'半径是 10÷2＝5 dm。',steps:'3.14×5²＝3.14×25。',answer:'78.5 dm²。'},
+        {label:'变式·周长反求面积',kind:'mix',prompt:'一个圆的周长是 18.84 cm，它的面积是多少平方厘米？',hint:'先由周长求半径。',steps:'18.84÷3.14÷2＝3（cm）；3.14×3²＝28.26。',answer:'28.26 cm²。'}]},
+      {id:'composite-circle',unit:'circle',title:'圆环、组合图形与阴影面积',subtitle:'先拆分，再用“大减小”或“加一加”',importance:5,difficulty:5,evidence:'教材重点＋期末压轴常见',keywords:'圆环 组合图形 阴影 外方内圆 运动场',method:['先用彩笔或心中标出要保留的区域。','把图形拆成会算的圆、半圆、正方形、长方形。','圆环用 π（R²－r²），公共边不重复计算。','计算后用整体面积检查：阴影不能比整体大。'],key:'复杂图形不是新公式，而是基本图形的加、减。',mistake:'周长与面积混算；半径、直径混用；组合图形重复加公共部分。',parent:'先让孩子说“这个阴影＝谁－谁”或“＝哪几块相加”，表达清楚后再计算。',examples:[
+        {label:'母题',kind:'mother',prompt:'一个圆环的外半径是 5 cm，内半径是 3 cm，面积是多少？',hint:'外圆面积减内圆面积。',steps:'3.14×（5²－3²）＝3.14×16。',answer:'50.24 cm²。'},
+        {label:'变式·外方内圆',kind:'change',prompt:'边长 10 cm 的正方形内画一个最大的圆，四角剩余部分面积是多少？',hint:'最大圆的直径等于正方形边长。',steps:'10²－3.14×（10÷2）²＝100－78.5。',answer:'21.5 cm²。'},
+        {label:'变式·运动场',kind:'mix',prompt:'运动场中间是长 20 m、宽 10 m 的长方形，两端各是直径 10 m 的半圆。面积是多少？',hint:'两个半圆正好合成一个圆。',steps:'20×10＋3.14×5²＝200＋78.5。',answer:'278.5 m²。'}]},
+      {id:'circle-motion',unit:'circle',title:'车轮滚动、跑道与捆扎问题',subtitle:'把一周长度与圈数、直线段联系起来',importance:4,difficulty:5,evidence:'教材综合＋旧卷变式',keywords:'滚动 圈数 跑道 捆扎 绳子 周长',method:['滚动距离＝轮子周长×圈数。','比较相邻跑道，只比较弯道增加的圆周。','捆扎图先画绳子的外轮廓，分成直线段和圆弧。','统一长度单位后再计算。'],key:'运动问题中，圆的周长常常是“一圈走多远”。',mistake:'把圈数乘面积；跑道直道部分重复计算；捆扎时把每个圆周全部相加。',parent:'用硬币在尺子上滚一圈，帮助孩子把“周长”和“前进距离”真正联系起来。',examples:[
+        {label:'母题',kind:'mother',prompt:'车轮直径 0.8 m，转动 50 圈前进多少米？',hint:'先求一圈走多远。',steps:'3.14×0.8×50＝2.512×50。',answer:'125.6 m。'},
+        {label:'变式·相邻跑道',kind:'change',prompt:'标准跑道弯道由两个半圆组成，相邻跑道宽 1.2 m。外圈一圈比内圈约长多少米？',hint:'两个半圆合成一个圆，半径增加 1.2 m。',steps:'周长增加量＝2×3.14×1.2。',answer:'约 7.536 m。'},
+        {label:'变式·三个圆筒',kind:'mix',prompt:'三个直径 8 cm 的圆筒排成一行，用绳子紧贴外侧捆一圈，至少需要多长？',hint:'外轮廓是上下两条直线，加两端合成的一个整圆。',steps:'两条直线共 2×（2×8）＝32 cm；两端圆弧共 3.14×8＝25.12 cm。',answer:'57.12 cm。'}]},
+      {id:'percent-meaning',unit:'percent',title:'百分数的意义、互化与常见百分率',subtitle:'百分数表示关系；百分率是部分量与总量的比较',importance:4,difficulty:3,evidence:'教材核心＋旧卷基础',keywords:'百分数 意义 小数 分数 互化 命中率 达标率 合格率',method:['先说清“谁占谁的百分之多少”。','小数化百分数：小数点右移两位，加 %；反向互化时左移两位。','分数先化成小数或分母为 100 的分数。','求百分率时，用符合条件的部分量÷总量，再化成百分数。'],key:'百分数表示两个量的关系；百分率＝部分量÷总量×100%。',mistake:'把 25% 写成 25；求命中率、合格率时把总量放在分子。',parent:'让孩子解释百分数的两端分别是什么量，比单纯做互化题更重要。',examples:[
+        {label:'母题',kind:'mother',prompt:'把 0.375 化成百分数。',hint:'小数点向右移动两位。',steps:'0.375×100%＝37.5%。',answer:'37.5%。'},
+        {label:'变式·分数互化',kind:'change',prompt:'把 5/8 化成百分数。',hint:'先算 5÷8。',steps:'5÷8＝0.625＝62.5%。',answer:'62.5%。'},
+        {label:'变式·求百分率',kind:'mix',prompt:'一次投篮 50 次，命中 46 次，命中率是多少？',hint:'命中数是部分量，出手次数是总量。',steps:'46÷50×100%＝92%。',answer:'命中率为 92%。'}]},
+      {id:'percent-three',unit:'percent',title:'百分数应用题的“三量关系”',subtitle:'总量、百分率、对应量，只要找准单位“1”',importance:5,difficulty:4,evidence:'教材核心＋期末必备',keywords:'百分数 对应量 单位1 已知 未知 三量关系',method:['圈出“谁是谁的百分之几”，后面的量通常是单位“1”。','单位“1”已知：乘百分率求对应量。','单位“1”未知：对应量除以百分率。','求百分率：对应量除以单位“1”。'],key:'对应量＝单位“1”的量×百分率。',mistake:'只凭“求多少”判断乘除；百分率对应的部分找错。',parent:'只要求孩子先写三量关系，不要求背三套零散口诀。',examples:[
+        {label:'母题',kind:'mother',prompt:'一批树苗有 240 棵，其中 35% 是银杏。银杏有多少棵？',hint:'总数已知，求其中的 35%。',steps:'240×35%＝84（棵）。',answer:'84 棵。'},
+        {label:'变式·反求总量',kind:'change',prompt:'合唱队有 72 人，占全年级人数的 60%。全年级有多少人？',hint:'全年级人数是单位“1”，它未知。',steps:'72÷60%＝120（人）。',answer:'120 人。'},
+        {label:'变式·求百分率',kind:'mix',prompt:'180 名学生中有 45 人参加篮球社团，参加人数占总人数的百分之多少？',hint:'部分量除以总量。',steps:'45÷180×100%＝25%。',answer:'25%。'}]},
+      {id:'change-rate',unit:'percent',title:'增长率与降低率',subtitle:'变化量除以变化前的量',importance:5,difficulty:4,evidence:'新版教材重点＋多区高频',keywords:'增长率 降低率 增加 减少 原来 现在',method:['先找变化前的量，它是比较标准。','变化量＝现在－原来，减少时用原来－现在。','变化率＝变化量÷原来的量。','用“原来×（1±变化率）＝现在”进行逆向检查。'],key:'问“增加百分之多少”，分母一定是原来的量。',mistake:'用现在的量作分母；把增加的具体数量直接写成百分率。',parent:'遇到“比”字先问孩子“和谁比”，只要比较标准找对，后面通常就顺了。',examples:[
+        {label:'母题',kind:'mother',prompt:'某产品产量从 80 件增加到 100 件，增长率是多少？',hint:'先求增加了 20 件，再除以原来的 80 件。',steps:'（100－80）÷80＝25%。',answer:'增长 25%。'},
+        {label:'变式·降低率',kind:'change',prompt:'每天用水量从 150 L 降到 120 L，降低了百分之多少？',hint:'降低量以原来的 150 L 为标准。',steps:'（150－120）÷150＝20%。',answer:'降低了 20%。'},
+        {label:'变式·反求原量',kind:'mix',prompt:'实际产量为每公顷 24.06 t，比目标高 7%。目标产量约是多少？（保留一位小数）',hint:'实际＝目标×（1＋7%）。',steps:'24.06÷107%≈22.486。',answer:'约 22.5 t。'}]},
+      {id:'successive-change',unit:'percent',title:'连续涨价、降价与多次变化',subtitle:'每次变化的单位“1”都会更新',importance:5,difficulty:5,evidence:'新版教材重点＋综合题',keywords:'连续变化 涨价 降价 两次 折扣 单位1',method:['把原来的量设成 100 或“1”，简化关系。','每次变化都乘新的系数，如涨 20% 乘 1.2。','按发生顺序连乘，不能把百分率直接相加减。','最后和最初数量比较，求总变化率。'],key:'连续变化看乘法：新量＝原量×系数1×系数2。',mistake:'“涨 20% 再降 20%”认为回到原价；第二次仍以原价为标准。',parent:'让孩子明确说出“第二次是以哪个价格为标准”，比记结论更重要。',examples:[
+        {label:'母题',kind:'mother',prompt:'商品原价 100 元，先涨价 20%，再降价 20%。现价是多少？',hint:'降价以涨价后的 120 元为标准。',steps:'100×（1＋20%）×（1－20%）＝100×1.2×0.8。',answer:'96 元，比原价低 4%。'},
+        {label:'变式·连续折扣',kind:'change',prompt:'一台电脑原价 4000 元，连续两次降价 10%，现价多少？',hint:'每次都乘 90%。',steps:'4000×90%×90%＝3240。',answer:'3240 元。'},
+        {label:'变式·剩余百分比',kind:'mix',prompt:'一根绳子第一次剪去全长的 40%，第二次剪去余下的 40%。最后剩下原长的百分之多少？',hint:'每次都剩下当时的 60%。',steps:'1×60%×60%＝36%。',answer:'剩下原长的 36%。'}]},
+      {id:'money-percent',unit:'percent',title:'折扣、利息与优惠方案',subtitle:'先翻译规则，再比较实际支出或收益',importance:4,difficulty:4,evidence:'教材应用＋生活考题',keywords:'折扣 利率 利息 本金 存期 满减 优惠',method:['几折就是原价的百分之几十。','利息＝本金×年利率×存期；本息＝本金＋利息。','满减先数清达到几个“满”，折扣直接乘折扣率。','比较方案时统一比较最终支付的钱。'],key:'促销语言必须先翻译成数学规则，再计算。',mistake:'八五折理解成便宜 85%；利息漏乘存期；满减按总价比例减。',parent:'购物题先让孩子口头模拟结账过程，确认规则后再列式。',examples:[
+        {label:'母题',kind:'mother',prompt:'一辆自行车原价 560 元，打八五折后多少钱？',hint:'八五折＝原价的 85%。',steps:'560×85%＝476（元）。',answer:'476 元。'},
+        {label:'变式·利息',kind:'change',prompt:'8000 元存三年定期，年利率 2.75%。到期利息和本息各是多少？',hint:'年利率要乘 3 年。',steps:'利息＝8000×2.75%×3＝660；本息＝8000＋660。',answer:'利息 660 元，本息 8660 元。'},
+        {label:'变式·比较优惠',kind:'mix',prompt:'标价 550 元的运动服，A 商场每满 100 减 30，B 商场打七折。哪里更便宜？',hint:'分别算最终付款，不比较折扣名称。',steps:'A：550－5×30＝400；B：550×70%＝385。',answer:'B 商场更便宜，便宜 15 元。'}]},
+      {id:'data-standards',unit:'percent',title:'用百分数分析数据、制定标准',subtitle:'先确定总体，再判断样本和标准是否合理',importance:4,difficulty:5,evidence:'新版明显强化',keywords:'数据 标准 达标线 加权 百分数 调查 统计',method:['先确认每个百分数对应的总体是否相同。','合并不同组时，先还原人数，再用总人数计算总体百分率。','制定达标线要说明目标、样本和排序方法。','结论后必须给出数据依据，不能只凭感觉。'],key:'百分数能比较不同总量的数据，但合并时不能直接平均两个百分数。',mistake:'不看两组人数就求百分数平均数；只看平均数忽略数据分布。',parent:'让孩子解释“这个百分数是从哪些人中算出来的”，培养数据意识。',examples:[
+        {label:'母题',kind:'mother',prompt:'1—3 年级有 600 人，套餐满意率 60%；4—6 年级有 400 人，满意率 50%。总体满意率是多少？',hint:'先分别求满意人数，不能直接算（60%＋50%）÷2。',steps:'600×60%＋400×50%＝560（人）；560÷1000＝56%。',answer:'总体满意率为 56%。'},
+        {label:'变式·制定达标线',kind:'change',prompt:'把 100 名学生的跳绳成绩从高到低排列，希望约 75% 的学生达标，应怎样初步选择达标线？',hint:'达标线要让排在前 75 名左右的学生达到。',steps:'观察排序后第 75 名附近的成绩，结合是否有并列及样本代表性确定。',answer:'可从第 75 名附近的成绩作为初步达标线，并说明并列与样本情况。'},
+        {label:'变式·节水效果',kind:'mix',prompt:'家庭日均用水从 30 L 降为 24 L，节水率是多少？这个结果能否说明方法有效？',hint:'先算相对原用水量减少的比例，再结合观察周期判断。',steps:'（30－24）÷30＝20%。若多日记录稳定且其他条件相近，可认为有效。',answer:'节水率 20%；还应结合连续记录和条件是否一致判断。'}]},
+      {id:'integrated-model',unit:'integrated',title:'综合实践：从真实问题到数学模型',subtitle:'提问题、收信息、选工具、算结果、解释结论',importance:4,difficulty:5,evidence:'新版综合实践',keywords:'体育 水资源 调查 模型 开放题 信息 数据 解释',method:['先把大问题改成一个可以计算或调查的小问题。','列出必须信息，排除无关信息，必要时测量或查资料。','选择合适工具：数对、方向距离、分数、圆或百分数。','结果要回到情境中解释，并检查假设是否合理。'],key:'开放题没有唯一写法，但必须有清楚的问题、依据、过程和结论。',mistake:'堆砌数据却没有明确问题；只给计算结果，不解释结论。',parent:'评价这类题时，不只看最终数值，还看孩子是否能说明为什么这样收集数据、这样计算。',examples:[
+        {label:'母题',kind:'mother',prompt:'相邻跑道宽 1.22 m。要研究 400 m 跑相邻起跑线应相差多少，哪些信息真正有用？',hint:'直道长度相同，差别只来自两端弯道。',steps:'两个半圆合成一个圆；相邻圆半径差 1.22 m，所以只需计算圆周长差 2π×1.22。',answer:'关键数据是跑道宽 1.22 m；起跑线约相差 7.66 m。'},
+        {label:'变式·设计调查',kind:'change',prompt:'想判断家庭节水计划是否有效，应记录哪些数据？',hint:'要能比较实施前后，并控制其他条件。',steps:'记录实施前后相同天数的用水量、家庭人数、是否有特殊用水事件，再比较日均用水量和节水率。',answer:'至少需要前后用水量、天数、人数及异常情况，并采用同口径比较。'},
+        {label:'变式·解释结论',kind:'mix',prompt:'一次抽样中 20 人有 16 人支持方案，能否直接说全校支持率一定是 80%？',hint:'样本结果不等于总体必然结果。',steps:'样本率是 16÷20＝80%，但还要看抽样是否随机、人数是否足够。',answer:'只能说本次样本支持率为 80%，不能断定全校一定为 80%。'}]},
+      {id:'pigeonhole',unit:'extend',title:'鸽巢问题：从“平均分”推出“至少”',subtitle:'带星号的新版拓展内容',importance:2,difficulty:4,evidence:'新版拓展',keywords:'鸽巢 总有 至少 平均分 反证 拓展',method:['辨认“鸽子”是被分的对象，“鸽巢”是分类或容器。','先尽量平均分，计算每个鸽巢能分到多少。','有余数时，总有一个鸽巢要多 1。','也可反过来假设每个都不超过某数，再推出装不下。'],key:'至少数＝向上取整（对象数÷鸽巢数）。',mistake:'只看余数，不写“至少”；没有说明题目中的对象和鸽巢分别是什么。',parent:'重点让孩子解释“为什么一定发生”，不要只背向上取整的结果。',examples:[
+        {label:'母题',kind:'mother',prompt:'7 只鸽子飞进 3 个鸽笼，总有一个鸽笼至少有几只？',hint:'尽量平均地分。',steps:'7÷3＝2……1；每笼先放 2 只后还剩 1 只，它必须进入某个笼。',answer:'至少有 3 只。'},
+        {label:'变式·生肖',kind:'change',prompt:'任意找 13 个人，至少有几个人的生肖相同？',hint:'12 种生肖就是 12 个“鸽巢”。',steps:'13÷12＝1……1，所以有一个生肖至少对应 2 人。',answer:'至少 2 人。'},
+        {label:'变式·多余数',kind:'mix',prompt:'把 25 本书放到 6 个书架上，总有一个书架至少放几本？',hint:'假设每个书架最多 4 本，一共能放多少？',steps:'每架最多 4 本只能放 24 本，第 25 本必使某架达到 5 本。',answer:'至少 5 本。'}]}
+    ];
+
+    const diagnostics = [
+      {id:'d1',text:'我能正确读写数对，并判断点移动后的新位置。',topics:['ordered-pairs']},
+      {id:'d2',text:'我能用“参照点＋方向＋距离”描述去程和返程。',topics:['direction-distance']},
+      {id:'d3',text:'我能准确计算分数乘、除法和混合运算。',topics:['fraction-multiply','fraction-mixed','fraction-division']},
+      {id:'d4',text:'我能在分数应用题中找出每个分率的单位“1”。',topics:['fraction-of-number','fraction-chain']},
+      {id:'d5',text:'单位“1”未知时，我会用除法或方程反求。',topics:['find-whole','fraction-equation']},
+      {id:'d6',text:'工程题没有总量时，我会把全部任务看作“1”。',topics:['engineering']},
+      {id:'d7',text:'我能解释生活中负数的实际含义。',topics:['negative-numbers']},
+      {id:'d8',text:'我能分清圆的半径、直径、周长和面积。',topics:['circle-basics','circumference','circle-area']},
+      {id:'d9',text:'我能把圆环或组合图形拆成基本图形。',topics:['composite-circle','circle-motion']},
+      {id:'d10',text:'我能用一个三量关系解决百分数应用题。',topics:['percent-meaning','percent-three']},
+      {id:'d11',text:'我能找准增长率、降低率的比较标准，并处理连续变化。',topics:['change-rate','successive-change','money-percent']},
+      {id:'d12',text:'我能根据数据说明判断依据，而不只给计算结果。',topics:['data-standards','integrated-model','pigeonhole']}
+    ];
+
+    const storageKey = 'grade6Math2026ProgressV1';
+    const blankState = {version:1,mode:'semester',bookmarks:{},status:{},diagnostic:{}};
+    let state = loadState();
+    let onlyBookmarks = false;
+    let onlyWeak = false;
+
+    function loadState(){
+      try { return {...blankState,...JSON.parse(localStorage.getItem(storageKey)||'{}')}; }
+      catch(e){ return {...blankState}; }
+    }
+    function saveState(){
+      try { localStorage.setItem(storageKey,JSON.stringify(state)); } catch(e){}
+      updateProgress();
+    }
+    function esc(value){return String(value).replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));}
+    function stars(n){return '★'.repeat(n)+'☆'.repeat(5-n);}
+    function unitFor(id){return units.find(u=>u.id===id);}
+    function evidenceClass(topic){
+      const unit=unitFor(topic.unit);
+      return unit.kind==='extend'?'extend':unit.kind==='new'?'new':'core';
+    }
+    function exampleHtml(ex,index){
+      return `<article class="example"><div class="example-head"><span class="level ${ex.kind}">${esc(ex.label)}</span><div class="prompt">${ex.prompt}</div></div><div class="reveal-row"><button type="button" data-reveal="hint-${index}">给一点提示</button><button type="button" data-reveal="steps-${index}">看关键步骤</button><button type="button" data-reveal="answer-${index}">核对答案</button></div><div id="hint-${index}" class="reveal"><b>提示：</b>${ex.hint}</div><div id="steps-${index}" class="reveal"><b>关键步骤：</b>${ex.steps}</div><div id="answer-${index}" class="reveal answer"><b>答案：</b>${ex.answer}</div></article>`;
+    }
+    function topicHtml(topic,index){
+      const status=state.status[topic.id]||'notYet';
+      const bookmarked=!!state.bookmarks[topic.id];
+      return `<article class="topic" id="${topic.id}" data-id="${topic.id}" data-unit="${topic.unit}" data-importance="${topic.importance}" data-search="${esc((topic.title+' '+topic.subtitle+' '+topic.key+' '+topic.keywords).toLowerCase())}">
+        <div class="topic-head"><div class="topic-index">${String(index+1).padStart(2,'0')}</div><div><h3>${esc(topic.title)}</h3><p class="topic-sub">${esc(topic.subtitle)}</p><div class="ratings"><span class="rating">重要 <b class="stars" aria-label="重要程度 ${topic.importance} 星">${stars(topic.importance)}</b></span><span class="rating">难度 <b class="stars" aria-label="难度 ${topic.difficulty} 星">${stars(topic.difficulty)}</b></span><span class="tag ${evidenceClass(topic)}">${esc(topic.evidence)}</span></div></div><div class="topic-actions"><button type="button" class="icon-btn bookmark ${bookmarked?'on':''}" aria-label="${bookmarked?'取消收藏':'收藏'}" title="收藏">${bookmarked?'★':'☆'}</button><button type="button" class="icon-btn expand-btn" aria-expanded="false">展开方法</button></div></div>
+        <div class="topic-body"><div class="method-card"><h4>关键解题方法</h4><ol class="method-list">${topic.method.map(x=>`<li>${x}</li>`).join('')}</ol></div><div class="mini-grid"><div class="mini"><h4>一句话抓手</h4><p>${topic.key}</p></div><div class="mini mistake"><h4>最容易错</h4><p>${topic.mistake}</p></div></div><details class="parent-tip"><summary>给家长的辅导提示</summary><p>${topic.parent}</p></details><div class="examples-title"><h4>母题与关键变式</h4><span>先想方法，再展开答案</span></div><div class="examples">${topic.examples.map((ex,i)=>exampleHtml(ex,`${topic.id}-${i}`)).join('')}</div><div class="status-row"><span>我对这个方法：</span><button type="button" data-status="notYet" class="${status==='notYet'?'selected':''}">还不会</button><button type="button" data-status="learning" class="${status==='learning'?'selected':''}">在巩固</button><button type="button" data-status="mastered" class="${status==='mastered'?'selected':''}">已掌握</button></div></div>
+      </article>`;
+    }
+    function unitSummaryHtml(unit,count){return `<div class="unit-summary panel" id="unit-${unit.id}"><div><h3>${esc(unit.name)}</h3><p>${esc(unit.summary)}</p><div class="unit-tags"><span class="tag ${unit.kind}">${esc(unit.pages)}</span><span class="tag">${count} 个关键方法</span></div></div><span class="tag ${unit.kind}">${unit.kind==='core'?'核心主线':unit.kind==='new'?'新版关注':'拓展提升'}</span></div>`;}
+
+    function renderContent(){
+      const content=document.querySelector('#content');
+      let html='';
+      if(state.mode==='semester'){
+        let number=0;
+        units.forEach(unit=>{
+          const list=topics.filter(t=>t.unit===unit.id);
+          html+=`<section class="unit-block" data-unit-block="${unit.id}">${unitSummaryHtml(unit,list.length)}<div class="topic-grid">${list.map(t=>topicHtml(t,number++)).join('')}</div></section>`;
+        });
+      }else{
+        const sorted=[...topics].sort((a,b)=>b.importance-a.importance||b.difficulty-a.difficulty);
+        let number=0;
+        [{min:5,title:'第一优先：必须掌握',desc:'期末复习先拿下这些方法。'},{min:4,title:'第二优先：重点掌握',desc:'在基础稳定后完成迁移。'},{min:0,title:'第三优先：理解与拓展',desc:'用于补齐新版内容和拓展思维。'}].forEach((group,idx)=>{
+          const max=idx===0?5:idx===1?4:3;
+          const list=sorted.filter(t=>idx===0?t.importance===5:idx===1?t.importance===4:t.importance<=3);
+          html+=`<section class="unit-block"><div class="unit-summary panel"><div><h3>${group.title}</h3><p>${group.desc}</p></div><span class="tag">${list.length} 个方法</span></div><div class="topic-grid">${list.map(t=>topicHtml(t,number++)).join('')}</div></section>`;
+        });
+      }
+      content.innerHTML=html;
+      bindTopicEvents();
+      applyFilters();
+      const hash=location.hash.slice(1);
+      if(hash && topics.some(t=>t.id===hash)){
+        const card=document.getElementById(hash); if(card){openTopic(card); setTimeout(()=>card.scrollIntoView({block:'start'}),0);}
+      }
+    }
+    function bindTopicEvents(){
+      document.querySelectorAll('.topic').forEach(card=>{
+        card.querySelector('.expand-btn').addEventListener('click',()=>card.classList.contains('open')?closeTopic(card):openTopic(card));
+        card.querySelector('.bookmark').addEventListener('click',e=>{
+          const id=card.dataset.id; state.bookmarks[id]=!state.bookmarks[id];
+          e.currentTarget.classList.toggle('on',state.bookmarks[id]); e.currentTarget.textContent=state.bookmarks[id]?'★':'☆'; e.currentTarget.setAttribute('aria-label',state.bookmarks[id]?'取消收藏':'收藏');
+          saveState(); applyFilters();
+        });
+        card.querySelectorAll('[data-reveal]').forEach(btn=>btn.addEventListener('click',()=>{
+          const box=document.getElementById(btn.dataset.reveal); const showing=box.classList.toggle('show'); btn.textContent=showing?'收起':'再看一次';
+        }));
+        card.querySelectorAll('[data-status]').forEach(btn=>btn.addEventListener('click',()=>{
+          state.status[card.dataset.id]=btn.dataset.status; card.querySelectorAll('[data-status]').forEach(x=>x.classList.toggle('selected',x===btn)); saveState(); applyFilters();
+        }));
+      });
+    }
+    function openTopic(card){card.classList.add('open');const btn=card.querySelector('.expand-btn');btn.textContent='收起';btn.setAttribute('aria-expanded','true');history.replaceState(null,'','#'+card.id);}
+    function closeTopic(card){card.classList.remove('open');const btn=card.querySelector('.expand-btn');btn.textContent='展开方法';btn.setAttribute('aria-expanded','false');}
+    function applyFilters(){
+      const query=document.querySelector('#searchInput').value.trim().toLowerCase();
+      const unit=document.querySelector('#unitFilter').value;
+      const importance=Number(document.querySelector('#importanceFilter').value);
+      let shown=0;
+      document.querySelectorAll('.topic').forEach(card=>{
+        const id=card.dataset.id;
+        const visible=(!query||card.dataset.search.includes(query))&&(unit==='all'||card.dataset.unit===unit)&&(!importance||Number(card.dataset.importance)===importance)&&(!onlyBookmarks||state.bookmarks[id])&&(!onlyWeak||state.status[id]!=='mastered');
+        card.classList.toggle('hidden',!visible); if(visible) shown++;
+      });
+      document.querySelectorAll('.unit-block').forEach(block=>block.style.display=block.querySelector('.topic:not(.hidden)')?'':'none');
+      document.querySelector('#resultCount').textContent=`显示 ${shown} / ${topics.length} 个方法`;
+      document.querySelector('#empty').classList.toggle('show',shown===0);
+    }
+    function updateProgress(){
+      const count=topics.filter(t=>state.status[t.id]==='mastered').length;
+      const pct=Math.round(count/topics.length*100);
+      document.querySelector('#progressPct').textContent=pct+'%';
+      document.querySelector('#progressText').textContent=`${count} / ${topics.length} 个方法`;
+      document.querySelector('#progressRing').style.setProperty('--progress',pct+'%');
+    }
+    function buildNavigation(){
+      const nav=document.querySelector('#unitNav');
+      nav.innerHTML=units.map(u=>`<button type="button" data-unit-jump="${u.id}">${u.name.replace(/^.+? /,'')}</button>`).join('');
+      nav.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{
+        if(state.mode!=='semester'){setMode('semester');}
+        setTimeout(()=>document.querySelector(`#unit-${btn.dataset.unitJump}`)?.scrollIntoView({behavior:'smooth',block:'start'}),0);
+      }));
+      const select=document.querySelector('#unitFilter');
+      select.innerHTML='<option value="all">全部内容</option>'+units.map(u=>`<option value="${u.id}">${u.name}</option>`).join('');
+    }
+    function setMode(mode){
+      state.mode=mode; saveState();
+      document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));
+      document.querySelector('#modeDescription').textContent=mode==='semester'?'按照新版教材顺序学习，适合日常同步。':'按照重要度和难度排序，适合期末集中复习。';
+      renderContent();
+    }
+    function buildDiagnostics(){
+      const box=document.querySelector('#diagnosticList');
+      box.innerHTML=diagnostics.map((d,i)=>`<div class="diagnostic-item" data-diagnostic="${d.id}"><p>${i+1}. ${d.text}</p><div class="diagnostic-options"><button type="button" data-value="yes" class="${state.diagnostic[d.id]==='yes'?'selected':''}">会</button><button type="button" data-value="maybe" class="${state.diagnostic[d.id]==='maybe'?'selected':''}">有点模糊</button><button type="button" data-value="no" class="${state.diagnostic[d.id]==='no'?'selected':''}">不会</button></div></div>`).join('');
+      box.querySelectorAll('.diagnostic-item').forEach(item=>item.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{
+        state.diagnostic[item.dataset.diagnostic]=btn.dataset.value; item.querySelectorAll('button').forEach(x=>x.classList.toggle('selected',x===btn)); saveState(); updateRecommendation();
+      })));
+      updateRecommendation();
+    }
+    function updateRecommendation(){
+      const scores={}; let answered=0;
+      diagnostics.forEach(d=>{const v=state.diagnostic[d.id];if(v){answered++;const w=v==='no'?2:v==='maybe'?1:0;d.topics.forEach(id=>scores[id]=(scores[id]||0)+w);}});
+      const target=document.querySelector('#recommendation');
+      if(!answered){target.innerHTML='<h3>建议从哪里开始</h3><p>完成选择后，这里会显示建议。</p>';return;}
+      const list=Object.entries(scores).filter(([,s])=>s>0).sort((a,b)=>b[1]-a[1]).slice(0,4).map(([id])=>topics.find(t=>t.id===id));
+      if(!list.length){target.innerHTML='<h3>目前很扎实</h3><p>所有已评项目都选择了“会”。建议切换到“期末重点”，优先检查五星题型的变式是否也能独立完成。</p>';return;}
+      target.innerHTML=`<h3>建议先复习</h3><p>${list.map(t=>`<a href="#${t.id}" data-rec="${t.id}">${t.title}</a>`).join('、')}。先读“一句话抓手”，再做母题；能说出方法后再看变式。</p>`;
+      target.querySelectorAll('[data-rec]').forEach(a=>a.addEventListener('click',()=>document.querySelector('#diagnosticDialog').close()));
+    }
+
+    buildNavigation(); buildDiagnostics(); updateProgress(); setMode(state.mode==='exam'?'exam':'semester');
+    document.querySelector('#searchInput').addEventListener('input',applyFilters);
+    document.querySelector('#unitFilter').addEventListener('change',applyFilters);
+    document.querySelector('#importanceFilter').addEventListener('change',applyFilters);
+    document.querySelector('#bookmarkFilter').addEventListener('click',e=>{onlyBookmarks=!onlyBookmarks;e.currentTarget.classList.toggle('active',onlyBookmarks);applyFilters();});
+    document.querySelector('#weakFilter').addEventListener('click',e=>{onlyWeak=!onlyWeak;e.currentTarget.classList.toggle('active',onlyWeak);applyFilters();});
+    document.querySelectorAll('[data-mode]').forEach(btn=>btn.addEventListener('click',()=>setMode(btn.dataset.mode)));
+    const dialog=document.querySelector('#diagnosticDialog');
+    document.querySelectorAll('.diagnostic-open').forEach(btn=>btn.addEventListener('click',()=>dialog.showModal()));
+    document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
+    dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
+  </script>
+
+
+</body></html>
