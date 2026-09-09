@@ -45,7 +45,39 @@
     .only-print{display:none}
     @media(max-width:980px){.layout{grid-template-columns:1fr;padding:16px}.side{position:static;max-height:none}.unit-nav{grid-template-columns:repeat(3,1fr)}.dashboard{grid-template-columns:1fr}.toolbar{top:68px}.method-strip{grid-template-columns:repeat(5,minmax(110px,1fr));overflow:auto;padding-bottom:4px}.top-inner{padding-inline:15px}.brand small{display:none}}
     @media(max-width:680px){body{font-size:15px}.top-inner{min-height:62px;gap:9px}.brand strong{font-size:.93rem}.brand-mark{width:38px;height:38px}.top-action{padding-inline:9px}.mode-switch button{padding-inline:9px}.layout{padding:10px}.overview,.focus{padding:19px}.unit-nav{grid-template-columns:repeat(2,1fr)}.toolbar{top:62px;padding:10px}.toolbar select{flex:1}.topic-head{grid-template-columns:auto 1fr}.topic-actions{grid-column:1/-1;justify-content:flex-end}.mini-grid{grid-template-columns:1fr}.reveal-row,.reveal{margin-left:14px}.unit-summary{grid-template-columns:1fr}.method-strip{grid-template-columns:repeat(5,118px)}.hide-mobile{display:none}}
-    @media print{.topbar,.side,.toolbar,.topic-actions,.reveal-row,.status-row,.parent-tip,.diagnostic-open{display:none!important}body{background:#fff;font-size:11pt}.layout{display:block;padding:0}.dashboard{display:block}.overview{color:#000;background:#fff;border:1px solid #aaa;box-shadow:none}.overview p,.eyebrow{color:#333}.focus{margin-top:10px}.panel,.topic{box-shadow:none;break-inside:avoid}.topic-body{display:block!important}.reveal{display:block!important;margin-left:0}.only-print{display:block}.section-head{break-after:avoid}footer{padding-inline:0}}
+    @media print{.topbar,.side,.toolbar,.topic-actions,.reveal-row,.status-row,.parent-tip,.diagnostic-open,.topic-pager{display:none!important}body{background:#fff;font-size:11pt}.layout{display:block;padding:0}.workspace-intro{display:none}.panel,.topic{box-shadow:none;break-inside:avoid}.topic-body{display:block!important}.reveal{display:block!important;margin-left:0}.only-print{display:block}.section-head{break-after:avoid}footer{padding-inline:0}}
+
+    /* V2：左侧两级目录，右侧只呈现当前题型 */
+    .layout{grid-template-columns:330px minmax(0,1fr);gap:20px;padding-top:18px}
+    .side{top:86px;padding:14px;max-height:calc(100vh - 104px)}
+    .side h2{margin:15px 4px 8px}
+    .unit-nav{display:grid;gap:8px}
+    .nav-unit{border:1px solid var(--line);border-radius:13px;overflow:hidden;background:#fbfcfd}
+    .nav-unit-button{width:100%;border:0;background:#f7fafb;padding:11px 12px;display:flex;align-items:center;gap:9px;text-align:left;color:#29465b;font-weight:800}
+    .nav-unit-button:hover,.nav-unit.open .nav-unit-button{background:#e9f4f7;color:var(--blue)}
+    .nav-unit-button .chevron{margin-left:auto;transition:transform .18s ease}.nav-unit.open .chevron{transform:rotate(90deg)}
+    .nav-unit-button small{font-size:.73rem;color:var(--muted);font-weight:650}
+    .topic-nav{display:none;padding:6px;background:#fff;border-top:1px solid var(--line)}.nav-unit.open .topic-nav{display:grid;gap:3px}
+    .topic-nav button{border:0;background:transparent;border-radius:9px;padding:8px 9px;text-align:left;color:#506878;display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:7px;align-items:start;font-size:.84rem;line-height:1.35}
+    .topic-nav button:hover{background:#f0f6f8;color:var(--blue)}.topic-nav button.active{background:var(--navy);color:#fff;font-weight:750}
+    .topic-nav .nav-index{opacity:.62}.topic-nav .nav-stars{color:var(--gold);font-size:.72rem;white-space:nowrap}.topic-nav button.active .nav-stars{color:#ffe090}
+    .topic-nav button.hidden{display:none}.nav-unit.filtered-out{display:none}
+    .workspace-intro{display:flex;align-items:center;gap:14px;padding:13px 16px;margin-bottom:12px;background:linear-gradient(135deg,#123b5d,#176b87);color:#fff;border:0}
+    .workspace-intro strong{font-size:.94rem}.workspace-intro p{margin:0;color:#dceef3;font-size:.84rem}.workflow-mini{margin-left:auto;display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}.workflow-mini span{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:5px 8px;font-size:.76rem;white-space:nowrap}
+    .toolbar{top:68px;margin-bottom:12px;padding:10px 12px}.toolbar .search{min-width:260px}
+    .section-head{align-items:center;margin:18px 2px 10px}.section-head h2{font-size:1.3rem}.topic-context{display:flex;gap:7px;flex-wrap:wrap;margin-top:7px}
+    .topic{border-radius:18px}.topic-head{padding:19px 20px}.topic-body{display:block;border-top:1px solid var(--line);padding:0 20px 20px}
+    .topic-actions{align-items:flex-start}.topic-actions .expand-btn{display:none}
+    .method-card{margin-top:18px}
+    .pattern-card{margin:14px 0 16px;border:1px solid #cfe0e7;border-radius:14px;overflow:hidden}.pattern-card h4{margin:0;padding:12px 14px;background:#edf6f8;color:var(--navy)}
+    .pattern-list{display:grid}.pattern-row{display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1.15fr);gap:12px;padding:12px 14px;border-top:1px solid var(--line);align-items:start}.pattern-row:first-child{border-top:0}.pattern-name{font-weight:800;color:var(--blue)}.pattern-signal,.pattern-strategy{font-size:.88rem}.pattern-signal b,.pattern-strategy b{display:block;color:var(--muted);font-size:.76rem;letter-spacing:.04em;margin-bottom:2px}
+    .examples-title{border-top:1px solid var(--line);padding-top:18px}.example{box-shadow:0 3px 12px rgba(25,55,73,.04)}.example-head{grid-template-columns:auto minmax(0,1fr)}
+    .exam-signal{margin-top:7px;padding:7px 9px;border-radius:8px;background:#fff8e8;color:#76550b;font-size:.82rem;font-weight:600}.exam-signal b{color:#9a6d0a}
+    .level.reason{background:#eee9ff;color:#5b42a5}.level.open{background:#e8f1ff;color:#285f9c}.level.hard{background:#ffe9e5;color:#9b3626}
+    .topic-pager{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px}.topic-pager button{min-height:42px;border:1px solid var(--line);border-radius:10px;background:#fff;padding:8px 14px;color:#365466}.topic-pager button:hover:not(:disabled){border-color:var(--blue);color:var(--blue)}.topic-pager button:disabled{opacity:.35;cursor:not-allowed}.topic-pager span{color:var(--muted);font-size:.84rem;text-align:center}
+    .empty{display:none}.empty.show{display:block}
+    @media(max-width:980px){.layout{grid-template-columns:280px minmax(0,1fr);padding:12px;gap:12px}.side{position:sticky;top:80px;max-height:calc(100vh - 92px)}.unit-nav{grid-template-columns:1fr}.workflow-mini{display:none}.pattern-row{grid-template-columns:120px 1fr}.pattern-strategy{grid-column:2}}
+    @media(max-width:760px){.layout{grid-template-columns:1fr}.side{position:static;max-height:none}.progress-head{padding-bottom:10px}.nav-unit.open .topic-nav{max-height:250px;overflow:auto}.workspace-intro{margin-top:2px}.toolbar{position:static}.pattern-row{grid-template-columns:1fr}.pattern-strategy{grid-column:auto}.section-head{align-items:flex-start}.topic-head{grid-template-columns:auto 1fr}.topic-actions{grid-column:1/-1;justify-content:flex-end}.reveal-row,.reveal{margin-left:14px}}
   </style>
 </head>
 <body>
@@ -64,26 +96,22 @@
   <div class="layout">
     <aside class="side" aria-label="学习导航">
       <div class="progress-head"><div class="progress-ring" id="progressRing" style="--progress: 0%;"><strong id="progressPct">0%</strong></div><div class="progress-copy"><strong>我的掌握进度</strong><span id="progressText">0 / 24 个方法</span></div></div>
-      <h2>按内容定位</h2><nav class="unit-nav" id="unitNav"></nav>
-      <h2>证据说明</h2><div class="legend"><span><i class="dot core"></i>教材核心＋旧卷稳定考法</span><span><i class="dot new"></i>新版教材重点，旧卷可能未覆盖</span><span><i class="dot extend"></i>综合实践或拓展提升</span></div>
+      <h2>两级学习目录</h2><nav class="unit-nav" id="unitNav"></nav>
+      <h2>证据说明</h2><div class="legend"><span><i class="dot core"></i>教材核心＋已核验真题考法</span><span><i class="dot new"></i>新版教材重点，旧卷可能未覆盖</span><span><i class="dot extend"></i>综合实践或拓展提升</span></div>
       <h2>记住这句话</h2><p style="margin:0;color:var(--muted);font-size:.86rem">不背题，先找到不变的数量关系；题目换了说法，方法仍然能用。</p>
     </aside>
     <main id="main">
-      <section class="dashboard" aria-labelledby="pageTitle">
-        <div class="overview panel"><p class="eyebrow">本学期学习主线</p><h1 id="pageTitle">把复杂题翻译成简单关系</h1><p>每道题都按同一条路线处理。真正需要掌握的不是某一道答案，而是下一次还能独立使用的方法。</p><div class="method-strip"><div class="method-step"><b>01 读</b><span>问题求谁？</span></div><div class="method-step"><b>02 找</b><span>标准量是谁？</span></div><div class="method-step"><b>03 画</b><span>线段图或草图</span></div><div class="method-step"><b>04 列</b><span>先写数量关系</span></div><div class="method-step"><b>05 查</b><span>估算、单位、逆算</span></div></div></div>
-        <div class="focus panel"><h2>先抓住三件事</h2><ul class="focus-list"><li><span class="rank">1</span><span><b>单位“1”</b><small>分数、百分数应用题的总开关</small></span></li><li><span class="rank">2</span><span><b>周长还是面积</b><small>圆题先判断求边界还是求大小</small></span></li><li><span class="rank">3</span><span><b>变化前的量</b><small>增长率、降低率都除以原来的量</small></span></li></ul></div>
-      </section>
+      <section class="workspace-intro panel" aria-labelledby="pageTitle"><div><strong id="pageTitle">把复杂题翻译成简单关系</strong><p>右侧一次只学一个方法；先读策略，再做母题和变式。</p></div><div class="workflow-mini" aria-label="通用解题流程"><span>1 读问题</span><span>2 找标准量</span><span>3 画关系</span><span>4 列式</span><span>5 检查</span></div></section>
       <section class="toolbar panel" aria-label="筛选工具">
         <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><input id="searchInput" type="search" placeholder="搜索题型、方法或关键词" aria-label="搜索"></label>
-        <select id="unitFilter" aria-label="选择单元"><option value="all">全部内容</option></select>
         <select id="importanceFilter" aria-label="重要程度"><option value="0">全部重要度</option><option value="5">★★★★★ 必须掌握</option><option value="4">★★★★ 重点掌握</option><option value="3">★★★ 理解掌握</option><option value="2">★★ 拓展了解</option></select>
         <button id="bookmarkFilter" class="filter-button" type="button">只看收藏</button>
         <button id="weakFilter" class="filter-button" type="button">只看待巩固</button>
       </section>
-      <section id="topics" aria-labelledby="topicsTitle"><div class="section-head"><div><h2 id="topicsTitle">重点题型与通用方法</h2><p id="modeDescription">按照新版教材顺序学习，适合日常同步。</p></div><span id="resultCount" class="result-count">显示 24 / 24 个方法</span></div><div id="content"></div><div id="empty" class="empty panel">没有符合当前条件的题型，请调整筛选条件。</div></section>
+      <section id="topics" aria-labelledby="topicsTitle"><div class="section-head"><div><h2 id="topicsTitle">重点题型与通用方法</h2><p id="modeDescription">按照新版教材顺序学习，适合日常同步。</p><div id="topicContext" class="topic-context"></div></div><span id="resultCount" class="result-count"></span></div><div id="content"></div><div id="empty" class="empty panel">没有符合当前条件的题型，请调整搜索或筛选条件。</div></section>
     </main>
   </div>
-  <footer><p><strong>内容依据：</strong>人民教育出版社《义务教育教科书·数学 六年级上册》（2026 秋季启用）及已收集的北京各区往年六年级上册期末试卷。</p><p>新版教材决定学习范围；往年试卷只用于分析稳定考法和易错点。样题为重新编写，仅供个人学习使用。π 按 3.14 计算，除非题目另有说明。</p><p class="only-print">打印日期：由浏览器生成。本页的答案在打印版中默认显示。</p></footer>
+  <footer><p><strong>内容依据：</strong>人民教育出版社《义务教育教科书·数学 六年级上册》（2026 秋季启用）及经卷面核验的北京各区往年六年级上册期末试卷。</p><p><strong>真题甄别规则：</strong>只有卷面能确认区名、学年、第一学期和“期末考试/学业水平测试”的材料才计入真题分析；“抽样检测指导卷”“数学练习”“样卷”“参考卷”等不计入真题高频统计，只作能力拓展参考。样题均为重新编写。π 按 3.14 计算，除非题目另有说明。</p><p class="only-print">打印日期：由浏览器生成。本页的答案在打印版中默认显示。</p></footer>
   <dialog id="diagnosticDialog"><div class="dialog-head"><div><h2>“我会不会”自评诊断</h2><div style="color:var(--muted);font-size:.86rem">不用计算分数，诚实选择就能得到复习建议。</div></div><button class="dialog-close" type="button" aria-label="关闭">×</button></div><div class="dialog-body"><div id="diagnosticList" class="diagnostic-list"></div><div id="recommendation" class="recommendation"><h3>建议从哪里开始</h3><p>完成选择后，这里会显示建议。</p></div></div></dialog>
   <script>
     const units = [
@@ -105,15 +133,15 @@
         {label:'母题',kind:'mother',prompt:'博物馆在学校北偏东 30° 方向 600 m 处。博物馆在学校的什么位置？从博物馆返回学校怎样走？',hint:'返回时把整条射线反向。',steps:'去程是北偏东 30°、600 m；相反方向是南偏西 30°，距离仍为 600 m。',answer:'博物馆在学校北偏东 30°、600 m；返回沿南偏西 30°走 600 m。'},
         {label:'变式·分段路线',kind:'change',prompt:'小林从家向北偏西 40°走 500 m 到学校，再向正东走 800 m 到图书馆。怎样完整描述这条路线？',hint:'每一段都要重新确定参照点。',steps:'第一段以家为参照点；第二段以学校为参照点，分别说方向和距离。',answer:'从家向北偏西 40°走 500 m 到学校，再从学校向正东走 800 m 到图书馆。'},
         {label:'变式·比例尺',kind:'mix',prompt:'图上 1 cm 表示实际 200 m。公园在学校正东 3.5 cm 处，实际距离是多少？',hint:'实际距离＝图上长度×每厘米代表的距离。',steps:'3.5×200＝700（m）。',answer:'公园在学校正东 700 m 处。'}]},
-      {id:'fraction-multiply',unit:'fmul',title:'理解并计算分数乘法',subtitle:'先判断意义，再约分计算',importance:5,difficulty:2,evidence:'教材核心＋旧卷稳定',keywords:'分数乘法 约分 乘整数 乘分数 比较大小',method:['把整数看成分母是 1 的分数。','分子乘分子、分母乘分母。','能约分时先约分，减少计算量。','结果要化成最简分数，并用大小关系检查。'],key:'一个数×分数，表示求这个数的几分之几。',mistake:'分子和分母分别相加；约分时把同一个分数的分子、分母同时除掉却没有交叉对应。',parent:'不要只问“怎么算”，还要让孩子解释这个乘法表示“谁的几分之几”。',examples:[
+      {id:'fraction-multiply',unit:'fmul',title:'理解并计算分数乘法',subtitle:'先判断意义，再约分计算',importance:5,difficulty:2,evidence:'教材核心＋已核真题',keywords:'分数乘法 约分 乘整数 乘分数 比较大小',method:['把整数看成分母是 1 的分数。','分子乘分子、分母乘分母。','能约分时先约分，减少计算量。','结果要化成最简分数，并用大小关系检查。'],key:'一个数×分数，表示求这个数的几分之几。',mistake:'分子和分母分别相加；约分时把同一个分数的分子、分母同时除掉却没有交叉对应。',parent:'不要只问“怎么算”，还要让孩子解释这个乘法表示“谁的几分之几”。',examples:[
         {label:'母题',kind:'mother',prompt:'计算 5/6×9/10。',hint:'先把 5 和 10、9 和 6 交叉约分。',steps:'5/10＝1/2，9/6＝3/2，所以积为（1×3）/（2×2）。',answer:'3/4。'},
         {label:'变式·整数相乘',kind:'change',prompt:'计算 7/12×18。',hint:'把 18 和分母 12 先约分。',steps:'18/12＝3/2，所以 7×3/2＝21/2。',answer:'21/2，也就是 10 又 1/2。'},
         {label:'变式·不计算判断',kind:'mix',prompt:'不计算，判断 8/9×3/4 与 8/9 哪个大。',hint:'一个正数乘小于 1 的数会怎样？',steps:'3/4＜1，8/9 乘 3/4 后会缩小。',answer:'8/9×3/4＜8/9。'}]},
-      {id:'fraction-mixed',unit:'fmul',title:'分数、小数混合运算与简便计算',subtitle:'先观察结构，再决定是否使用运算律',importance:4,difficulty:3,evidence:'教材核心＋旧卷常见',keywords:'混合运算 运算律 简便计算 小数 分配律',method:['先看括号和运算顺序，不急着计算。','寻找相同因数、互为倒数或可以凑整的数。','小数与分数混合时，选择更容易约分的形式。','简便方法完成后仍按原式顺序验算。'],key:'运算律是为了改变计算顺序，不改变运算关系。',mistake:'看见分数就全部通分；使用分配律时漏乘括号中的一项。',parent:'鼓励孩子在计算前先圈出“共同因数”或“能凑整的数”，形成先观察后动笔的习惯。',examples:[
+      {id:'fraction-mixed',unit:'fmul',title:'分数、小数混合运算与简便计算',subtitle:'先观察结构，再决定是否使用运算律',importance:4,difficulty:3,evidence:'教材核心＋已核真题',keywords:'混合运算 运算律 简便计算 小数 分配律',method:['先看括号和运算顺序，不急着计算。','寻找相同因数、互为倒数或可以凑整的数。','小数与分数混合时，选择更容易约分的形式。','简便方法完成后仍按原式顺序验算。'],key:'运算律是为了改变计算顺序，不改变运算关系。',mistake:'看见分数就全部通分；使用分配律时漏乘括号中的一项。',parent:'鼓励孩子在计算前先圈出“共同因数”或“能凑整的数”，形成先观察后动笔的习惯。',examples:[
         {label:'母题',kind:'mother',prompt:'计算（5/6＋1/3）×6。',hint:'可以用乘法分配律，避免先通分。',steps:'5/6×6＋1/3×6＝5＋2。',answer:'7。'},
         {label:'变式·提取因数',kind:'change',prompt:'计算 3/7×15/8＋3/7×1/8。',hint:'两项都有 3/7。',steps:'3/7×（15/8＋1/8）＝3/7×2。',answer:'6/7。'},
         {label:'变式·小数混合',kind:'mix',prompt:'计算 2.4×5/8。',hint:'2.4 与 8 可以先处理，也可以把 2.4 化成 12/5。',steps:'12/5×5/8＝12/8。',answer:'1.5。'}]},
-      {id:'fraction-of-number',unit:'fmul',title:'求一个数的几分之几',subtitle:'单位“1”已知，用乘法',importance:5,difficulty:3,evidence:'教材核心＋多区高频',keywords:'单位1 求几分之几 乘法 应用题',method:['圈出“谁的几分之几”，把“谁”定为单位“1”。','确认单位“1”的具体数量已经知道。','写数量关系：单位“1”的量×对应分数＝所求量。','估算结果：分数小于 1 时，答案应比单位“1”小。'],key:'单位“1”已知：单位“1”的量×分数＝对应量。',mistake:'看到分数就用除法；没有判断分数是在说明谁和谁的关系。',parent:'让孩子先完整说出“求的是___的___”，再允许列式。',examples:[
+      {id:'fraction-of-number',unit:'fmul',title:'求一个数的几分之几',subtitle:'单位“1”已知，用乘法',importance:5,difficulty:3,evidence:'教材核心＋已核真题',keywords:'单位1 求几分之几 乘法 应用题',method:['圈出“谁的几分之几”，把“谁”定为单位“1”。','确认单位“1”的具体数量已经知道。','写数量关系：单位“1”的量×对应分数＝所求量。','估算结果：分数小于 1 时，答案应比单位“1”小。'],key:'单位“1”已知：单位“1”的量×分数＝对应量。',mistake:'看到分数就用除法；没有判断分数是在说明谁和谁的关系。',parent:'让孩子先完整说出“求的是___的___”，再允许列式。',examples:[
         {label:'母题',kind:'mother',prompt:'一条绿道长 240 km，其中山脊线占 3/8。山脊线长多少千米？',hint:'240 km 是单位“1”，它已经知道。',steps:'240×3/8＝90（km）。',answer:'90 km。'},
         {label:'变式·换单位',kind:'change',prompt:'一本书有 72 页，小明读了全书的 5/6。他读了多少页？',hint:'全书页数是单位“1”。',steps:'72×5/6＝60（页）。',answer:'60 页。'},
         {label:'变式·求剩余',kind:'mix',prompt:'仓库原有 150 箱货物，运走 2/5，还剩多少箱？',hint:'剩余占原来的 1－2/5。',steps:'150×（1－2/5）＝150×3/5。',answer:'90 箱。'}]},
@@ -121,11 +149,11 @@
         {label:'母题',kind:'mother',prompt:'种植园有 480 m²，3/4 种果树，其中 2/5 种苹果。苹果占地多少平方米？',hint:'先求果树地，再求果树地的 2/5。',steps:'480×3/4×2/5＝144（m²）。',answer:'144 m²。'},
         {label:'变式·多几分之几',kind:'change',prompt:'芍药花期 60 天，玫瑰花期比芍药多 1/3。玫瑰花期多少天？',hint:'玫瑰是芍药的 1＋1/3。',steps:'60×（1＋1/3）＝80（天）。',answer:'80 天。'},
         {label:'变式·连续变化',kind:'mix',prompt:'一个球从 50 m 高处落下，第一次弹起高度比原来降低 2/5，第二次又比第一次提高 1/2。第二次弹起多高？',hint:'第二次的提高以第一次弹起高度为标准。',steps:'50×（1－2/5）×（1＋1/2）＝50×3/5×3/2。',answer:'45 m。'}]},
-      {id:'fraction-division',unit:'fdiv',title:'倒数与分数除法计算',subtitle:'除以一个非零数，等于乘它的倒数',importance:5,difficulty:2,evidence:'教材核心＋旧卷稳定',keywords:'倒数 分数除法 商 大小',method:['先确认除数不为 0。','把除号改成乘号，同时只把除数变成倒数。','约分后计算并化简。','用“商×除数＝被除数”验算。'],key:'a÷b＝a×1/b（b≠0）。',mistake:'被除数和除数一起颠倒；把 0 当成有倒数。',parent:'让孩子边写边说“变的是除数”，可以有效减少机械性错误。',examples:[
+      {id:'fraction-division',unit:'fdiv',title:'倒数与分数除法计算',subtitle:'除以一个非零数，等于乘它的倒数',importance:5,difficulty:2,evidence:'教材核心＋已核真题',keywords:'倒数 分数除法 商 大小',method:['先确认除数不为 0。','把除号改成乘号，同时只把除数变成倒数。','约分后计算并化简。','用“商×除数＝被除数”验算。'],key:'a÷b＝a×1/b（b≠0）。',mistake:'被除数和除数一起颠倒；把 0 当成有倒数。',parent:'让孩子边写边说“变的是除数”，可以有效减少机械性错误。',examples:[
         {label:'母题',kind:'mother',prompt:'计算 5/6÷10/9。',hint:'乘 10/9 的倒数 9/10。',steps:'5/6×9/10，交叉约分后得 3/4。',answer:'3/4。'},
         {label:'变式·除以整数',kind:'change',prompt:'计算 7/8÷7。',hint:'7 的倒数是 1/7。',steps:'7/8×1/7＝1/8。',answer:'1/8。'},
         {label:'变式·判断商',kind:'mix',prompt:'不计算，判断 3/4÷1/2 的商比 3/4 大还是小。',hint:'除以一个小于 1 的正数，相当于分成更小的份。',steps:'除数 1/2＜1，所以商比被除数大。',answer:'商比 3/4 大；实际商为 3/2。'}]},
-      {id:'find-whole',unit:'fdiv',title:'已知一个数的几分之几，求这个数',subtitle:'单位“1”未知，用除法或方程',importance:5,difficulty:4,evidence:'教材核心＋多区高频',keywords:'反求 单位1 未知 方程 分数除法',method:['找出表示单位“1”的整体，并设为 x。','写关系：单位“1”的量×分数＝已知对应量。','用除法或方程求 x。','把结果乘回原分数，检查是否得到已知量。'],key:'单位“1”未知：对应量÷对应分数＝单位“1”的量。',mistake:'仍然使用乘法；把“剩下的分率”误写成“已读的分率”。',parent:'判断孩子是否会做，不看他背“知一求几、知几求一”，只看能否写出完整数量关系。',examples:[
+      {id:'find-whole',unit:'fdiv',title:'已知一个数的几分之几，求这个数',subtitle:'单位“1”未知，用除法或方程',importance:5,difficulty:4,evidence:'教材核心＋已核真题',keywords:'反求 单位1 未知 方程 分数除法',method:['找出表示单位“1”的整体，并设为 x。','写关系：单位“1”的量×分数＝已知对应量。','用除法或方程求 x。','把结果乘回原分数，检查是否得到已知量。'],key:'单位“1”未知：对应量÷对应分数＝单位“1”的量。',mistake:'仍然使用乘法；把“剩下的分率”误写成“已读的分率”。',parent:'判断孩子是否会做，不看他背“知一求几、知几求一”，只看能否写出完整数量关系。',examples:[
         {label:'母题',kind:'mother',prompt:'一本书已经读了 42 页，占全书的 7/9。全书多少页？',hint:'全书页数×7/9＝42。',steps:'42÷7/9＝42×9/7。',answer:'54 页。'},
         {label:'变式·剩余量',kind:'change',prompt:'一本书读了 3/5 后还剩 80 页，全书多少页？',hint:'80 页对应的是剩下的 2/5。',steps:'80÷（1－3/5）＝80÷2/5。',answer:'200 页。'},
         {label:'变式·比原来少',kind:'mix',prompt:'某餐馆现在每天产生厨余垃圾 120 kg，比原来少 1/4。原来每天约有多少千克？',hint:'现在是原来的 1－1/4。',steps:'120÷（1－1/4）＝120÷3/4。',answer:'160 kg。'}]},
@@ -141,15 +169,15 @@
         {label:'母题',kind:'mother',prompt:'早晨气温是－3 ℃，中午升到 5 ℃。气温升高了多少摄氏度？',hint:'从－3 到 0 先升 3，再从 0 到 5 升 5。',steps:'3＋5＝8（℃）。',answer:'升高了 8 ℃。'},
         {label:'变式·收支',kind:'change',prompt:'账单中支出 120 元记作－120 元，随后收入 200 元。两笔合计变化多少元？',hint:'收入为正，支出为负。',steps:'－120＋200＝80。',answer:'合计增加 80 元。'},
         {label:'变式·海拔差',kind:'mix',prompt:'吐鲁番盆地最低点海拔约－154.31 m，珠穆朗玛峰海拔 8848.86 m，两地海拔相差多少米？',hint:'从最低点到海平面是 154.31 m，再从海平面向上 8848.86 m。',steps:'154.31＋8848.86＝9003.17（m）。',answer:'9003.17 m。'}]},
-      {id:'circle-basics',unit:'circle',title:'圆、半径、直径与扇形',subtitle:'圆心定位置，半径定大小',importance:4,difficulty:2,evidence:'教材核心＋旧卷常见',keywords:'圆 圆心 半径 直径 扇形 对称轴 圆心角',method:['先确认线段是否经过圆心、两端是否在圆上。','同一圆中 d＝2r，所有半径相等。','一条弧和两条半径围成扇形。','圆有无数条对称轴，每条直径所在直线都是对称轴。'],key:'圆心决定位置，半径决定大小。',mistake:'把任意弦都当作直径；认为圆心角相同但半径不同的扇形一样大。',parent:'让孩子边指图边说定义，不必背长句；能判断反例比只会背概念更重要。',examples:[
+      {id:'circle-basics',unit:'circle',title:'圆、半径、直径与扇形',subtitle:'圆心定位置，半径定大小',importance:4,difficulty:2,evidence:'教材核心＋已核真题',keywords:'圆 圆心 半径 直径 扇形 对称轴 圆心角',method:['先确认线段是否经过圆心、两端是否在圆上。','同一圆中 d＝2r，所有半径相等。','一条弧和两条半径围成扇形。','圆有无数条对称轴，每条直径所在直线都是对称轴。'],key:'圆心决定位置，半径决定大小。',mistake:'把任意弦都当作直径；认为圆心角相同但半径不同的扇形一样大。',parent:'让孩子边指图边说定义，不必背长句；能判断反例比只会背概念更重要。',examples:[
         {label:'母题',kind:'mother',prompt:'一个圆的半径是 3.5 cm，它的直径是多少厘米？',hint:'直径是半径的 2 倍。',steps:'3.5×2＝7（cm）。',answer:'7 cm。'},
         {label:'变式·决定因素',kind:'change',prompt:'两个圆的半径相同、圆心不同，它们的大小和位置有什么关系？',hint:'半径管大小，圆心管位置。',steps:'半径相同所以大小相同；圆心不同所以位置不同。',answer:'大小相同，位置不同。'},
         {label:'变式·扇形比较',kind:'mix',prompt:'在同一个圆中，圆心角分别为 60° 和 120° 的两个扇形，哪个更大？',hint:'同圆中半径相同，只需比较圆心角。',steps:'120° 是 60° 的 2 倍，对应扇形也更大。',answer:'120° 的扇形更大，面积是另一个的 2 倍。'}]},
-      {id:'circumference',unit:'circle',title:'圆的周长：顺求、反求与半圆边界',subtitle:'求边界长度，公式 C＝πd＝2πr',importance:5,difficulty:3,evidence:'教材核心＋多区高频',keywords:'周长 直径 半径 反求 半圆 边界',method:['先判断题目求的是一圈的长度。','统一半径或直径后代入公式。','反求直径用 C÷π，反求半径再÷2。','半圆周长要加直径，不能只算半个圆周。'],key:'“绕一圈、边缘、围栏、滚一周”通常在求周长。',mistake:'把半径直接代入 πd；半圆边界漏掉直径。',parent:'让孩子在图上用手沿边界走一圈，先确定哪些线段要算，再写公式。',examples:[
+      {id:'circumference',unit:'circle',title:'圆的周长：顺求、反求与半圆边界',subtitle:'求边界长度，公式 C＝πd＝2πr',importance:5,difficulty:3,evidence:'教材核心＋已核真题',keywords:'周长 直径 半径 反求 半圆 边界',method:['先判断题目求的是一圈的长度。','统一半径或直径后代入公式。','反求直径用 C÷π，反求半径再÷2。','半圆周长要加直径，不能只算半个圆周。'],key:'“绕一圈、边缘、围栏、滚一周”通常在求周长。',mistake:'把半径直接代入 πd；半圆边界漏掉直径。',parent:'让孩子在图上用手沿边界走一圈，先确定哪些线段要算，再写公式。',examples:[
         {label:'母题',kind:'mother',prompt:'一个圆的直径是 8 cm，周长是多少厘米？',hint:'已知直径，用 C＝πd。',steps:'3.14×8＝25.12（cm）。',answer:'25.12 cm。'},
         {label:'变式·反求半径',kind:'change',prompt:'一个圆的周长是 31.4 m，它的半径是多少米？',hint:'先用周长除以 π 求直径。',steps:'31.4÷3.14＝10（m），10÷2＝5（m）。',answer:'5 m。'},
         {label:'变式·半圆边界',kind:'mix',prompt:'一个半圆的半径是 4 cm，它的周长是多少厘米？',hint:'半个圆周加一条直径。',steps:'3.14×4＋2×4＝12.56＋8。',answer:'20.56 cm。'}]},
-      {id:'circle-area',unit:'circle',title:'圆的面积：顺求与反求',subtitle:'求圆面大小，公式 S＝πr²',importance:5,difficulty:3,evidence:'教材核心＋旧卷稳定',keywords:'圆面积 半径平方 反求 周长求面积',method:['先判断求的是圆面的大小。','无论已知什么，先得到半径 r。','平方的是半径，不是 π，也不是直径。','用面积单位作答，并用正方形面积估算。'],key:'面积只认半径：S＝πr²。',mistake:'把 2r 写成 r²；已知直径时不除以 2；把周长单位写成面积单位。',parent:'让孩子先单独写“r＝___”，再写面积公式，可减少大部分代入错误。',examples:[
+      {id:'circle-area',unit:'circle',title:'圆的面积：顺求与反求',subtitle:'求圆面大小，公式 S＝πr²',importance:5,difficulty:3,evidence:'教材核心＋已核真题',keywords:'圆面积 半径平方 反求 周长求面积',method:['先判断求的是圆面的大小。','无论已知什么，先得到半径 r。','平方的是半径，不是 π，也不是直径。','用面积单位作答，并用正方形面积估算。'],key:'面积只认半径：S＝πr²。',mistake:'把 2r 写成 r²；已知直径时不除以 2；把周长单位写成面积单位。',parent:'让孩子先单独写“r＝___”，再写面积公式，可减少大部分代入错误。',examples:[
         {label:'母题',kind:'mother',prompt:'圆形喷灌装置的射程是 6 m，它最多能喷灌多少平方米？',hint:'射程就是半径。',steps:'3.14×6²＝3.14×36。',answer:'113.04 m²。'},
         {label:'变式·已知直径',kind:'change',prompt:'圆形茶几直径 10 dm，桌面面积是多少平方分米？',hint:'半径是 10÷2＝5 dm。',steps:'3.14×5²＝3.14×25。',answer:'78.5 dm²。'},
         {label:'变式·周长反求面积',kind:'mix',prompt:'一个圆的周长是 18.84 cm，它的面积是多少平方厘米？',hint:'先由周长求半径。',steps:'18.84÷3.14÷2＝3（cm）；3.14×3²＝28.26。',answer:'28.26 cm²。'}]},
@@ -157,11 +185,11 @@
         {label:'母题',kind:'mother',prompt:'一个圆环的外半径是 5 cm，内半径是 3 cm，面积是多少？',hint:'外圆面积减内圆面积。',steps:'3.14×（5²－3²）＝3.14×16。',answer:'50.24 cm²。'},
         {label:'变式·外方内圆',kind:'change',prompt:'边长 10 cm 的正方形内画一个最大的圆，四角剩余部分面积是多少？',hint:'最大圆的直径等于正方形边长。',steps:'10²－3.14×（10÷2）²＝100－78.5。',answer:'21.5 cm²。'},
         {label:'变式·运动场',kind:'mix',prompt:'运动场中间是长 20 m、宽 10 m 的长方形，两端各是直径 10 m 的半圆。面积是多少？',hint:'两个半圆正好合成一个圆。',steps:'20×10＋3.14×5²＝200＋78.5。',answer:'278.5 m²。'}]},
-      {id:'circle-motion',unit:'circle',title:'车轮滚动、跑道与捆扎问题',subtitle:'把一周长度与圈数、直线段联系起来',importance:4,difficulty:5,evidence:'教材综合＋旧卷变式',keywords:'滚动 圈数 跑道 捆扎 绳子 周长',method:['滚动距离＝轮子周长×圈数。','比较相邻跑道，只比较弯道增加的圆周。','捆扎图先画绳子的外轮廓，分成直线段和圆弧。','统一长度单位后再计算。'],key:'运动问题中，圆的周长常常是“一圈走多远”。',mistake:'把圈数乘面积；跑道直道部分重复计算；捆扎时把每个圆周全部相加。',parent:'用硬币在尺子上滚一圈，帮助孩子把“周长”和“前进距离”真正联系起来。',examples:[
+      {id:'circle-motion',unit:'circle',title:'车轮滚动、跑道与捆扎问题',subtitle:'把一周长度与圈数、直线段联系起来',importance:4,difficulty:5,evidence:'教材核心＋已核真题',keywords:'滚动 圈数 跑道 捆扎 绳子 周长',method:['滚动距离＝轮子周长×圈数。','比较相邻跑道，只比较弯道增加的圆周。','捆扎图先画绳子的外轮廓，分成直线段和圆弧。','统一长度单位后再计算。'],key:'运动问题中，圆的周长常常是“一圈走多远”。',mistake:'把圈数乘面积；跑道直道部分重复计算；捆扎时把每个圆周全部相加。',parent:'用硬币在尺子上滚一圈，帮助孩子把“周长”和“前进距离”真正联系起来。',examples:[
         {label:'母题',kind:'mother',prompt:'车轮直径 0.8 m，转动 50 圈前进多少米？',hint:'先求一圈走多远。',steps:'3.14×0.8×50＝2.512×50。',answer:'125.6 m。'},
         {label:'变式·相邻跑道',kind:'change',prompt:'标准跑道弯道由两个半圆组成，相邻跑道宽 1.2 m。外圈一圈比内圈约长多少米？',hint:'两个半圆合成一个圆，半径增加 1.2 m。',steps:'周长增加量＝2×3.14×1.2。',answer:'约 7.536 m。'},
         {label:'变式·三个圆筒',kind:'mix',prompt:'三个直径 8 cm 的圆筒排成一行，用绳子紧贴外侧捆一圈，至少需要多长？',hint:'外轮廓是上下两条直线，加两端合成的一个整圆。',steps:'两条直线共 2×（2×8）＝32 cm；两端圆弧共 3.14×8＝25.12 cm。',answer:'57.12 cm。'}]},
-      {id:'percent-meaning',unit:'percent',title:'百分数的意义、互化与常见百分率',subtitle:'百分数表示关系；百分率是部分量与总量的比较',importance:4,difficulty:3,evidence:'教材核心＋旧卷基础',keywords:'百分数 意义 小数 分数 互化 命中率 达标率 合格率',method:['先说清“谁占谁的百分之多少”。','小数化百分数：小数点右移两位，加 %；反向互化时左移两位。','分数先化成小数或分母为 100 的分数。','求百分率时，用符合条件的部分量÷总量，再化成百分数。'],key:'百分数表示两个量的关系；百分率＝部分量÷总量×100%。',mistake:'把 25% 写成 25；求命中率、合格率时把总量放在分子。',parent:'让孩子解释百分数的两端分别是什么量，比单纯做互化题更重要。',examples:[
+      {id:'percent-meaning',unit:'percent',title:'百分数的意义、互化与常见百分率',subtitle:'百分数表示关系；百分率是部分量与总量的比较',importance:4,difficulty:3,evidence:'教材核心＋已核真题',keywords:'百分数 意义 小数 分数 互化 命中率 达标率 合格率',method:['先说清“谁占谁的百分之多少”。','小数化百分数：小数点右移两位，加 %；反向互化时左移两位。','分数先化成小数或分母为 100 的分数。','求百分率时，用符合条件的部分量÷总量，再化成百分数。'],key:'百分数表示两个量的关系；百分率＝部分量÷总量×100%。',mistake:'把 25% 写成 25；求命中率、合格率时把总量放在分子。',parent:'让孩子解释百分数的两端分别是什么量，比单纯做互化题更重要。',examples:[
         {label:'母题',kind:'mother',prompt:'把 0.375 化成百分数。',hint:'小数点向右移动两位。',steps:'0.375×100%＝37.5%。',answer:'37.5%。'},
         {label:'变式·分数互化',kind:'change',prompt:'把 5/8 化成百分数。',hint:'先算 5÷8。',steps:'5÷8＝0.625＝62.5%。',answer:'62.5%。'},
         {label:'变式·求百分率',kind:'mix',prompt:'一次投篮 50 次，命中 46 次，命中率是多少？',hint:'命中数是部分量，出手次数是总量。',steps:'46÷50×100%＝92%。',answer:'命中率为 92%。'}]},
@@ -169,7 +197,7 @@
         {label:'母题',kind:'mother',prompt:'一批树苗有 240 棵，其中 35% 是银杏。银杏有多少棵？',hint:'总数已知，求其中的 35%。',steps:'240×35%＝84（棵）。',answer:'84 棵。'},
         {label:'变式·反求总量',kind:'change',prompt:'合唱队有 72 人，占全年级人数的 60%。全年级有多少人？',hint:'全年级人数是单位“1”，它未知。',steps:'72÷60%＝120（人）。',answer:'120 人。'},
         {label:'变式·求百分率',kind:'mix',prompt:'180 名学生中有 45 人参加篮球社团，参加人数占总人数的百分之多少？',hint:'部分量除以总量。',steps:'45÷180×100%＝25%。',answer:'25%。'}]},
-      {id:'change-rate',unit:'percent',title:'增长率与降低率',subtitle:'变化量除以变化前的量',importance:5,difficulty:4,evidence:'新版教材重点＋多区高频',keywords:'增长率 降低率 增加 减少 原来 现在',method:['先找变化前的量，它是比较标准。','变化量＝现在－原来，减少时用原来－现在。','变化率＝变化量÷原来的量。','用“原来×（1±变化率）＝现在”进行逆向检查。'],key:'问“增加百分之多少”，分母一定是原来的量。',mistake:'用现在的量作分母；把增加的具体数量直接写成百分率。',parent:'遇到“比”字先问孩子“和谁比”，只要比较标准找对，后面通常就顺了。',examples:[
+      {id:'change-rate',unit:'percent',title:'增长率与降低率',subtitle:'变化量除以变化前的量',importance:5,difficulty:4,evidence:'新版重点＋真题迁移',keywords:'增长率 降低率 增加 减少 原来 现在',method:['先找变化前的量，它是比较标准。','变化量＝现在－原来，减少时用原来－现在。','变化率＝变化量÷原来的量。','用“原来×（1±变化率）＝现在”进行逆向检查。'],key:'问“增加百分之多少”，分母一定是原来的量。',mistake:'用现在的量作分母；把增加的具体数量直接写成百分率。',parent:'遇到“比”字先问孩子“和谁比”，只要比较标准找对，后面通常就顺了。',examples:[
         {label:'母题',kind:'mother',prompt:'某产品产量从 80 件增加到 100 件，增长率是多少？',hint:'先求增加了 20 件，再除以原来的 80 件。',steps:'（100－80）÷80＝25%。',answer:'增长 25%。'},
         {label:'变式·降低率',kind:'change',prompt:'每天用水量从 150 L 降到 120 L，降低了百分之多少？',hint:'降低量以原来的 150 L 为标准。',steps:'（150－120）÷150＝20%。',answer:'降低了 20%。'},
         {label:'变式·反求原量',kind:'mix',prompt:'实际产量为每公顷 24.06 t，比目标高 7%。目标产量约是多少？（保留一位小数）',hint:'实际＝目标×（1＋7%）。',steps:'24.06÷107%≈22.486。',answer:'约 22.5 t。'}]},
@@ -195,6 +223,203 @@
         {label:'变式·多余数',kind:'mix',prompt:'把 25 本书放到 6 个书架上，总有一个书架至少放几本？',hint:'假设每个书架最多 4 本，一共能放多少？',steps:'每架最多 4 本只能放 24 本，第 25 本必使某架达到 5 本。',answer:'至少 5 本。'}]}
     ];
 
+    const examPatterns = {
+      'ordered-pairs':[
+        {name:'直接定位',signal:'给出网格、列与行，要求写点的位置。',strategy:'先横后纵，固定写成（列，行）；用原图反查一次。'},
+        {name:'移动与反推',signal:'点平移若干格，或已知新位置求原位置。',strategy:'左右只动第一个数，上下只动第二个数；反推时把方向倒过来。'},
+        {name:'路线设计',signal:'要求用若干点组成图形或设计最短路线。',strategy:'先逐点写数对，再检查相邻点怎样变化，不凭视觉猜。'}],
+      'direction-distance':[
+        {name:'方向定位',signal:'出现参照点、角度、距离或比例尺。',strategy:'先画北箭头，再从北或南量角，最后换算实际距离。'},
+        {name:'返程路线',signal:'原路返回、从终点看起点。',strategy:'距离不变，方向整体相反；北东对应南西，角度保持。'},
+        {name:'分段行程',signal:'路线有多个转折点，要求描述或作图。',strategy:'每一段重新确定参照点，分段写“方向＋距离”。'}],
+      'fraction-multiply':[
+        {name:'意义辨识',signal:'求“一个量的几分之几”，选算式或画图。',strategy:'先完整说“求谁的几分之几”，再用乘法；答案大小要符合分数范围。'},
+        {name:'结构巧算',signal:'同一个分数或同一个数在两项中重复出现。',strategy:'先看共同因数，尝试分配律；能约分时先约分。'},
+        {name:'图形嵌套',signal:'一个图形先取一部分，再取其中的一部分。',strategy:'两个“其中”就是连续相乘，并标清每个分数的单位“1”。'}],
+      'fraction-mixed':[
+        {name:'运算顺序',signal:'括号、乘除与加减混在同一算式。',strategy:'先标计算层次；除法先转成乘倒数，再寻找约分机会。'},
+        {name:'隐蔽分配律',signal:'两项看似不同，但含相同因数或两数和能凑整。',strategy:'把共同因数圈出来，确认括号每一项都乘到。'},
+        {name:'方法评价',signal:'给出两种算法，判断谁对、哪里错。',strategy:'不只重算结果，要指出违反了哪条运算顺序或运算律。'}],
+      'fraction-of-number':[
+        {name:'直接对应量',signal:'单位“1”数量已知，求它的几分之几。',strategy:'写“单位1的量×分率＝对应量”，算后做大小检查。'},
+        {name:'连续取部分',signal:'先取整体的一部分，再取剩余或这部分的几分之几。',strategy:'画两层线段图；遇到“剩余”先算 1－已用分率。'},
+        {name:'信息筛选',signal:'题目给很多数据，只有部分数据与问题有关。',strategy:'从问题倒推需要哪条数量关系，无关数据先划掉。'},
+        {name:'图文结合',signal:'分率藏在面积图、进度条或统计图中。',strategy:'先把图翻译成分率，再回到数量关系。'}],
+      'fraction-chain':[
+        {name:'多层单位“1”',signal:'A 是 B 的几分之几，B 又是 C 的几分之几。',strategy:'关系按顺序相乘；每个分率旁写清“以谁为1”。'},
+        {name:'多/少几分之几',signal:'出现“比……多/少几分之几”。',strategy:'先得到系数 1±分率，再乘标准量。'},
+        {name:'部分＋比例反求',signal:'已知一个具体部分，又给已完成与未完成之比。',strategy:'把比例先化为占总量的分率，再用方程连接具体量。'},
+        {name:'变化叠加',signal:'人数变、平均量也变，追问总量怎样变。',strategy:'把两个变化写成乘法系数，连乘后再与 1 比较。'}],
+      'fraction-division':[
+        {name:'计算与验算',signal:'分数除法、连除或含带分数。',strategy:'只把除数变倒数；约分后算，用“商×除数”验算。'},
+        {name:'商的大小',signal:'不计算比较商与被除数大小。',strategy:'除以小于1的正数，商变大；除以大于1的数，商变小。'},
+        {name:'缺数填空',signal:'算式中除数或被除数未知。',strategy:'用乘除法互逆关系，不靠试数。'}],
+      'find-whole':[
+        {name:'标准反求',signal:'已知整体的几分之几是多少，求整体。',strategy:'对应量÷对应分率；或设整体为 x 写乘法关系。'},
+        {name:'剩余反求',signal:'“用去几分之几后还剩……”是已知量。',strategy:'剩余分率＝1－用去分率，再用剩余量除以剩余分率。'},
+        {name:'多出来的量',signal:'现在比原来多几分之几，已知现在。',strategy:'现在＝原来×（1＋分率），反求时除以整个系数。'},
+        {name:'逆向链条',signal:'关系连续出现，最后只给一个具体数量。',strategy:'从具体量向单位“1”逐层倒推，必要时设 x。'}],
+      'fraction-equation':[
+        {name:'和差关系',signal:'两个量转移后相等，或总量与相差量并存。',strategy:'先设一个量，按变化前后写等式；转移不会改变总量。'},
+        {name:'几何关系',signal:'周长、长宽与分率同时出现。',strategy:'把长宽关系代入周长公式，再解方程。'},
+        {name:'比例转分率',signal:'已知已用∶剩余或两类数量之比。',strategy:'把比化成占总量的分率，再连接已知具体量。'}],
+      'engineering':[
+        {name:'合作完成',signal:'给各自独做时间，问合作时间。',strategy:'总量设为1，先求各自效率，再用 1÷效率和。'},
+        {name:'阶段接力',signal:'先单独做若干天，后来合作。',strategy:'分段算完成量；第二阶段只处理剩余工作。'},
+        {name:'够不够用',signal:'给限定时间，问能否完成或还差多少。',strategy:'先算限定时间能完成的量，与总量比较并回答“够/不够＋差多少”。'},
+        {name:'解释算式',signal:'给出算式，要求解释每一步含义。',strategy:'逐项对应工作效率、时间与完成量，不能只报结果。'}],
+      'negative-numbers':[
+        {name:'意义解释',signal:'温度、海拔、收支、楼层等相反量。',strategy:'先说清0的含义和正方向，再解释符号。'},
+        {name:'变化比较',signal:'从一个负数变化到正数，问升降多少。',strategy:'画数轴数间隔，变化量不是只减绝对值。'}],
+      'circle-basics':[
+        {name:'概念判断',signal:'半径、直径、弦、扇形或对称轴辨析。',strategy:'逐条对照定义，特别检查线段是否经过圆心。'},
+        {name:'图形关系',signal:'正方形内最大圆、圆内最大正方形。',strategy:'先找直径对应哪条长度，再确定半径。'}],
+      'circumference':[
+        {name:'顺求周长',signal:'绕一圈、围栏、边缘、滚一周。',strategy:'统一到半径或直径，再用 C＝πd＝2πr。'},
+        {name:'反求半径',signal:'已知一圈长度，求直径、半径或面积。',strategy:'先 C÷π 得直径，再按问题继续。'},
+        {name:'半圆边界',signal:'求半圆形花坛或拱门的完整边长。',strategy:'半个圆周加直径；先沿边界逐段指一遍。'}],
+      'circle-area':[
+        {name:'直接面积',signal:'圆形占地、喷灌范围、覆盖面积。',strategy:'先求 r，再用 πr²；检查面积单位。'},
+        {name:'周长反求面积',signal:'先给圆周长，再问面积。',strategy:'周长→直径→半径→面积，不能把周长直接平方。'},
+        {name:'变化规律',signal:'半径扩大若干倍，问面积变化。',strategy:'面积随半径的平方变化，扩大 n 倍就是 n² 倍。'}],
+      'composite-circle':[
+        {name:'外方内圆',signal:'正方形与内切圆、圆与内接图形。',strategy:'找直径和边长的对应，再用“大面积－小面积”。'},
+        {name:'圆环阴影',signal:'同心圆、环形跑道或边缘宽度。',strategy:'外半径＝内半径＋宽，面积用 π（R²－r²）。'},
+        {name:'拼剪转化',signal:'半圆、扇形或若干弧拼成陌生阴影。',strategy:'找可平移、旋转或互补的区域，化成基本图形。'},
+        {name:'边界重组',signal:'既问面积又问周长，内部有公共边。',strategy:'面积按区域加减；周长只走外边界，公共边不算。'}],
+      'circle-motion':[
+        {name:'车轮滚动',signal:'轮子转若干圈，问前进距离或圈数。',strategy:'距离＝周长×圈数，先统一单位。'},
+        {name:'相邻跑道',signal:'不同跑道同终点，问起跑线差。',strategy:'直道相同会抵消，只算弯道圆周差。'},
+        {name:'捆扎圆柱',signal:'绳子紧贴若干相同圆柱外侧。',strategy:'外轮廓拆成直线段＋合起来的一整圈圆弧。'}],
+      'percent-meaning':[
+        {name:'意义辨析',signal:'标签、命中率、成分率，判断百分数含义。',strategy:'完整说“部分占总量的百分之几”，分子分母不能倒。'},
+        {name:'多形式比较',signal:'分数、小数、百分数混合比较。',strategy:'统一化成同一种形式再比较。'},
+        {name:'统计陷阱',signal:'某次命中率能否代表每次或下次。',strategy:'百分率描述已有整体，不保证未来单次结果。'}],
+      'percent-three':[
+        {name:'求对应量',signal:'总量和百分率已知。',strategy:'总量×百分率，结果应落在合理范围内。'},
+        {name:'反求总量',signal:'对应量和百分率已知。',strategy:'对应量÷百分率；先确认百分率对应的是哪一部分。'},
+        {name:'求百分率',signal:'部分量与总量已知。',strategy:'部分÷总量，最后化成百分数。'},
+        {name:'嵌套百分率',signal:'一部分中又有若干百分比。',strategy:'两层单位“1”分开标，连续求对应量时连乘。'}],
+      'change-rate':[
+        {name:'增长/降低率',signal:'现在比原来增加或减少百分之多少。',strategy:'变化量÷原来的量，分母必须是变化前。'},
+        {name:'绝对与相对',signal:'既给增减数量，又问增减百分比。',strategy:'先算具体变化量，再除以原量；两种表达不可混。'},
+        {name:'结论评价',signal:'广告或报告声称“提升×%”，要求判断。',strategy:'核查它说的是百分点、百分率还是具体数量，并找比较基准。'}],
+      'successive-change':[
+        {name:'涨后再降',signal:'同一数量连续按百分率变化。',strategy:'逐次乘 1±百分率，不能把两次百分率直接抵消。'},
+        {name:'基数改变',signal:'人数总量和某类人数同时变化。',strategy:'分别求新分子、新分母，再计算新百分率。'},
+        {name:'逆向恢复',signal:'连续变化后给现价，反求原价。',strategy:'从后往前依次除以各阶段系数。'}],
+      'money-percent':[
+        {name:'折扣满减',signal:'折扣、满减、优惠券叠加或二选一。',strategy:'按商家规则逐步结账，最后只比较实付金额。'},
+        {name:'退票手续费',signal:'分时段收取不同百分比费用。',strategy:'先判断属于哪一档，再用票价×费率。'},
+        {name:'储蓄利息',signal:'本金、年利率、存期与本息。',strategy:'利息＝本金×年利率×存期；注意存期单位。'}],
+      'data-standards':[
+        {name:'加权合并',signal:'两组人数不同、百分率不同，求总体百分率。',strategy:'先还原每组人数再合并，不能平均两个百分率。'},
+        {name:'分布比较',signal:'平均数相同，要求判断哪组更稳定或更好。',strategy:'同时看数据分布、极端值和达标人数。'},
+        {name:'样本判断',signal:'用少量调查推断全年级或全校。',strategy:'检查是否随机、样本量是否足够、群体是否有代表性。'},
+        {name:'制定标准',signal:'要求提出达标线或评价办法。',strategy:'说明目标、数据、排序或分组方法，并解释标准为何合理。'}],
+      'integrated-model':[
+        {name:'信息选择',signal:'给出图表、文字与多项数据，先问哪些有用。',strategy:'从问题倒推所需数据，并说明无关信息为何不用。'},
+        {name:'方案设计',signal:'要求调查、测量或制定方案。',strategy:'写清问题、对象、数据、计算方法和判断标准。'},
+        {name:'开放解释',signal:'答案不唯一，但要求说明理由。',strategy:'结论必须由数据或数量关系支撑，并检查假设。'}],
+      'pigeonhole':[
+        {name:'直接保证',signal:'出现“至少、总有、保证”。',strategy:'辨认对象和分类，平均分后向上取整。'},
+        {name:'反向最坏',signal:'问至少取多少才能保证某类达到若干个。',strategy:'先构造还不能保证的最大数量，再加1。'}]
+    };
+
+    const extraExamples = {
+      'ordered-pairs':[
+        {label:'变式·反推原点',kind:'reason',prompt:'点 P 向左 3 格、向上 2 格后到达（5，7）。点 P 原来在哪里？',signal:'看到“移动后到达”，要逆着方向还原。',hint:'原来位置应向右 3 格、向下 2 格。',steps:'列坐标 5＋3＝8；行坐标 7－2＝5。',answer:'点 P 原来在（8，5）。'}],
+      'direction-distance':[
+        {label:'变式·比例尺路线',kind:'mix',prompt:'图上科技馆在学校北偏东 35°方向 4 cm 处，比例尺是 1 cm 表示 300 m。小明从科技馆原路返回学校，应怎样描述路线？',signal:'方向、距离、返程三个条件同时出现。',hint:'先换算距离，再把方向整体反向。',steps:'4×300＝1200（m）；北偏东 35°的反方向是南偏西 35°。',answer:'从科技馆向南偏西 35°方向走 1200 m 到学校。'}],
+      'fraction-multiply':[
+        {label:'变式·先辨结构',kind:'reason',prompt:'不按顺序硬算，说明怎样计算 36×5/8＋36×3/8 最简便，并解释理由。',signal:'两个乘积中有共同因数 36。',hint:'把 36 提出来。',steps:'36×（5/8＋3/8）＝36×1＝36，使用乘法分配律。',answer:'结果是 36；共同因数相同，先合并分率最简便。'},
+        {label:'变式·面积中的连续部分',kind:'mix',prompt:'一块长 3/4 m、宽 2/3 m 的长方形布，其中 1/2 用来制作图案。制作图案的布有多少平方米？',signal:'先求整块面积，再取面积的一部分。',hint:'长×宽得到总面积，然后再乘 1/2。',steps:'3/4×2/3×1/2＝1/4（m²）。',answer:'1/4 平方米。'}],
+      'fraction-mixed':[
+        {label:'变式·隐蔽公因数',kind:'hard',prompt:'计算 7/9×13/5＋7/9×2/5，并说明为什么不必分别通分。',signal:'两项都含 7/9。',hint:'先提取共同因数。',steps:'7/9×（13/5＋2/5）＝7/9×3＝7/3。',answer:'7/3。'},
+        {label:'变式·评价算法',kind:'reason',prompt:'小宇计算（4/7＋3/5）×35 时写成 4/7×35＋3/5。请指出错误并改正。',signal:'题目要求判断方法，不只是求结果。',hint:'分配律中括号里的每一项都要乘 35。',steps:'正确为 4/7×35＋3/5×35＝20＋21＝41。',answer:'小宇漏乘了第二项；正确结果是 41。'}],
+      'fraction-of-number':[
+        {label:'母题·两层路线',kind:'hard',prompt:'一条步道长 24 km，山脊路段占全程的 5/8；其余路段中有 2/3 穿过森林。穿过森林的路段长多少千米？',signal:'“其余路段中”改变了第二个分率的单位“1”。',hint:'先求剩余路段，再取其中的 2/3。',steps:'24×（1－5/8）＝9（km）；9×2/3＝6（km）。',answer:'穿过森林的路段长 6 km。'},
+        {label:'变式·调查嵌套',kind:'mix',prompt:'学校调查 600 名学生，3/5 的学生参加线上阅读；参加线上阅读的学生中，1/4 每天阅读超过 1 小时。每天超过 1 小时的有多少人？',signal:'总人数→线上阅读人数→其中一部分。',hint:'两个分率对应不同层级，但可连续相乘。',steps:'600×3/5×1/4＝90（人）。',answer:'90 人。'},
+        {label:'变式·图形面积',kind:'mix',prompt:'一块 48 m² 的试验田，3/4 已种植；已种植部分的 2/3 种花，其余种草。种花面积比种草面积多多少？',signal:'先找已种植部分，再把它分成花和草。',hint:'草占已种植部分的 1/3。',steps:'已种植 48×3/4＝36；花 36×2/3＝24，草 36×1/3＝12；相差 12。',answer:'种花面积比种草面积多 12 m²。'},
+        {label:'变式·选择信息',kind:'reason',prompt:'一辆车从甲地到乙地全程 180 km，上午行了全程的 4/9，中途休息 20 分钟。求上午行驶路程，需要使用“20 分钟”吗？为什么？',signal:'题目混入了与问题无关的数据。',hint:'问题只由全程和所占分率决定。',steps:'180×4/9＝80（km）；休息时间不影响已经行驶的路程。',answer:'上午行驶 80 km；不需要使用 20 分钟。'}],
+      'fraction-chain':[
+        {label:'母题·三量传递',kind:'hard',prompt:'合唱队人数是舞蹈队的 2/3，舞蹈队人数是管乐队的 3/4。管乐队有 96 人，合唱队有多少人？合唱队是管乐队的几分之几？',signal:'两个“是……的”串成关系链。',hint:'从 96 人按顺序乘两个分率。',steps:'96×3/4×2/3＝48；2/3×3/4＝1/2。',answer:'合唱队有 48 人，是管乐队的 1/2。'},
+        {label:'变式·具体量＋读剩比',kind:'hard',prompt:'一本书第一天读 72 页，第二天读全书的 1/4。两天后已读页数与未读页数之比是 2∶3。这本书共多少页？',signal:'已读∶未读要先转成已读占总页数的分率。',hint:'两天共读了全书的 2/5。',steps:'设全书 x 页，72＋x/4＝2x/5；72＝3x/20，x＝480。',answer:'全书共 480 页。'},
+        {label:'变式·两项同时变化',kind:'reason',prompt:'某社区户数比去年增加 1/10，平均每户垃圾量比去年减少 1/6。社区垃圾总量比去年增加还是减少？变化几分之几？',signal:'总量由“户数×户均量”决定，两项同时变化。',hint:'把去年总量看作 1，两个变化系数相乘。',steps:'（1＋1/10）×（1－1/6）＝11/10×5/6＝11/12，比 1 少 1/12。',answer:'总量减少了去年的 1/12。'},
+        {label:'变式·三段分配',kind:'mix',prompt:'铁人三项全程中，游泳占 1/5；剩余路程里自行车与跑步的比是 3∶1。自行车和跑步各占全程的几分之几？',signal:'先扣除已知部分，再按比分配剩余。',hint:'剩余占 4/5，再分成 4 份。',steps:'自行车占 4/5×3/4＝3/5；跑步占 4/5×1/4＝1/5。',answer:'自行车占 3/5，跑步占 1/5。'},
+        {label:'变式·剩余再分',kind:'mix',prompt:'农场有 240 公顷土地，3/8 种小麦；剩余土地的 2/5 种玉米，其余种蔬菜。蔬菜面积是多少公顷？',signal:'“剩余”的单位“1”不是 240。',hint:'先求小麦以外的 150 公顷。',steps:'240×（1－3/8）＝150；150×（1－2/5）＝90。',answer:'蔬菜面积是 90 公顷。'}],
+      'find-whole':[
+        {label:'母题·变化后反求',kind:'hard',prompt:'水结成冰后，体积比原来增加 1/10。一块冰体积是 13.2 dm³，结冰前水的体积是多少？',signal:'已知变化后的量，单位“1”是原来的水。',hint:'冰体积是水体积的 1＋1/10。',steps:'13.2÷（1＋1/10）＝13.2÷1.1＝12（dm³）。',answer:'结冰前水的体积是 12 dm³。'},
+        {label:'变式·零件加长',kind:'mix',prompt:'新型列车车头比旧型车头长 1/5，新型车头长 15 m。旧型车头长多少米？',signal:'“新比旧多”但已知的是新量。',hint:'新长度＝旧长度×6/5。',steps:'15÷（1＋1/5）＝15×5/6＝12.5（m）。',answer:'旧型车头长 12.5 m。'},
+        {label:'变式·载货量反求',kind:'mix',prompt:'某飞船本次载货 8880 kg，比上一型飞船多 7/30。上一型飞船载货多少千克？',signal:'具体量是“多了之后”的量。',hint:'8880 对应上一型的 37/30。',steps:'8880÷（1＋7/30）＝8880×30/37＝7200。',answer:'上一型飞船载货 7200 kg。'},
+        {label:'变式·剩余量反求',kind:'change',prompt:'一本书读完 4/7 后还剩 168 页。这本书原来有多少页？',signal:'已知的是剩余页数。',hint:'剩余占全书的 3/7。',steps:'168÷（1－4/7）＝168÷3/7＝392。',answer:'全书原来有 392 页。'}],
+      'fraction-equation':[
+        {label:'母题·转移后相等',kind:'hard',prompt:'甲箱球数是乙箱的 3/5。从乙箱取 12 个放入甲箱后，两箱一样多。原来甲、乙两箱各有多少个球？',signal:'转移只改变两箱分配，不改变总数。',hint:'设乙箱有 x 个，转移后两边写相等。',steps:'3x/5＋12＝x－12；2x/5＝24，x＝60；甲箱 36。',answer:'原来甲箱 36 个，乙箱 60 个。'},
+        {label:'变式·比转分率',kind:'mix',prompt:'一批零件加工后，已完成与未完成的比是 5∶3，未完成有 75 个。这批零件一共有多少个？',signal:'比中未完成占 3 份，总量占 8 份。',hint:'可列 3/8x＝75。',steps:'设总数为 x，3x/8＝75，x＝200。',answer:'一共有 200 个。'},
+        {label:'变式·周长关系',kind:'hard',prompt:'一个长方形周长是 72 cm，宽是长的 4/5。它的长和宽各是多少厘米？',signal:'分数关系要代入周长公式。',hint:'设长为 x，宽为 4x/5。',steps:'2×（x＋4x/5）＝72；18x/5＝72，x＝20，宽 16。',answer:'长 20 cm，宽 16 cm。'}],
+      'engineering':[
+        {label:'母题·限时够不够',kind:'hard',prompt:'3D 打印机每天完成 9 个零件，10 天完成计划的 60%。按原效率再工作 6 天，能完成计划吗？如果不能，还差多少个？',signal:'先由“10天完成60%”反求计划总量。',hint:'90 个对应计划的 60%。',steps:'计划 9×10÷60%＝150（个）；16 天完成 9×16＝144（个），还差 6 个。',answer:'不能完成，还差 6 个。'},
+        {label:'变式·先单做再合作',kind:'hard',prompt:'甲单独修路 12 天完成，乙单独 18 天完成。甲先做 3 天，余下两队合作，还需多少天？',signal:'工作分两个阶段，合作只做剩余部分。',hint:'甲先完成 3/12＝1/4。',steps:'剩余 3/4；合作效率 1/12＋1/18＝5/36；所需时间 3/4÷5/36＝27/5（天）。',answer:'还需 27/5 天，即 5.4 天。'},
+        {label:'变式·解释算式',kind:'reason',prompt:'一项任务甲 8 天完成、乙 12 天完成。算式（1－1/8×2）÷（1/8＋1/12）解决的是什么问题？',signal:'不要计算先解释每一部分。',hint:'1/8×2 表示甲先做 2 天的工作量。',steps:'1－1/8×2 是剩余量；分母是合作效率；整个算式是完成剩余任务所需时间。',answer:'它表示甲先做 2 天后，甲乙合作完成余下任务还需要多少天。'},
+        {label:'变式·完成一部分',kind:'mix',prompt:'甲、乙合作 6 天完成一项任务。甲单独完成要 15 天。两人合作 2 天后，乙又单独做 3 天，共完成任务的几分之几？',signal:'先由合作效率反求乙的效率。',hint:'乙效率＝1/6－1/15。',steps:'乙效率＝1/10；合作 2 天完成 2/6＝1/3，乙 3 天完成 3/10；共 1/3＋3/10＝19/30。',answer:'共完成 19/30。'}],
+      'negative-numbers':[
+        {label:'变式·跨越零点',kind:'mix',prompt:'清晨气温是－6℃，中午升到 4℃，气温上升了多少摄氏度？',signal:'从负数到正数要跨过 0。',hint:'从－6 到 0 是 6℃，从 0 到 4 是 4℃。',steps:'6＋4＝10（℃）。',answer:'气温上升了 10℃。'}],
+      'circle-basics':[
+        {label:'变式·最大圆',kind:'reason',prompt:'在长 18 cm、宽 12 cm 的长方形纸中剪一个最大的圆，这个圆的半径是多少？为什么不是 9 cm？',signal:'最大圆受较短边限制。',hint:'圆的直径不能超过长方形的宽。',steps:'最大直径是 12 cm，半径 12÷2＝6 cm；若半径 9 cm，直径 18 cm 会超过宽。',answer:'半径是 6 cm。'}],
+      'circumference':[
+        {label:'母题·围栏缺口',kind:'mix',prompt:'一个半圆形观景台直径 20 m，沿完整边缘安装护栏，只在直径边中央留 2 m 宽的入口。需护栏多少米？',signal:'完整边缘＝半圆弧＋直径，再扣入口。',hint:'半圆弧长是整圆周长的一半。',steps:'3.14×20÷2＋20－2＝49.4（m）。',answer:'需要护栏 49.4 m。'},
+        {label:'变式·周长反求',kind:'hard',prompt:'一棵树树干横截面的周长约 94.2 cm。若横截面近似圆形，它的半径约是多少厘米？',signal:'已知周长，先反求直径。',hint:'直径＝周长÷π。',steps:'94.2÷3.14＝30（cm）；30÷2＝15（cm）。',answer:'半径约 15 cm。'}],
+      'circle-area':[
+        {label:'变式·喷灌覆盖',kind:'mix',prompt:'圆形喷灌器射程是 8 m。若射程调整为原来的 3/4，覆盖面积比原来减少多少平方米？',signal:'半径改变后，面积按半径平方变化。',hint:'新半径 6 m，分别算两次面积。',steps:'3.14×8²－3.14×6²＝3.14×28＝87.92（m²）。',answer:'覆盖面积减少 87.92 m²。'},
+        {label:'变式·面积倍数',kind:'reason',prompt:'甲圆半径是乙圆的 3/2。甲圆面积是乙圆的几倍？请说明为什么不是 3/2 倍。',signal:'面积公式里半径要平方。',hint:'比较 r²。',steps:'面积比＝（3/2）²＝9/4。',answer:'甲圆面积是乙圆的 9/4 倍。'}],
+      'composite-circle':[
+        {label:'母题·外方内圆',kind:'hard',prompt:'正方形边长 12 cm，里面画一个最大的圆。正方形中没有被圆覆盖的面积是多少？',signal:'最大圆的直径等于正方形边长。',hint:'阴影＝正方形面积－圆面积。',steps:'12²－3.14×6²＝144－113.04＝30.96（cm²）。',answer:'没有被覆盖的面积是 30.96 cm²。'},
+        {label:'变式·环形跑道',kind:'mix',prompt:'圆形花坛半径 10 m，外围铺一条宽 2 m 的环形小路。小路面积是多少平方米？',signal:'外半径不是 2 m，而是 10＋2。',hint:'用外圆面积减内圆面积。',steps:'3.14×（12²－10²）＝3.14×44＝138.16（m²）。',answer:'小路面积是 138.16 m²。'},
+        {label:'变式·周长面积分开',kind:'reason',prompt:'两个相同半圆拼成一个完整圆。拼成前后面积是否改变？两段直径边从外边界消失后，周长怎样变化？',signal:'面积可直接相加，周长只算外边界。',hint:'拼接边不再属于外边界。',steps:'面积始终是两个半圆面积之和，即一个圆面积；拼后周长比拼前两个半圆周长之和少两条直径。',answer:'面积不变；周长减少两条直径的总长度。'}],
+      'circle-motion':[
+        {label:'母题·三圆捆扎',kind:'hard',prompt:'3 根直径 8 cm 的圆柱形木棍并排紧靠，用绳子从外面捆一周（忽略绳结）。绳长至少多少厘米？',signal:'外轮廓不是三个完整圆周。',hint:'上下各有两段直线，左右两个半圆合成一整圆。',steps:'直线总长 4×8＝32；圆弧总长 3.14×8＝25.12；合计 57.12。',answer:'绳长至少 57.12 cm。'},
+        {label:'变式·相邻跑道',kind:'mix',prompt:'标准跑道两端弯道合成一个圆，相邻两条跑道中心线相距 1.22 m。若同终点，相邻起跑线应相差约多少米？',signal:'直道长度相同，只比较合成圆的周长差。',hint:'圆周长差＝2π×半径差。',steps:'2×3.14×1.22≈7.66（m）。',answer:'相邻起跑线约相差 7.66 m。'},
+        {label:'变式·轮径与圈数',kind:'hard',prompt:'甲轮直径 60 cm，乙轮直径 75 cm。走相同距离时，甲轮转 250 圈，乙轮约转多少圈？',signal:'距离相同，周长与圈数成反向关系。',hint:'可先写 π×60×250＝π×75×圈数。',steps:'圈数＝60×250÷75＝200。',answer:'乙轮约转 200 圈。'}],
+      'percent-meaning':[
+        {label:'变式·样本解释',kind:'reason',prompt:'小林前 20 次投篮命中 12 次，于是说：“我下一次投篮命中的可能性一定是 60%。”这句话严密吗？',signal:'已有命中率不能保证单次结果。',hint:'60% 描述的是前 20 次的统计结果。',steps:'12÷20＝60%，只能说明这组数据的命中率；下一次只有命中或不命中，不能说一定按 60% 发生。',answer:'不严密；60% 是此前的统计命中率，不保证下一次。'}],
+      'percent-three':[
+        {label:'母题·退票分档',kind:'hard',prompt:'一张 808 元的车票，发车前 24—48 小时退票收 10% 手续费。此时退票可退回多少元？',signal:'先确定费率档，再区分手续费与退回金额。',hint:'退回金额＝票价×（1－手续费率）。',steps:'808×（1－10%）＝727.2（元）。',answer:'可退回 727.20 元。'},
+        {label:'变式·成分嵌套',kind:'mix',prompt:'一件衣服面料重 250 g，其中棉占 96%；棉纤维中有 5% 在加工中损耗。最终保留棉纤维多少克？',signal:'第二个百分率的单位“1”是棉，不是整件面料。',hint:'连续求两个对应量。',steps:'250×96%×（1－5%）＝228（g）。',answer:'最终保留 228 g。'},
+        {label:'变式·反求总体',kind:'hard',prompt:'调查中有 144 人支持方案，占全部受访者的 60%；未表态者占全部受访者的 15%。未表态者有多少人？',signal:'先由已知对应量反求总人数，再求另一部分。',hint:'144÷60% 得到全部受访者。',steps:'总人数 144÷60%＝240；未表态 240×15%＝36。',answer:'未表态者有 36 人。'},
+        {label:'变式·信息关系图',kind:'reason',prompt:'某班男生 24 人，女生比男生少 25%。要计算全班人数，应把哪个量看作单位“1”？列出关系式。',signal:'百分率跟在“比男生少”后，标准量是男生。',hint:'女生＝男生×（1－25%）。',steps:'男生是单位“1”；女生 24×75%＝18；全班 24＋18＝42。',answer:'男生为单位“1”，全班 42 人。'}],
+      'change-rate':[
+        {label:'母题·数量与百分率',kind:'hard',prompt:'某设备耗电量从每小时 50 kWh 降到 42 kWh。报告写“耗电下降 8%”。这个结论对吗？请改正。',signal:'8 是具体变化量，不是百分率。',hint:'降低率要除以原来的 50。',steps:'降低量 50－42＝8；降低率 8÷50＝16%。',answer:'结论不对，应为耗电量下降 8 kWh，降低 16%。'},
+        {label:'变式·百分点陷阱',kind:'reason',prompt:'合格率从 80% 提高到 92%。可以说“提高了 12%”吗？请分别写出提高的百分点和相对提高率。',signal:'两个百分数之差与相对变化率不是一回事。',hint:'相对提高率要用 12%÷80%。',steps:'提高 92%－80%＝12 个百分点；相对提高率＝12%÷80%＝15%。',answer:'严密说法是提高 12 个百分点，或相对提高 15%。'},
+        {label:'变式·反求原量',kind:'mix',prompt:'改进后每小时产量为 276 件，比改进前提高 15%。改进前每小时产量是多少件？',signal:'已知提高后的量，求原量。',hint:'276 对应原量的 115%。',steps:'276÷（1＋15%）＝240。',answer:'改进前每小时 240 件。'}],
+      'successive-change':[
+        {label:'母题·涨后再降',kind:'hard',prompt:'一件商品先涨价 20%，再按涨价后的价格降价 20%。现价与原价相比怎样变化？',signal:'两个 20% 的单位“1”不同。',hint:'把原价设为 100 元。',steps:'100×1.2×0.8＝96（元），比原价少 4 元。',answer:'现价是原价的 96%，降低了 4%。'},
+        {label:'变式·分子分母同变',kind:'hard',prompt:'合唱团原有 40 人，其中女生占 60%。后来新增 10 人，其中 8 人是女生。现在女生占全团百分之几？',signal:'总人数和女生人数都发生变化。',hint:'先分别求新女生人数和新总人数。',steps:'原女生 40×60%＝24；新女生 32，新总人数 50；32÷50＝64%。',answer:'现在女生占 64%。'},
+        {label:'变式·逆向原价',kind:'mix',prompt:'一件商品先打九折，再使用一张使实付价减少 10% 的优惠券，最终支付 486 元。原价是多少元？',signal:'连续两次变化后反求原量。',hint:'原价×90%×90%＝486。',steps:'486÷0.9÷0.9＝600。',answer:'原价是 600 元。'}],
+      'money-percent':[
+        {label:'母题·优惠二选一',kind:'hard',prompt:'购买 620 元商品。方案 A：全场八五折；方案 B：每满 200 元减 35 元。哪个方案更省？',signal:'两种规则不能只比“折扣数字”，要算实付。',hint:'方案 B 可达到 3 个“满200”。',steps:'A：620×85%＝527；B：620－35×3＝515。',answer:'方案 B 更省，比方案 A 少付 12 元。'},
+        {label:'变式·利息存期',kind:'mix',prompt:'把 8000 元存两年，年利率 2.1%，到期利息是多少元？本息共多少元？',signal:'年利率要乘存期。',hint:'利息＝本金×年利率×2。',steps:'8000×2.1%×2＝336（元）；8000＋336＝8336（元）。',answer:'利息 336 元，本息 8336 元。'},
+        {label:'变式·退票比较',kind:'reason',prompt:'同一张 600 元车票，甲在收 5% 手续费的时段退票，乙在收 20% 手续费的时段退票。乙比甲少退回多少元？',signal:'比较退回金额也可直接比较手续费差。',hint:'费率相差 15%。',steps:'600×（20%－5%）＝90（元）。',answer:'乙比甲少退回 90 元。'}],
+      'data-standards':[
+        {label:'母题·不能平均百分率',kind:'hard',prompt:'低年级 600 人，活动满意率 60%；高年级 400 人，满意率 50%。全校满意率是多少？为什么不能直接算（60%＋50%）÷2？',signal:'两组总体人数不同。',hint:'先求两组满意人数。',steps:'600×60%＋400×50%＝560（人）；560÷1000＝56%。两组权重不同，不能等权平均。',answer:'全校满意率为 56%。'},
+        {label:'变式·平均相同分布不同',kind:'reason',prompt:'甲组成绩为 80、80、80、80、80；乙组为 60、70、80、90、100。两组平均分相同，能否说学习状况完全相同？',signal:'平均数不能反映全部分布。',hint:'比较波动和极端值。',steps:'两组平均数都是 80，但甲组集中，乙组差异大，稳定性不同。',answer:'不能；平均相同但分布与稳定性明显不同。'},
+        {label:'变式·样本代表性',kind:'hard',prompt:'想了解全校 1200 名学生的午餐满意度，只在篮球社随机调查 30 人，得到满意率 90%。能否据此代表全校？怎样改进？',signal:'调查对象来自特殊群体，样本可能有偏。',hint:'样本应覆盖不同年级、班级和人群。',steps:'篮球社成员不能代表全校；可按年级分层，再从各班随机抽取足够人数。',answer:'不能直接代表；应扩大样本并采用分层随机抽样。'},
+        {label:'变式·制定达标线',kind:'open',prompt:'把 100 名学生的跳绳成绩从高到低排列，希望约 75% 的学生达标。怎样初步选择达标线？还要说明什么？',signal:'开放题要有方法和限制条件。',hint:'观察第 75 名附近，并处理并列成绩。',steps:'可把第 75 名附近成绩作为初步线；同时说明并列处理、测试条件和样本是否代表全年级。',answer:'合理方案之一：取第 75 名附近成绩，并说明并列与样本条件。'}],
+      'integrated-model':[
+        {label:'母题·信息筛选',kind:'open',prompt:'研究“相邻 400 m 跑道起跑线应错开多少”，已知直道长、弯道半径、跑道宽、运动员人数。哪些信息真正有用？写出模型。',signal:'不是给了数据就都要用。',hint:'相邻跑道的直道相同，会抵消。',steps:'关键是跑道宽，即半径差；两个半圆合成一圆，错开量＝2π×跑道宽。',answer:'核心数据是跑道宽；模型为 2π×跑道宽。'},
+        {label:'变式·设计节水调查',kind:'open',prompt:'要判断家庭节水计划是否有效，请设计一个可执行的数据记录与比较方案。',signal:'开放题需写对象、数据、口径和判断标准。',hint:'实施前后要在相近条件下比较。',steps:'记录前后相同天数的总用水量、家庭人数与异常事件；算日均或人均用水量及节水率；多日稳定降低才支持有效。',answer:'符合“同口径记录＋计算指标＋说明异常与结论”的方案均可。'},
+        {label:'变式·从数据提问',kind:'reason',prompt:'某城市绿道全长 48 km，其中滨水段占 37.5%，林荫段占 5/12。请提出一个需要两步以上计算的问题，并给出解答。',signal:'先自行建立可计算的问题。',hint:'可问两类路段合计或其余路段。',steps:'示例：其余路段多长？滨水 48×37.5%＝18；林荫 48×5/12＝20；其余 48－18－20＝10。',answer:'示例答案：其余路段长 10 km；其他合理问题与过程也可。'},
+        {label:'变式·评价结论',kind:'reason',prompt:'某班抽取 5 名学生测得平均睡眠 9 小时，就说“全校学生睡眠已达标”。请从数学角度指出至少两点不足。',signal:'结论强于证据时要检查样本与指标。',hint:'考虑样本量、抽样方式和平均数。',steps:'样本只有 5 人且未说明随机；平均数可能掩盖部分学生不足；还需明确达标标准。',answer:'指出其中两点并给出扩大随机样本、查看分布等改进即可。'}]
+    };
+
+    const auditedEvidence = {
+      'ordered-pairs':'新版教材核心','direction-distance':'教材核心＋已核真题','fraction-multiply':'教材核心＋已核真题','fraction-mixed':'教材核心＋已核真题','fraction-of-number':'教材核心＋已核真题','fraction-chain':'教材核心＋已核真题','fraction-division':'教材核心＋已核真题','find-whole':'教材核心＋已核真题','fraction-equation':'教材核心＋已核真题','engineering':'教材核心＋已核真题','negative-numbers':'新版教材核心','circle-basics':'教材核心＋已核真题','circumference':'教材核心＋已核真题','circle-area':'教材核心＋已核真题','composite-circle':'教材核心＋已核真题','circle-motion':'教材核心＋已核真题','percent-meaning':'教材核心＋已核真题','percent-three':'教材核心＋已核真题','change-rate':'新版重点＋真题迁移','successive-change':'新版重点','money-percent':'新版重点＋生活应用','data-standards':'新版重点＋真题迁移','integrated-model':'新版综合实践','pigeonhole':'新版拓展（非主考）'
+    };
+    topics.forEach(topic=>{
+      topic.patterns=examPatterns[topic.id]||[];
+      topic.evidence=auditedEvidence[topic.id]||topic.evidence;
+      topic.examples=[...topic.examples,...(extraExamples[topic.id]||[])];
+    });
+
     const diagnostics = [
       {id:'d1',text:'我能正确读写数对，并判断点移动后的新位置。',topics:['ordered-pairs']},
       {id:'d2',text:'我能用“参照点＋方向＋距离”描述去程和返程。',topics:['direction-distance']},
@@ -210,8 +435,8 @@
       {id:'d12',text:'我能根据数据说明判断依据，而不只给计算结果。',topics:['data-standards','integrated-model','pigeonhole']}
     ];
 
-    const storageKey = 'grade6Math2026ProgressV1';
-    const blankState = {version:1,mode:'semester',bookmarks:{},status:{},diagnostic:{}};
+    const storageKey = 'grade6Math2026ProgressV2';
+    const blankState = {version:2,mode:'semester',currentTopic:'fraction-of-number',bookmarks:{},status:{},diagnostic:{}};
     let state = loadState();
     let onlyBookmarks = false;
     let onlyWeak = false;
@@ -232,76 +457,79 @@
       return unit.kind==='extend'?'extend':unit.kind==='new'?'new':'core';
     }
     function exampleHtml(ex,index){
-      return `<article class="example"><div class="example-head"><span class="level ${ex.kind}">${esc(ex.label)}</span><div class="prompt">${ex.prompt}</div></div><div class="reveal-row"><button type="button" data-reveal="hint-${index}">给一点提示</button><button type="button" data-reveal="steps-${index}">看关键步骤</button><button type="button" data-reveal="answer-${index}">核对答案</button></div><div id="hint-${index}" class="reveal"><b>提示：</b>${ex.hint}</div><div id="steps-${index}" class="reveal"><b>关键步骤：</b>${ex.steps}</div><div id="answer-${index}" class="reveal answer"><b>答案：</b>${ex.answer}</div></article>`;
+      return `<article class="example"><div class="example-head"><span class="level ${ex.kind}">${esc(ex.label)}</span><div><div class="prompt">${ex.prompt}</div>${ex.signal?`<div class="exam-signal"><b>识别信号：</b>${ex.signal}</div>`:''}</div></div><div class="reveal-row"><button type="button" data-reveal="hint-${index}">给一点提示</button><button type="button" data-reveal="steps-${index}">看关键步骤</button><button type="button" data-reveal="answer-${index}">核对答案</button></div><div id="hint-${index}" class="reveal"><b>提示：</b>${ex.hint}</div><div id="steps-${index}" class="reveal"><b>关键步骤：</b>${ex.steps}</div><div id="answer-${index}" class="reveal answer"><b>答案：</b>${ex.answer}</div></article>`;
+    }
+    function patternsHtml(topic){
+      return `<section class="pattern-card"><h4>考场识别：看到什么，立刻用什么方法</h4><div class="pattern-list">${topic.patterns.map(p=>`<div class="pattern-row"><div class="pattern-name">${esc(p.name)}</div><div class="pattern-signal"><b>题目常见信号</b>${esc(p.signal)}</div><div class="pattern-strategy"><b>对应答题策略</b>${esc(p.strategy)}</div></div>`).join('')}</div></section>`;
     }
     function topicHtml(topic,index){
       const status=state.status[topic.id]||'notYet';
       const bookmarked=!!state.bookmarks[topic.id];
       return `<article class="topic" id="${topic.id}" data-id="${topic.id}" data-unit="${topic.unit}" data-importance="${topic.importance}" data-search="${esc((topic.title+' '+topic.subtitle+' '+topic.key+' '+topic.keywords).toLowerCase())}">
-        <div class="topic-head"><div class="topic-index">${String(index+1).padStart(2,'0')}</div><div><h3>${esc(topic.title)}</h3><p class="topic-sub">${esc(topic.subtitle)}</p><div class="ratings"><span class="rating">重要 <b class="stars" aria-label="重要程度 ${topic.importance} 星">${stars(topic.importance)}</b></span><span class="rating">难度 <b class="stars" aria-label="难度 ${topic.difficulty} 星">${stars(topic.difficulty)}</b></span><span class="tag ${evidenceClass(topic)}">${esc(topic.evidence)}</span></div></div><div class="topic-actions"><button type="button" class="icon-btn bookmark ${bookmarked?'on':''}" aria-label="${bookmarked?'取消收藏':'收藏'}" title="收藏">${bookmarked?'★':'☆'}</button><button type="button" class="icon-btn expand-btn" aria-expanded="false">展开方法</button></div></div>
-        <div class="topic-body"><div class="method-card"><h4>关键解题方法</h4><ol class="method-list">${topic.method.map(x=>`<li>${x}</li>`).join('')}</ol></div><div class="mini-grid"><div class="mini"><h4>一句话抓手</h4><p>${topic.key}</p></div><div class="mini mistake"><h4>最容易错</h4><p>${topic.mistake}</p></div></div><details class="parent-tip"><summary>给家长的辅导提示</summary><p>${topic.parent}</p></details><div class="examples-title"><h4>母题与关键变式</h4><span>先想方法，再展开答案</span></div><div class="examples">${topic.examples.map((ex,i)=>exampleHtml(ex,`${topic.id}-${i}`)).join('')}</div><div class="status-row"><span>我对这个方法：</span><button type="button" data-status="notYet" class="${status==='notYet'?'selected':''}">还不会</button><button type="button" data-status="learning" class="${status==='learning'?'selected':''}">在巩固</button><button type="button" data-status="mastered" class="${status==='mastered'?'selected':''}">已掌握</button></div></div>
+        <div class="topic-head"><div class="topic-index">${String(index+1).padStart(2,'0')}</div><div><h3>${esc(topic.title)}</h3><p class="topic-sub">${esc(topic.subtitle)}</p><div class="ratings"><span class="rating">重要 <b class="stars" aria-label="重要程度 ${topic.importance} 星">${stars(topic.importance)}</b></span><span class="rating">难度 <b class="stars" aria-label="难度 ${topic.difficulty} 星">${stars(topic.difficulty)}</b></span><span class="tag ${evidenceClass(topic)}">${esc(topic.evidence)}</span></div></div><div class="topic-actions"><button type="button" class="icon-btn bookmark ${bookmarked?'on':''}" aria-label="${bookmarked?'取消收藏':'收藏'}" title="收藏">${bookmarked?'★':'☆'}</button></div></div>
+        <div class="topic-body"><div class="method-card"><h4>关键解题方法</h4><ol class="method-list">${topic.method.map(x=>`<li>${x}</li>`).join('')}</ol></div><div class="mini-grid"><div class="mini"><h4>一句话抓手</h4><p>${topic.key}</p></div><div class="mini mistake"><h4>最容易错</h4><p>${topic.mistake}</p></div></div>${patternsHtml(topic)}<details class="parent-tip"><summary>给家长的辅导提示</summary><p>${topic.parent}</p></details><div class="examples-title"><h4>母题与关键变式（${topic.examples.length} 题）</h4><span>先独立识别题型，再按需展开提示</span></div><div class="examples">${topic.examples.map((ex,i)=>exampleHtml(ex,`${topic.id}-${i}`)).join('')}</div><div class="status-row"><span>我对这个方法：</span><button type="button" data-status="notYet" class="${status==='notYet'?'selected':''}">还不会</button><button type="button" data-status="learning" class="${status==='learning'?'selected':''}">在巩固</button><button type="button" data-status="mastered" class="${status==='mastered'?'selected':''}">已掌握</button></div></div>
       </article>`;
     }
-    function unitSummaryHtml(unit,count){return `<div class="unit-summary panel" id="unit-${unit.id}"><div><h3>${esc(unit.name)}</h3><p>${esc(unit.summary)}</p><div class="unit-tags"><span class="tag ${unit.kind}">${esc(unit.pages)}</span><span class="tag">${count} 个关键方法</span></div></div><span class="tag ${unit.kind}">${unit.kind==='core'?'核心主线':unit.kind==='new'?'新版关注':'拓展提升'}</span></div>`;}
-
+    function topicOrder(){return state.mode==='exam'?[...topics].sort((a,b)=>b.importance-a.importance||b.difficulty-a.difficulty):topics;}
+    function passesFilters(topic){
+      const query=document.querySelector('#searchInput').value.trim().toLowerCase();
+      const importance=Number(document.querySelector('#importanceFilter').value);
+      const haystack=(topic.title+' '+topic.subtitle+' '+topic.key+' '+topic.keywords+' '+topic.method.join(' ')+' '+topic.patterns.map(p=>p.name+' '+p.signal+' '+p.strategy).join(' ')).toLowerCase();
+      return (!query||haystack.includes(query))&&(!importance||topic.importance===importance)&&(!onlyBookmarks||state.bookmarks[topic.id])&&(!onlyWeak||state.status[topic.id]!=='mastered');
+    }
+    function filteredTopics(){return topicOrder().filter(passesFilters);}
     function renderContent(){
       const content=document.querySelector('#content');
-      let html='';
-      if(state.mode==='semester'){
-        let number=0;
-        units.forEach(unit=>{
-          const list=topics.filter(t=>t.unit===unit.id);
-          html+=`<section class="unit-block" data-unit-block="${unit.id}">${unitSummaryHtml(unit,list.length)}<div class="topic-grid">${list.map(t=>topicHtml(t,number++)).join('')}</div></section>`;
-        });
-      }else{
-        const sorted=[...topics].sort((a,b)=>b.importance-a.importance||b.difficulty-a.difficulty);
-        let number=0;
-        [{min:5,title:'第一优先：必须掌握',desc:'期末复习先拿下这些方法。'},{min:4,title:'第二优先：重点掌握',desc:'在基础稳定后完成迁移。'},{min:0,title:'第三优先：理解与拓展',desc:'用于补齐新版内容和拓展思维。'}].forEach((group,idx)=>{
-          const max=idx===0?5:idx===1?4:3;
-          const list=sorted.filter(t=>idx===0?t.importance===5:idx===1?t.importance===4:t.importance<=3);
-          html+=`<section class="unit-block"><div class="unit-summary panel"><div><h3>${group.title}</h3><p>${group.desc}</p></div><span class="tag">${list.length} 个方法</span></div><div class="topic-grid">${list.map(t=>topicHtml(t,number++)).join('')}</div></section>`;
-        });
-      }
-      content.innerHTML=html;
-      bindTopicEvents();
-      applyFilters();
+      const available=filteredTopics();
       const hash=location.hash.slice(1);
-      if(hash && topics.some(t=>t.id===hash)){
-        const card=document.getElementById(hash); if(card){openTopic(card); setTimeout(()=>card.scrollIntoView({block:'start'}),0);}
+      const hashTopic=available.find(t=>t.id===hash);
+      let current=hashTopic||available.find(t=>t.id===state.currentTopic)||available[0];
+      document.querySelector('#resultCount').textContent=`${available.length} / ${topics.length} 个题型可选`;
+      document.querySelector('#empty').classList.toggle('show',!current);
+      if(!current){
+        content.innerHTML='';
+        document.querySelector('#topicsTitle').textContent='没有匹配的题型';
+        document.querySelector('#topicContext').innerHTML='';
+        buildNavigation(available);
+        return;
       }
+      state.currentTopic=current.id;
+      try{localStorage.setItem(storageKey,JSON.stringify(state));}catch(e){}
+      history.replaceState(null,'','#'+current.id);
+      const index=topics.indexOf(current);
+      const position=available.indexOf(current);
+      const previous=available[position-1];
+      const next=available[position+1];
+      content.innerHTML=`${topicHtml(current,index)}<div class="topic-pager"><button type="button" data-page-topic="${previous?.id||''}" ${previous?'':'disabled'}>← 上一个题型</button><span>当前第 ${position+1} 个，共 ${available.length} 个</span><button type="button" data-page-topic="${next?.id||''}" ${next?'':'disabled'}>下一个题型 →</button></div>`;
+      const unit=unitFor(current.unit);
+      document.querySelector('#topicsTitle').textContent=current.title;
+      document.querySelector('#topicContext').innerHTML=`<span class="tag ${unit.kind}">${esc(unit.name)}</span><span class="tag">${esc(unit.pages)}</span><span class="tag">${current.examples.length} 道样题</span>`;
+      bindTopicEvents();
+      document.querySelectorAll('[data-page-topic]').forEach(btn=>btn.addEventListener('click',()=>btn.dataset.pageTopic&&selectTopic(btn.dataset.pageTopic,true)));
+      buildNavigation(available);
     }
     function bindTopicEvents(){
       document.querySelectorAll('.topic').forEach(card=>{
-        card.querySelector('.expand-btn').addEventListener('click',()=>card.classList.contains('open')?closeTopic(card):openTopic(card));
         card.querySelector('.bookmark').addEventListener('click',e=>{
           const id=card.dataset.id; state.bookmarks[id]=!state.bookmarks[id];
           e.currentTarget.classList.toggle('on',state.bookmarks[id]); e.currentTarget.textContent=state.bookmarks[id]?'★':'☆'; e.currentTarget.setAttribute('aria-label',state.bookmarks[id]?'取消收藏':'收藏');
-          saveState(); applyFilters();
+          saveState(); renderContent();
         });
         card.querySelectorAll('[data-reveal]').forEach(btn=>btn.addEventListener('click',()=>{
           const box=document.getElementById(btn.dataset.reveal); const showing=box.classList.toggle('show'); btn.textContent=showing?'收起':'再看一次';
         }));
         card.querySelectorAll('[data-status]').forEach(btn=>btn.addEventListener('click',()=>{
-          state.status[card.dataset.id]=btn.dataset.status; card.querySelectorAll('[data-status]').forEach(x=>x.classList.toggle('selected',x===btn)); saveState(); applyFilters();
+          state.status[card.dataset.id]=btn.dataset.status; card.querySelectorAll('[data-status]').forEach(x=>x.classList.toggle('selected',x===btn)); saveState(); renderContent();
         }));
       });
     }
-    function openTopic(card){card.classList.add('open');const btn=card.querySelector('.expand-btn');btn.textContent='收起';btn.setAttribute('aria-expanded','true');history.replaceState(null,'','#'+card.id);}
-    function closeTopic(card){card.classList.remove('open');const btn=card.querySelector('.expand-btn');btn.textContent='展开方法';btn.setAttribute('aria-expanded','false');}
-    function applyFilters(){
-      const query=document.querySelector('#searchInput').value.trim().toLowerCase();
-      const unit=document.querySelector('#unitFilter').value;
-      const importance=Number(document.querySelector('#importanceFilter').value);
-      let shown=0;
-      document.querySelectorAll('.topic').forEach(card=>{
-        const id=card.dataset.id;
-        const visible=(!query||card.dataset.search.includes(query))&&(unit==='all'||card.dataset.unit===unit)&&(!importance||Number(card.dataset.importance)===importance)&&(!onlyBookmarks||state.bookmarks[id])&&(!onlyWeak||state.status[id]!=='mastered');
-        card.classList.toggle('hidden',!visible); if(visible) shown++;
-      });
-      document.querySelectorAll('.unit-block').forEach(block=>block.style.display=block.querySelector('.topic:not(.hidden)')?'':'none');
-      document.querySelector('#resultCount').textContent=`显示 ${shown} / ${topics.length} 个方法`;
-      document.querySelector('#empty').classList.toggle('show',shown===0);
+    function selectTopic(id,scroll){
+      if(!topics.some(t=>t.id===id))return;
+      state.currentTopic=id;
+      renderContent();
+      if(scroll)document.querySelector('#topics')?.scrollIntoView({behavior:'smooth',block:'start'});
     }
+    function applyFilters(){renderContent();}
     function updateProgress(){
       const count=topics.filter(t=>state.status[t.id]==='mastered').length;
       const pct=Math.round(count/topics.length*100);
@@ -309,20 +537,25 @@
       document.querySelector('#progressText').textContent=`${count} / ${topics.length} 个方法`;
       document.querySelector('#progressRing').style.setProperty('--progress',pct+'%');
     }
-    function buildNavigation(){
+    function buildNavigation(available=filteredTopics()){
       const nav=document.querySelector('#unitNav');
-      nav.innerHTML=units.map(u=>`<button type="button" data-unit-jump="${u.id}">${u.name.replace(/^.+? /,'')}</button>`).join('');
-      nav.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{
-        if(state.mode!=='semester'){setMode('semester');}
-        setTimeout(()=>document.querySelector(`#unit-${btn.dataset.unitJump}`)?.scrollIntoView({behavior:'smooth',block:'start'}),0);
+      const availableIds=new Set(available.map(t=>t.id));
+      nav.innerHTML=units.map(unit=>{
+        const list=topicOrder().filter(t=>t.unit===unit.id&&availableIds.has(t.id));
+        const currentInUnit=list.some(t=>t.id===state.currentTopic);
+        return `<section class="nav-unit ${currentInUnit?'open':''} ${list.length?'':'filtered-out'}" data-nav-unit="${unit.id}"><button type="button" class="nav-unit-button" aria-expanded="${currentInUnit}"><span>${esc(unit.name)}</span><small>${list.length}</small><span class="chevron">›</span></button><div class="topic-nav">${list.map(t=>`<button type="button" data-topic-nav="${t.id}" class="${t.id===state.currentTopic?'active':''}"><span class="nav-index">${String(topics.indexOf(t)+1).padStart(2,'0')}</span><span>${esc(t.title)}</span><span class="nav-stars">${'★'.repeat(t.importance)}</span></button>`).join('')}</div></section>`;
+      }).join('');
+      nav.querySelectorAll('.nav-unit-button').forEach(btn=>btn.addEventListener('click',()=>{
+        const section=btn.closest('.nav-unit');
+        const open=section.classList.toggle('open');
+        btn.setAttribute('aria-expanded',String(open));
       }));
-      const select=document.querySelector('#unitFilter');
-      select.innerHTML='<option value="all">全部内容</option>'+units.map(u=>`<option value="${u.id}">${u.name}</option>`).join('');
+      nav.querySelectorAll('[data-topic-nav]').forEach(btn=>btn.addEventListener('click',()=>selectTopic(btn.dataset.topicNav,true)));
     }
     function setMode(mode){
       state.mode=mode; saveState();
       document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));
-      document.querySelector('#modeDescription').textContent=mode==='semester'?'按照新版教材顺序学习，适合日常同步。':'按照重要度和难度排序，适合期末集中复习。';
+      document.querySelector('#modeDescription').textContent=mode==='semester'?'按新版教材顺序浏览左侧目录；右侧一次只学习一个题型。':'目录内优先显示重要度高、难度高的题型，适合期末集中复习。';
       renderContent();
     }
     function buildDiagnostics(){
@@ -341,16 +574,16 @@
       const list=Object.entries(scores).filter(([,s])=>s>0).sort((a,b)=>b[1]-a[1]).slice(0,4).map(([id])=>topics.find(t=>t.id===id));
       if(!list.length){target.innerHTML='<h3>目前很扎实</h3><p>所有已评项目都选择了“会”。建议切换到“期末重点”，优先检查五星题型的变式是否也能独立完成。</p>';return;}
       target.innerHTML=`<h3>建议先复习</h3><p>${list.map(t=>`<a href="#${t.id}" data-rec="${t.id}">${t.title}</a>`).join('、')}。先读“一句话抓手”，再做母题；能说出方法后再看变式。</p>`;
-      target.querySelectorAll('[data-rec]').forEach(a=>a.addEventListener('click',()=>document.querySelector('#diagnosticDialog').close()));
+      target.querySelectorAll('[data-rec]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();document.querySelector('#diagnosticDialog').close();selectTopic(a.dataset.rec,true);}));
     }
 
-    buildNavigation(); buildDiagnostics(); updateProgress(); setMode(state.mode==='exam'?'exam':'semester');
+    buildDiagnostics(); updateProgress(); setMode(state.mode==='exam'?'exam':'semester');
     document.querySelector('#searchInput').addEventListener('input',applyFilters);
-    document.querySelector('#unitFilter').addEventListener('change',applyFilters);
     document.querySelector('#importanceFilter').addEventListener('change',applyFilters);
     document.querySelector('#bookmarkFilter').addEventListener('click',e=>{onlyBookmarks=!onlyBookmarks;e.currentTarget.classList.toggle('active',onlyBookmarks);applyFilters();});
     document.querySelector('#weakFilter').addEventListener('click',e=>{onlyWeak=!onlyWeak;e.currentTarget.classList.toggle('active',onlyWeak);applyFilters();});
     document.querySelectorAll('[data-mode]').forEach(btn=>btn.addEventListener('click',()=>setMode(btn.dataset.mode)));
+    window.addEventListener('hashchange',()=>{const id=location.hash.slice(1);if(id&&id!==state.currentTopic)selectTopic(id,true);});
     const dialog=document.querySelector('#diagnosticDialog');
     document.querySelectorAll('.diagnostic-open').forEach(btn=>btn.addEventListener('click',()=>dialog.showModal()));
     document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
