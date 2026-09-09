@@ -63,7 +63,7 @@
     .topic-nav .nav-index{opacity:.62}.topic-nav .nav-stars{color:var(--gold);font-size:.72rem;white-space:nowrap}.topic-nav button.active .nav-stars{color:#ffe090}
     .topic-nav button.hidden{display:none}.nav-unit.filtered-out{display:none}
     .workspace-intro{display:flex;align-items:center;gap:14px;padding:13px 16px;margin-bottom:12px;background:linear-gradient(135deg,#123b5d,#176b87);color:#fff;border:0}
-    .workspace-intro strong{font-size:.94rem}.workspace-intro p{margin:0;color:#dceef3;font-size:.84rem}.workflow-mini{margin-left:auto;display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}.workflow-mini span{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:5px 8px;font-size:.76rem;white-space:nowrap}
+    .workspace-intro strong{font-size:.94rem}.workspace-intro p{margin:0;color:#dceef3;font-size:.84rem}.evidence-chip{display:inline-flex;margin-top:6px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(255,255,255,.12);padding:3px 9px;color:#f4fbfd;font-size:.73rem;font-weight:700}.workflow-mini{margin-left:auto;display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}.workflow-mini span{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:5px 8px;font-size:.76rem;white-space:nowrap}
     .toolbar{top:68px;margin-bottom:12px;padding:10px 12px}.toolbar .search{min-width:260px}
     .section-head{align-items:center;margin:18px 2px 10px}.section-head h2{font-size:1.3rem}.topic-context{display:flex;gap:7px;flex-wrap:wrap;margin-top:7px}
     .topic{border-radius:18px}.topic-head{padding:19px 20px}.topic-body{display:block;border-top:1px solid var(--line);padding:0 20px 20px}
@@ -95,13 +95,13 @@
   </header>
   <div class="layout">
     <aside class="side" aria-label="学习导航">
-      <div class="progress-head"><div class="progress-ring" id="progressRing" style="--progress: 0%;"><strong id="progressPct">0%</strong></div><div class="progress-copy"><strong>我的掌握进度</strong><span id="progressText">0 / 24 个方法</span></div></div>
+      <div class="progress-head"><div class="progress-ring" id="progressRing"><strong id="progressPct">0%</strong></div><div class="progress-copy"><strong>我的掌握进度</strong><span id="progressText">0 / 24 个方法</span></div></div>
       <h2>两级学习目录</h2><nav class="unit-nav" id="unitNav"></nav>
       <h2>证据说明</h2><div class="legend"><span><i class="dot core"></i>教材核心＋已核验真题考法</span><span><i class="dot new"></i>新版教材重点，旧卷可能未覆盖</span><span><i class="dot extend"></i>综合实践或拓展提升</span></div>
       <h2>记住这句话</h2><p style="margin:0;color:var(--muted);font-size:.86rem">不背题，先找到不变的数量关系；题目换了说法，方法仍然能用。</p>
     </aside>
     <main id="main">
-      <section class="workspace-intro panel" aria-labelledby="pageTitle"><div><strong id="pageTitle">把复杂题翻译成简单关系</strong><p>右侧一次只学一个方法；先读策略，再做母题和变式。</p></div><div class="workflow-mini" aria-label="通用解题流程"><span>1 读问题</span><span>2 找标准量</span><span>3 画关系</span><span>4 列式</span><span>5 检查</span></div></section>
+      <section class="workspace-intro panel" aria-labelledby="pageTitle"><div><strong id="pageTitle">把复杂题翻译成简单关系</strong><p>右侧一次只学一个方法；先读策略，再做母题和变式。</p><span class="evidence-chip">已审计 13 份正式卷 · 8 个区或地区 · 2023—2025</span></div><div class="workflow-mini" aria-label="通用解题流程"><span>1 读问题</span><span>2 找标准量</span><span>3 画关系</span><span>4 列式</span><span>5 检查</span></div></section>
       <section class="toolbar panel" aria-label="筛选工具">
         <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><input id="searchInput" type="search" placeholder="搜索题型、方法或关键词" aria-label="搜索"></label>
         <select id="importanceFilter" aria-label="重要程度"><option value="0">全部重要度</option><option value="5">★★★★★ 必须掌握</option><option value="4">★★★★ 重点掌握</option><option value="3">★★★ 理解掌握</option><option value="2">★★ 拓展了解</option></select>
@@ -111,8 +111,8 @@
       <section id="topics" aria-labelledby="topicsTitle"><div class="section-head"><div><h2 id="topicsTitle">重点题型与通用方法</h2><p id="modeDescription">按照新版教材顺序学习，适合日常同步。</p><div id="topicContext" class="topic-context"></div></div><span id="resultCount" class="result-count"></span></div><div id="content"></div><div id="empty" class="empty panel">没有符合当前条件的题型，请调整搜索或筛选条件。</div></section>
     </main>
   </div>
-  <footer><p><strong>内容依据：</strong>人民教育出版社《义务教育教科书·数学 六年级上册》（2026 秋季启用）及经卷面核验的北京各区往年六年级上册期末试卷。</p><p><strong>真题甄别规则：</strong>只有卷面能确认区名、学年、第一学期和“期末考试/学业水平测试”的材料才计入真题分析；“抽样检测指导卷”“数学练习”“样卷”“参考卷”等不计入真题高频统计，只作能力拓展参考。样题均为重新编写。π 按 3.14 计算，除非题目另有说明。</p><p class="only-print">打印日期：由浏览器生成。本页的答案在打印版中默认显示。</p></footer>
-  <dialog id="diagnosticDialog"><div class="dialog-head"><div><h2>“我会不会”自评诊断</h2><div style="color:var(--muted);font-size:.86rem">不用计算分数，诚实选择就能得到复习建议。</div></div><button class="dialog-close" type="button" aria-label="关闭">×</button></div><div class="dialog-body"><div id="diagnosticList" class="diagnostic-list"></div><div id="recommendation" class="recommendation"><h3>建议从哪里开始</h3><p>完成选择后，这里会显示建议。</p></div></div></dialog>
+  <footer><p><strong>内容依据：</strong>人民教育出版社《义务教育教科书·数学 六年级上册》（2026 秋季启用），以及 13 份经卷面核验的北京六年级第一学期正式期末卷（2023—2024、2024—2025 学年度，共 8 个区或地区）。</p><p><strong>真题甄别规则：</strong>只有卷面能确认区名、学年、第一学期和“期末考试/学业水平测试”的材料才计入真题分析；“抽样监测指导卷”“数学练习”“综合练习”“样卷”“参考卷”“自我挑战”等不计入真题高频统计。旧卷只帮助总结考法，新版教材决定学习范围；样题均为重新编写。π 按 3.14 计算，除非题目另有说明。</p><p class="only-print">打印日期：由浏览器生成。本页的答案在打印版中默认显示。</p></footer>
+  <dialog id="diagnosticDialog"><div class="dialog-head"><div><h2>“我会不会”自评诊断</h2><div style="color:var(--muted);font-size:.86rem">不用计算分数，诚实选择就能得到复习建议。</div></div><button class="dialog-close" type="button" aria-label="关闭">×</button></div><div class="dialog-body"><div id="diagnosticList" class="diagnostic-list"></div></div><div class="diagnostic-item" data-diagnostic="d2"><p>2. 我能用“参照点＋方向＋距离”描述去程和返程。</p><div class="diagnostic-options"><button type="button" data-value="yes" class="">会</button><button type="button" data-value="maybe" class="">有点模糊</button><button type="button" data-value="no" class="">不会</button></div></div><div class="diagnostic-item" data-diagnostic="d3"><p>3. 我能准确计算分数乘、除法和混合运算。</p><div class="diagnostic-options"><button type="button" data-value="yes" class="">会</button><button type="button" data-value="maybe" class="">有点模糊</button><button type="button" data-value="no" class="">不会</button></div></div><div class="diagnostic-item" data-diagnostic="d4"><p>4. 我能在分数应用题中找出每个分率的单位“1”。</p><div class="diagnostic-options"><button type="button" data-value="yes" class="">会</button><button type="button" data-value="maybe" class="">有点模糊</button><button type="button" data-value="no" class="">不会</button></div></div><div class="diagnostic-item" data-diagnostic="d5"><p>5. 单位“1”未知时，我会用除法或方程反求。</p><div class="diagnostic-options"><button type="button" data-value="yes" class="">会</button><button type="button" data-value="maybe" class="">有点模糊</button><button type="button" data-value="no" class="">不会</button></div></div><div class="diagnostic-item" data-diagnostic="d6"><p>6. 工程题没有总量时，我会把全部任务看作“1”。</p><div class="diagnostic-options"><button type="button" data-value="yes" class="">会</button><button type="button" data-value="maybe" class="">有点模糊</button><button type="button" data-value="no" class="">不会</button></div></div><div class="diagnostic-item" data-diagnostic="d7"><p>7. 我能解释生活中负数的实际含义。</p><div class="diagnostic-options"><button type="button" data-value="yes" class="">会</button><button type="button" data-value="maybe" class="">有点模糊</button><button type="button" data-value="no" class="">不会</button></div></div><div class="diagnostic-item" data-diagnostic="d8"><p>8. 我能分清圆的半径、直径、周长和面积。</p><div class="diagnostic-options"><button type="button" data-value="yes" class="">会</button><button type="button" data-value="maybe" class="">有点模糊</button><button type="button" data-value="no" class="">不会</button></div></div><div class="diagnostic-item" data-diagnostic="d9"><p>9. 我能把圆环或组合图形拆成基本图形。</p><div class="diagnostic-options"><button type="button" data-value="yes" class="">会</button><button type="button" data-value="maybe" class="">有点模糊</button><button type="button" data-value="no" class="">不会</button></div></div><div class="diagnostic-item" data-diagnostic="d10"><p>10. 我能用一个三量关系解决百分数应用题。</p><div class="diagnostic-options"><button type="button" data-value="yes" class="">会</button><button type="button" data-value="maybe" class="">有点模糊</button><button type="button" data-value="no" class="">不会</button></div></div><div class="diagnostic-item" data-diagnostic="d11"><p>11. 我能找准增长率、降低率的比较标准，并处理连续变化。</p><div class="diagnostic-options"><button type="button" data-value="yes" class="">会</button><button type="button" data-value="maybe" class="">有点模糊</button><button type="button" data-value="no" class="">不会</button></div></div><div class="diagnostic-item" data-diagnostic="d12"><p>12. 我能根据数据说明判断依据，而不只给计算结果。</p><div class="diagnostic-options"><button type="button" data-value="yes" class="">会</button><button type="button" data-value="maybe" class="">有点模糊</button><button type="button" data-value="no" class="">不会</button></div></div></div><div id="recommendation" class="recommendation"><h3>建议从哪里开始</h3><p>完成选择后，这里会显示建议。</p></div></div></dialog>
   <script>
     const units = [
       {id:'position',name:'一 确定位置',pages:'课本第 1—15 页',kind:'new',summary:'用两个条件准确定位：数对看列和行，方向定位看参照点、方向和距离。'},
@@ -145,7 +145,7 @@
         {label:'母题',kind:'mother',prompt:'一条绿道长 240 km，其中山脊线占 3/8。山脊线长多少千米？',hint:'240 km 是单位“1”，它已经知道。',steps:'240×3/8＝90（km）。',answer:'90 km。'},
         {label:'变式·换单位',kind:'change',prompt:'一本书有 72 页，小明读了全书的 5/6。他读了多少页？',hint:'全书页数是单位“1”。',steps:'72×5/6＝60（页）。',answer:'60 页。'},
         {label:'变式·求剩余',kind:'mix',prompt:'仓库原有 150 箱货物，运走 2/5，还剩多少箱？',hint:'剩余占原来的 1－2/5。',steps:'150×（1－2/5）＝150×3/5。',answer:'90 箱。'}]},
-      {id:'fraction-chain',unit:'fmul',title:'连续求几分之几与“多（少）几分之几”',subtitle:'每一步重新确认单位“1”',importance:5,difficulty:4,evidence:'教材核心＋综合题常见',keywords:'连续 几分之几 多几分之几 少几分之几 单位1',method:['把每个分率旁边的单位“1”写出来。','连续关系按顺序相乘，不要把两个分数相加。','“多几分之几”乘（1＋分数），“少几分之几”乘（1－分数）。','每算一步都检查新的单位“1”是否改变。'],key:'关键不是分数多少，而是每个分数以谁为标准。',mistake:'把“比 A 多 1/3”理解成“是 A 的 1/3”；连续变化仍以最初数量为单位“1”。',parent:'让孩子在每条关系下写小字“以谁为1”，比多做几道题更有效。',examples:[
+      {id:'fraction-chain',unit:'fmul',title:'连续求几分之几与“多（少）几分之几”',subtitle:'每一步重新确认单位“1”',importance:5,difficulty:4,evidence:'教材核心＋综合题常见',keywords:'连续 几分之几 多几分之几 少几分之几 单位1 补条件',method:['把每个分率旁边的单位“1”写出来。','连续关系按顺序相乘，不要把两个分数相加。','“多几分之几”乘（1＋分数），“少几分之几”乘（1－分数）。','条件不完整时，先把每个候选条件翻译成数量关系再选择。','每算一步都检查新的单位“1”是否改变。'],key:'关键不是分数多少，而是每个分数以谁为标准。',mistake:'把“比 A 多 1/3”理解成“是 A 的 1/3”；连续变化仍以最初数量为单位“1”。',parent:'让孩子在每条关系下写小字“以谁为1”，比多做几道题更有效。',examples:[
         {label:'母题',kind:'mother',prompt:'种植园有 480 m²，3/4 种果树，其中 2/5 种苹果。苹果占地多少平方米？',hint:'先求果树地，再求果树地的 2/5。',steps:'480×3/4×2/5＝144（m²）。',answer:'144 m²。'},
         {label:'变式·多几分之几',kind:'change',prompt:'芍药花期 60 天，玫瑰花期比芍药多 1/3。玫瑰花期多少天？',hint:'玫瑰是芍药的 1＋1/3。',steps:'60×（1＋1/3）＝80（天）。',answer:'80 天。'},
         {label:'变式·连续变化',kind:'mix',prompt:'一个球从 50 m 高处落下，第一次弹起高度比原来降低 2/5，第二次又比第一次提高 1/2。第二次弹起多高？',hint:'第二次的提高以第一次弹起高度为标准。',steps:'50×（1－2/5）×（1＋1/2）＝50×3/5×3/2。',answer:'45 m。'}]},
@@ -173,7 +173,7 @@
         {label:'母题',kind:'mother',prompt:'一个圆的半径是 3.5 cm，它的直径是多少厘米？',hint:'直径是半径的 2 倍。',steps:'3.5×2＝7（cm）。',answer:'7 cm。'},
         {label:'变式·决定因素',kind:'change',prompt:'两个圆的半径相同、圆心不同，它们的大小和位置有什么关系？',hint:'半径管大小，圆心管位置。',steps:'半径相同所以大小相同；圆心不同所以位置不同。',answer:'大小相同，位置不同。'},
         {label:'变式·扇形比较',kind:'mix',prompt:'在同一个圆中，圆心角分别为 60° 和 120° 的两个扇形，哪个更大？',hint:'同圆中半径相同，只需比较圆心角。',steps:'120° 是 60° 的 2 倍，对应扇形也更大。',answer:'120° 的扇形更大，面积是另一个的 2 倍。'}]},
-      {id:'circumference',unit:'circle',title:'圆的周长：顺求、反求与半圆边界',subtitle:'求边界长度，公式 C＝πd＝2πr',importance:5,difficulty:3,evidence:'教材核心＋已核真题',keywords:'周长 直径 半径 反求 半圆 边界',method:['先判断题目求的是一圈的长度。','统一半径或直径后代入公式。','反求直径用 C÷π，反求半径再÷2。','半圆周长要加直径，不能只算半个圆周。'],key:'“绕一圈、边缘、围栏、滚一周”通常在求周长。',mistake:'把半径直接代入 πd；半圆边界漏掉直径。',parent:'让孩子在图上用手沿边界走一圈，先确定哪些线段要算，再写公式。',examples:[
+      {id:'circumference',unit:'circle',title:'圆的周长：顺求、反求与半圆边界',subtitle:'求边界长度，公式 C＝πd＝2πr',importance:5,difficulty:3,evidence:'教材核心＋已核真题',keywords:'周长 直径 半径 反求 半圆 边界 环形列队 估测',method:['先判断题目求的是一圈的长度。','统一半径或直径后代入公式。','反求直径用 C÷π，反求半径再÷2。','半圆周长要加直径，不能只算半个圆周。','封闭成圈时，间隔数通常等于人数或物体数。'],key:'“绕一圈、边缘、围栏、滚一周”通常在求周长。',mistake:'把半径直接代入 πd；半圆边界漏掉直径；封闭列队把间隔数少算 1。',parent:'让孩子在图上用手沿边界走一圈，先确定哪些线段要算，再写公式。',examples:[
         {label:'母题',kind:'mother',prompt:'一个圆的直径是 8 cm，周长是多少厘米？',hint:'已知直径，用 C＝πd。',steps:'3.14×8＝25.12（cm）。',answer:'25.12 cm。'},
         {label:'变式·反求半径',kind:'change',prompt:'一个圆的周长是 31.4 m，它的半径是多少米？',hint:'先用周长除以 π 求直径。',steps:'31.4÷3.14＝10（m），10÷2＝5（m）。',answer:'5 m。'},
         {label:'变式·半圆边界',kind:'mix',prompt:'一个半圆的半径是 4 cm，它的周长是多少厘米？',hint:'半个圆周加一条直径。',steps:'3.14×4＋2×4＝12.56＋8。',answer:'20.56 cm。'}]},
@@ -181,7 +181,7 @@
         {label:'母题',kind:'mother',prompt:'圆形喷灌装置的射程是 6 m，它最多能喷灌多少平方米？',hint:'射程就是半径。',steps:'3.14×6²＝3.14×36。',answer:'113.04 m²。'},
         {label:'变式·已知直径',kind:'change',prompt:'圆形茶几直径 10 dm，桌面面积是多少平方分米？',hint:'半径是 10÷2＝5 dm。',steps:'3.14×5²＝3.14×25。',answer:'78.5 dm²。'},
         {label:'变式·周长反求面积',kind:'mix',prompt:'一个圆的周长是 18.84 cm，它的面积是多少平方厘米？',hint:'先由周长求半径。',steps:'18.84÷3.14÷2＝3（cm）；3.14×3²＝28.26。',answer:'28.26 cm²。'}]},
-      {id:'composite-circle',unit:'circle',title:'圆环、组合图形与阴影面积',subtitle:'先拆分，再用“大减小”或“加一加”',importance:5,difficulty:5,evidence:'教材重点＋期末压轴常见',keywords:'圆环 组合图形 阴影 外方内圆 运动场',method:['先用彩笔或心中标出要保留的区域。','把图形拆成会算的圆、半圆、正方形、长方形。','圆环用 π（R²－r²），公共边不重复计算。','计算后用整体面积检查：阴影不能比整体大。'],key:'复杂图形不是新公式，而是基本图形的加、减。',mistake:'周长与面积混算；半径、直径混用；组合图形重复加公共部分。',parent:'先让孩子说“这个阴影＝谁－谁”或“＝哪几块相加”，表达清楚后再计算。',examples:[
+      {id:'composite-circle',unit:'circle',title:'圆环、组合图形与阴影面积',subtitle:'先拆分，再用“大减小”或“加一加”',importance:5,difficulty:5,evidence:'教材重点＋期末压轴常见',keywords:'圆环 组合图形 阴影 外方内圆 运动场 弧线重组',method:['先用彩笔或心中标出要保留的区域。','把图形拆成会算的圆、半圆、正方形、长方形。','圆环用 π（R²－r²），公共边不重复计算。','比较多段半圆弧时，先比较它们的直径总和。','计算后用整体面积检查：阴影不能比整体大。'],key:'复杂图形不是新公式，而是基本图形的加、减。',mistake:'周长与面积混算；半径、直径混用；组合图形重复加公共部分。',parent:'先让孩子说“这个阴影＝谁－谁”或“＝哪几块相加”，表达清楚后再计算。',examples:[
         {label:'母题',kind:'mother',prompt:'一个圆环的外半径是 5 cm，内半径是 3 cm，面积是多少？',hint:'外圆面积减内圆面积。',steps:'3.14×（5²－3²）＝3.14×16。',answer:'50.24 cm²。'},
         {label:'变式·外方内圆',kind:'change',prompt:'边长 10 cm 的正方形内画一个最大的圆，四角剩余部分面积是多少？',hint:'最大圆的直径等于正方形边长。',steps:'10²－3.14×（10÷2）²＝100－78.5。',answer:'21.5 cm²。'},
         {label:'变式·运动场',kind:'mix',prompt:'运动场中间是长 20 m、宽 10 m 的长方形，两端各是直径 10 m 的半圆。面积是多少？',hint:'两个半圆正好合成一个圆。',steps:'20×10＋3.14×5²＝200＋78.5。',answer:'278.5 m²。'}]},
@@ -189,7 +189,7 @@
         {label:'母题',kind:'mother',prompt:'车轮直径 0.8 m，转动 50 圈前进多少米？',hint:'先求一圈走多远。',steps:'3.14×0.8×50＝2.512×50。',answer:'125.6 m。'},
         {label:'变式·相邻跑道',kind:'change',prompt:'标准跑道弯道由两个半圆组成，相邻跑道宽 1.2 m。外圈一圈比内圈约长多少米？',hint:'两个半圆合成一个圆，半径增加 1.2 m。',steps:'周长增加量＝2×3.14×1.2。',answer:'约 7.536 m。'},
         {label:'变式·三个圆筒',kind:'mix',prompt:'三个直径 8 cm 的圆筒排成一行，用绳子紧贴外侧捆一圈，至少需要多长？',hint:'外轮廓是上下两条直线，加两端合成的一个整圆。',steps:'两条直线共 2×（2×8）＝32 cm；两端圆弧共 3.14×8＝25.12 cm。',answer:'57.12 cm。'}]},
-      {id:'percent-meaning',unit:'percent',title:'百分数的意义、互化与常见百分率',subtitle:'百分数表示关系；百分率是部分量与总量的比较',importance:4,difficulty:3,evidence:'教材核心＋已核真题',keywords:'百分数 意义 小数 分数 互化 命中率 达标率 合格率',method:['先说清“谁占谁的百分之多少”。','小数化百分数：小数点右移两位，加 %；反向互化时左移两位。','分数先化成小数或分母为 100 的分数。','求百分率时，用符合条件的部分量÷总量，再化成百分数。'],key:'百分数表示两个量的关系；百分率＝部分量÷总量×100%。',mistake:'把 25% 写成 25；求命中率、合格率时把总量放在分子。',parent:'让孩子解释百分数的两端分别是什么量，比单纯做互化题更重要。',examples:[
+      {id:'percent-meaning',unit:'percent',title:'百分数的意义、互化与常见百分率',subtitle:'百分数表示关系；百分率是部分量与总量的比较',importance:4,difficulty:3,evidence:'教材核心＋已核真题',keywords:'百分数 意义 小数 分数 互化 命中率 达标率 合格率 超过100%',method:['先说清“谁占谁的百分之多少”。','小数化百分数：小数点右移两位，加 %；反向互化时左移两位。','分数先化成小数或分母为 100 的分数。','求百分率时，用符合条件的部分量÷总量，再化成百分数。','判断能否超过100%时，先看分子是不是分母的一部分。'],key:'百分数表示两个量的关系；百分率＝部分量÷总量×100%。',mistake:'把 25% 写成 25；求命中率、合格率时把总量放在分子；认为所有百分率都不能超过100%。',parent:'让孩子解释百分数的两端分别是什么量，比单纯做互化题更重要。',examples:[
         {label:'母题',kind:'mother',prompt:'把 0.375 化成百分数。',hint:'小数点向右移动两位。',steps:'0.375×100%＝37.5%。',answer:'37.5%。'},
         {label:'变式·分数互化',kind:'change',prompt:'把 5/8 化成百分数。',hint:'先算 5÷8。',steps:'5÷8＝0.625＝62.5%。',answer:'62.5%。'},
         {label:'变式·求百分率',kind:'mix',prompt:'一次投篮 50 次，命中 46 次，命中率是多少？',hint:'命中数是部分量，出手次数是总量。',steps:'46÷50×100%＝92%。',answer:'命中率为 92%。'}]},
@@ -205,11 +205,11 @@
         {label:'母题',kind:'mother',prompt:'商品原价 100 元，先涨价 20%，再降价 20%。现价是多少？',hint:'降价以涨价后的 120 元为标准。',steps:'100×（1＋20%）×（1－20%）＝100×1.2×0.8。',answer:'96 元，比原价低 4%。'},
         {label:'变式·连续折扣',kind:'change',prompt:'一台电脑原价 4000 元，连续两次降价 10%，现价多少？',hint:'每次都乘 90%。',steps:'4000×90%×90%＝3240。',answer:'3240 元。'},
         {label:'变式·剩余百分比',kind:'mix',prompt:'一根绳子第一次剪去全长的 40%，第二次剪去余下的 40%。最后剩下原长的百分之多少？',hint:'每次都剩下当时的 60%。',steps:'1×60%×60%＝36%。',answer:'剩下原长的 36%。'}]},
-      {id:'money-percent',unit:'percent',title:'折扣、利息与优惠方案',subtitle:'先翻译规则，再比较实际支出或收益',importance:4,difficulty:4,evidence:'教材应用＋生活考题',keywords:'折扣 利率 利息 本金 存期 满减 优惠',method:['几折就是原价的百分之几十。','利息＝本金×年利率×存期；本息＝本金＋利息。','满减先数清达到几个“满”，折扣直接乘折扣率。','比较方案时统一比较最终支付的钱。'],key:'促销语言必须先翻译成数学规则，再计算。',mistake:'八五折理解成便宜 85%；利息漏乘存期；满减按总价比例减。',parent:'购物题先让孩子口头模拟结账过程，确认规则后再列式。',examples:[
+      {id:'money-percent',unit:'percent',title:'折扣、利息与优惠方案',subtitle:'先翻译规则，再比较实际支出或收益',importance:4,difficulty:4,evidence:'教材应用＋生活考题',keywords:'折扣 利率 利息 本金 存期 满减 优惠 分档计费',method:['几折就是原价的百分之几十。','利息＝本金×年利率×存期；本息＝本金＋利息。','满减先数清达到几个“满”，折扣直接乘折扣率。','分档计费先按区间拆量，各档分别算钱。','比较方案时统一比较最终支付的钱。'],key:'生活规则必须先翻译成数学步骤，再计算。',mistake:'八五折理解成便宜 85%；利息漏乘存期；把全部用量都按最高档计费。',parent:'生活规则题先让孩子口头模拟结账或计费过程，确认规则后再列式。',examples:[
         {label:'母题',kind:'mother',prompt:'一辆自行车原价 560 元，打八五折后多少钱？',hint:'八五折＝原价的 85%。',steps:'560×85%＝476（元）。',answer:'476 元。'},
         {label:'变式·利息',kind:'change',prompt:'8000 元存三年定期，年利率 2.75%。到期利息和本息各是多少？',hint:'年利率要乘 3 年。',steps:'利息＝8000×2.75%×3＝660；本息＝8000＋660。',answer:'利息 660 元，本息 8660 元。'},
         {label:'变式·比较优惠',kind:'mix',prompt:'标价 550 元的运动服，A 商场每满 100 减 30，B 商场打七折。哪里更便宜？',hint:'分别算最终付款，不比较折扣名称。',steps:'A：550－5×30＝400；B：550×70%＝385。',answer:'B 商场更便宜，便宜 15 元。'}]},
-      {id:'data-standards',unit:'percent',title:'用百分数分析数据、制定标准',subtitle:'先确定总体，再判断样本和标准是否合理',importance:4,difficulty:5,evidence:'新版明显强化',keywords:'数据 标准 达标线 加权 百分数 调查 统计',method:['先确认每个百分数对应的总体是否相同。','合并不同组时，先还原人数，再用总人数计算总体百分率。','制定达标线要说明目标、样本和排序方法。','结论后必须给出数据依据，不能只凭感觉。'],key:'百分数能比较不同总量的数据，但合并时不能直接平均两个百分数。',mistake:'不看两组人数就求百分数平均数；只看平均数忽略数据分布。',parent:'让孩子解释“这个百分数是从哪些人中算出来的”，培养数据意识。',examples:[
+      {id:'data-standards',unit:'percent',title:'用百分数分析数据、制定标准',subtitle:'先确定总体，再判断样本和标准是否合理',importance:4,difficulty:5,evidence:'新版明显强化',keywords:'数据 标准 达标线 加权 百分数 调查 统计 样本 累计表现',method:['先确认每个百分数对应的总体是否相同。','合并不同组时，先还原人数，再用总人数计算总体百分率。','比较表现时同时看百分率、样本量和数据是否稳定。','制定达标线要说明目标、样本和排序方法。','结论后必须给出数据依据，不能只凭感觉。'],key:'百分数能比较不同总量的数据，但样本量和分母不同，结论的分量也不同。',mistake:'不看两组人数就求百分数平均数；被小样本的100%误导；只看平均数忽略数据分布。',parent:'让孩子解释“这个百分数是从哪些人中算出来的”，培养数据意识。',examples:[
         {label:'母题',kind:'mother',prompt:'1—3 年级有 600 人，套餐满意率 60%；4—6 年级有 400 人，满意率 50%。总体满意率是多少？',hint:'先分别求满意人数，不能直接算（60%＋50%）÷2。',steps:'600×60%＋400×50%＝560（人）；560÷1000＝56%。',answer:'总体满意率为 56%。'},
         {label:'变式·制定达标线',kind:'change',prompt:'把 100 名学生的跳绳成绩从高到低排列，希望约 75% 的学生达标，应怎样初步选择达标线？',hint:'达标线要让排在前 75 名左右的学生达到。',steps:'观察排序后第 75 名附近的成绩，结合是否有并列及样本代表性确定。',answer:'可从第 75 名附近的成绩作为初步达标线，并说明并列与样本情况。'},
         {label:'变式·节水效果',kind:'mix',prompt:'家庭日均用水从 30 L 降为 24 L，节水率是多少？这个结果能否说明方法有效？',hint:'先算相对原用水量减少的比例，再结合观察周期判断。',steps:'（30－24）÷30＝20%。若多日记录稳定且其他条件相近，可认为有效。',answer:'节水率 20%；还应结合连续记录和条件是否一致判断。'}]},
@@ -249,7 +249,8 @@
         {name:'多层单位“1”',signal:'A 是 B 的几分之几，B 又是 C 的几分之几。',strategy:'关系按顺序相乘；每个分率旁写清“以谁为1”。'},
         {name:'多/少几分之几',signal:'出现“比……多/少几分之几”。',strategy:'先得到系数 1±分率，再乘标准量。'},
         {name:'部分＋比例反求',signal:'已知一个具体部分，又给已完成与未完成之比。',strategy:'把比例先化为占总量的分率，再用方程连接具体量。'},
-        {name:'变化叠加',signal:'人数变、平均量也变，追问总量怎样变。',strategy:'把两个变化写成乘法系数，连乘后再与 1 比较。'}],
+        {name:'变化叠加',signal:'人数变、平均量也变，追问总量怎样变。',strategy:'把两个变化写成乘法系数，连乘后再与 1 比较。'},
+        {name:'补全条件',signal:'题干留空，要求选择一个条件后解题。',strategy:'分别把候选条件翻译成数量关系；先判断单位“1”和乘除方向，再选能回答问题的条件。'}],
       'fraction-division':[
         {name:'计算与验算',signal:'分数除法、连除或含带分数。',strategy:'只把除数变倒数；约分后算，用“商×除数”验算。'},
         {name:'商的大小',signal:'不计算比较商与被除数大小。',strategy:'除以小于1的正数，商变大；除以大于1的数，商变小。'},
@@ -277,7 +278,8 @@
       'circumference':[
         {name:'顺求周长',signal:'绕一圈、围栏、边缘、滚一周。',strategy:'统一到半径或直径，再用 C＝πd＝2πr。'},
         {name:'反求半径',signal:'已知一圈长度，求直径、半径或面积。',strategy:'先 C÷π 得直径，再按问题继续。'},
-        {name:'半圆边界',signal:'求半圆形花坛或拱门的完整边长。',strategy:'半个圆周加直径；先沿边界逐段指一遍。'}],
+        {name:'半圆边界',signal:'求半圆形花坛或拱门的完整边长。',strategy:'半个圆周加直径；先沿边界逐段指一遍。'},
+        {name:'环形列队估测',signal:'若干人等距围成一圈，要求估计圆的直径。',strategy:'封闭一圈的间隔数等于人数；先用“人数×间距”估周长，再用 C÷π 估直径。'}],
       'circle-area':[
         {name:'直接面积',signal:'圆形占地、喷灌范围、覆盖面积。',strategy:'先求 r，再用 πr²；检查面积单位。'},
         {name:'周长反求面积',signal:'先给圆周长，再问面积。',strategy:'周长→直径→半径→面积，不能把周长直接平方。'},
@@ -286,7 +288,8 @@
         {name:'外方内圆',signal:'正方形与内切圆、圆与内接图形。',strategy:'找直径和边长的对应，再用“大面积－小面积”。'},
         {name:'圆环阴影',signal:'同心圆、环形跑道或边缘宽度。',strategy:'外半径＝内半径＋宽，面积用 π（R²－r²）。'},
         {name:'拼剪转化',signal:'半圆、扇形或若干弧拼成陌生阴影。',strategy:'找可平移、旋转或互补的区域，化成基本图形。'},
-        {name:'边界重组',signal:'既问面积又问周长，内部有公共边。',strategy:'面积按区域加减；周长只走外边界，公共边不算。'}],
+        {name:'边界重组',signal:'既问面积又问周长，内部有公共边。',strategy:'面积按区域加减；周长只走外边界，公共边不算。'},
+        {name:'多段弧等长',signal:'一条大半圆弧被若干小半圆弧替换，问周长是否改变。',strategy:'半圆弧长＝πd÷2；若小半圆直径之和等于大半圆直径，弧长总和就相等。'}],
       'circle-motion':[
         {name:'车轮滚动',signal:'轮子转若干圈，问前进距离或圈数。',strategy:'距离＝周长×圈数，先统一单位。'},
         {name:'相邻跑道',signal:'不同跑道同终点，问起跑线差。',strategy:'直道相同会抵消，只算弯道圆周差。'},
@@ -294,7 +297,8 @@
       'percent-meaning':[
         {name:'意义辨析',signal:'标签、命中率、成分率，判断百分数含义。',strategy:'完整说“部分占总量的百分之几”，分子分母不能倒。'},
         {name:'多形式比较',signal:'分数、小数、百分数混合比较。',strategy:'统一化成同一种形式再比较。'},
-        {name:'统计陷阱',signal:'某次命中率能否代表每次或下次。',strategy:'百分率描述已有整体，不保证未来单次结果。'}],
+        {name:'统计陷阱',signal:'某次命中率能否代表每次或下次。',strategy:'百分率描述已有整体，不保证未来单次结果。'},
+        {name:'能否超过100%',signal:'判断合格率、增长率、完成率等百分率的上限。',strategy:'先看分子是否是分母的一部分；部分率通常不超过100%，增长率和完成进度可能超过100%。'}],
       'percent-three':[
         {name:'求对应量',signal:'总量和百分率已知。',strategy:'总量×百分率，结果应落在合理范围内。'},
         {name:'反求总量',signal:'对应量和百分率已知。',strategy:'对应量÷百分率；先确认百分率对应的是哪一部分。'},
@@ -311,12 +315,14 @@
       'money-percent':[
         {name:'折扣满减',signal:'折扣、满减、优惠券叠加或二选一。',strategy:'按商家规则逐步结账，最后只比较实付金额。'},
         {name:'退票手续费',signal:'分时段收取不同百分比费用。',strategy:'先判断属于哪一档，再用票价×费率。'},
-        {name:'储蓄利息',signal:'本金、年利率、存期与本息。',strategy:'利息＝本金×年利率×存期；注意存期单位。'}],
+        {name:'储蓄利息',signal:'本金、年利率、存期与本息。',strategy:'利息＝本金×年利率×存期；注意存期单位。'},
+        {name:'分档计费',signal:'用量跨过多个区间，各档单价不同。',strategy:'先把总量按区间拆开；每档只计算落在本档的部分，最后相加。'}],
       'data-standards':[
         {name:'加权合并',signal:'两组人数不同、百分率不同，求总体百分率。',strategy:'先还原每组人数再合并，不能平均两个百分率。'},
         {name:'分布比较',signal:'平均数相同，要求判断哪组更稳定或更好。',strategy:'同时看数据分布、极端值和达标人数。'},
         {name:'样本判断',signal:'用少量调查推断全年级或全校。',strategy:'检查是否随机、样本量是否足够、群体是否有代表性。'},
-        {name:'制定标准',signal:'要求提出达标线或评价办法。',strategy:'说明目标、数据、排序或分组方法，并解释标准为何合理。'}],
+        {name:'制定标准',signal:'要求提出达标线或评价办法。',strategy:'说明目标、数据、排序或分组方法，并解释标准为何合理。'},
+        {name:'累计表现',signal:'多轮测试样本量不同，问哪个百分率更能代表真实水平。',strategy:'优先看较大、较稳定的累计样本；小样本的100%不等于稳定达到100%。'}],
       'integrated-model':[
         {name:'信息选择',signal:'给出图表、文字与多项数据，先问哪些有用。',strategy:'从问题倒推所需数据，并说明无关信息为何不用。'},
         {name:'方案设计',signal:'要求调查、测量或制定方案。',strategy:'写清问题、对象、数据、计算方法和判断标准。'},
@@ -347,7 +353,8 @@
         {label:'变式·具体量＋读剩比',kind:'hard',prompt:'一本书第一天读 72 页，第二天读全书的 1/4。两天后已读页数与未读页数之比是 2∶3。这本书共多少页？',signal:'已读∶未读要先转成已读占总页数的分率。',hint:'两天共读了全书的 2/5。',steps:'设全书 x 页，72＋x/4＝2x/5；72＝3x/20，x＝480。',answer:'全书共 480 页。'},
         {label:'变式·两项同时变化',kind:'reason',prompt:'某社区户数比去年增加 1/10，平均每户垃圾量比去年减少 1/6。社区垃圾总量比去年增加还是减少？变化几分之几？',signal:'总量由“户数×户均量”决定，两项同时变化。',hint:'把去年总量看作 1，两个变化系数相乘。',steps:'（1＋1/10）×（1－1/6）＝11/10×5/6＝11/12，比 1 少 1/12。',answer:'总量减少了去年的 1/12。'},
         {label:'变式·三段分配',kind:'mix',prompt:'铁人三项全程中，游泳占 1/5；剩余路程里自行车与跑步的比是 3∶1。自行车和跑步各占全程的几分之几？',signal:'先扣除已知部分，再按比分配剩余。',hint:'剩余占 4/5，再分成 4 份。',steps:'自行车占 4/5×3/4＝3/5；跑步占 4/5×1/4＝1/5。',answer:'自行车占 3/5，跑步占 1/5。'},
-        {label:'变式·剩余再分',kind:'mix',prompt:'农场有 240 公顷土地，3/8 种小麦；剩余土地的 2/5 种玉米，其余种蔬菜。蔬菜面积是多少公顷？',signal:'“剩余”的单位“1”不是 240。',hint:'先求小麦以外的 150 公顷。',steps:'240×（1－3/8）＝150；150×（1－2/5）＝90。',answer:'蔬菜面积是 90 公顷。'}],
+        {label:'变式·剩余再分',kind:'mix',prompt:'农场有 240 公顷土地，3/8 种小麦；剩余土地的 2/5 种玉米，其余种蔬菜。蔬菜面积是多少公顷？',signal:'“剩余”的单位“1”不是 240。',hint:'先求小麦以外的 150 公顷。',steps:'240×（1－3/8）＝150；150×（1－2/5）＝90。',answer:'蔬菜面积是 90 公顷。'},
+        {label:'变式·补全条件',kind:'reason',prompt:'小航第一天读了 45 页。请选择一个条件补全题目，使第二天读的页数少于第一天，并求第二天读了多少页：①第二天比第一天少 4/5；②第一天比第二天少 4/5。',signal:'两个条件文字相近，但单位“1”相反。',hint:'分别说清“谁是标准量”；要满足第二天少于第一天。',steps:'①以第一天为单位“1”，第二天＝45×（1－4/5）＝9；②表示第一天只有第二天的 1/5，第二天会更多。',answer:'选择①，第二天读了 9 页。'}],
       'find-whole':[
         {label:'母题·变化后反求',kind:'hard',prompt:'水结成冰后，体积比原来增加 1/10。一块冰体积是 13.2 dm³，结冰前水的体积是多少？',signal:'已知变化后的量，单位“1”是原来的水。',hint:'冰体积是水体积的 1＋1/10。',steps:'13.2÷（1＋1/10）＝13.2÷1.1＝12（dm³）。',answer:'结冰前水的体积是 12 dm³。'},
         {label:'变式·零件加长',kind:'mix',prompt:'新型列车车头比旧型车头长 1/5，新型车头长 15 m。旧型车头长多少米？',signal:'“新比旧多”但已知的是新量。',hint:'新长度＝旧长度×6/5。',steps:'15÷（1＋1/5）＝15×5/6＝12.5（m）。',answer:'旧型车头长 12.5 m。'},
@@ -368,20 +375,23 @@
         {label:'变式·最大圆',kind:'reason',prompt:'在长 18 cm、宽 12 cm 的长方形纸中剪一个最大的圆，这个圆的半径是多少？为什么不是 9 cm？',signal:'最大圆受较短边限制。',hint:'圆的直径不能超过长方形的宽。',steps:'最大直径是 12 cm，半径 12÷2＝6 cm；若半径 9 cm，直径 18 cm 会超过宽。',answer:'半径是 6 cm。'}],
       'circumference':[
         {label:'母题·围栏缺口',kind:'mix',prompt:'一个半圆形观景台直径 20 m，沿完整边缘安装护栏，只在直径边中央留 2 m 宽的入口。需护栏多少米？',signal:'完整边缘＝半圆弧＋直径，再扣入口。',hint:'半圆弧长是整圆周长的一半。',steps:'3.14×20÷2＋20－2＝49.4（m）。',answer:'需要护栏 49.4 m。'},
-        {label:'变式·周长反求',kind:'hard',prompt:'一棵树树干横截面的周长约 94.2 cm。若横截面近似圆形，它的半径约是多少厘米？',signal:'已知周长，先反求直径。',hint:'直径＝周长÷π。',steps:'94.2÷3.14＝30（cm）；30÷2＝15（cm）。',answer:'半径约 15 cm。'}],
+        {label:'变式·周长反求',kind:'hard',prompt:'一棵树树干横截面的周长约 94.2 cm。若横截面近似圆形，它的半径约是多少厘米？',signal:'已知周长，先反求直径。',hint:'直径＝周长÷π。',steps:'94.2÷3.14＝30（cm）；30÷2＝15（cm）。',answer:'半径约 15 cm。'},
+        {label:'变式·环形列队估测',kind:'hard',prompt:'60 名学生等距离围成一圈做游戏，相邻两人之间约 0.9 m。把队形看作圆，这个圆的直径约多少米？（得数保留一位小数）',signal:'封闭列队中，人数和间隔数相等。',hint:'先估计一圈总长，再由周长反求直径。',steps:'圆周长约为 60×0.9＝54（m）；直径约为 54÷3.14≈17.2（m）。',answer:'这个圆的直径约 17.2 m。'}],
       'circle-area':[
         {label:'变式·喷灌覆盖',kind:'mix',prompt:'圆形喷灌器射程是 8 m。若射程调整为原来的 3/4，覆盖面积比原来减少多少平方米？',signal:'半径改变后，面积按半径平方变化。',hint:'新半径 6 m，分别算两次面积。',steps:'3.14×8²－3.14×6²＝3.14×28＝87.92（m²）。',answer:'覆盖面积减少 87.92 m²。'},
         {label:'变式·面积倍数',kind:'reason',prompt:'甲圆半径是乙圆的 3/2。甲圆面积是乙圆的几倍？请说明为什么不是 3/2 倍。',signal:'面积公式里半径要平方。',hint:'比较 r²。',steps:'面积比＝（3/2）²＝9/4。',answer:'甲圆面积是乙圆的 9/4 倍。'}],
       'composite-circle':[
         {label:'母题·外方内圆',kind:'hard',prompt:'正方形边长 12 cm，里面画一个最大的圆。正方形中没有被圆覆盖的面积是多少？',signal:'最大圆的直径等于正方形边长。',hint:'阴影＝正方形面积－圆面积。',steps:'12²－3.14×6²＝144－113.04＝30.96（cm²）。',answer:'没有被覆盖的面积是 30.96 cm²。'},
         {label:'变式·环形跑道',kind:'mix',prompt:'圆形花坛半径 10 m，外围铺一条宽 2 m 的环形小路。小路面积是多少平方米？',signal:'外半径不是 2 m，而是 10＋2。',hint:'用外圆面积减内圆面积。',steps:'3.14×（12²－10²）＝3.14×44＝138.16（m²）。',answer:'小路面积是 138.16 m²。'},
-        {label:'变式·周长面积分开',kind:'reason',prompt:'两个相同半圆拼成一个完整圆。拼成前后面积是否改变？两段直径边从外边界消失后，周长怎样变化？',signal:'面积可直接相加，周长只算外边界。',hint:'拼接边不再属于外边界。',steps:'面积始终是两个半圆面积之和，即一个圆面积；拼后周长比拼前两个半圆周长之和少两条直径。',answer:'面积不变；周长减少两条直径的总长度。'}],
+        {label:'变式·周长面积分开',kind:'reason',prompt:'两个相同半圆拼成一个完整圆。拼成前后面积是否改变？两段直径边从外边界消失后，周长怎样变化？',signal:'面积可直接相加，周长只算外边界。',hint:'拼接边不再属于外边界。',steps:'面积始终是两个半圆面积之和，即一个圆面积；拼后周长比拼前两个半圆周长之和少两条直径。',answer:'面积不变；周长减少两条直径的总长度。'},
+        {label:'变式·多段弧替换',kind:'reason',prompt:'一条步道原来的一侧是直径 24 m 的大半圆弧。改造后，用直径分别为 5 m、7 m、12 m 的三个小半圆弧首尾相接替换它。其他边界不变，步道周长会改变吗？',signal:'弧的形状变了，要比较的是各段半圆弧长之和。',hint:'半圆弧长都等于 π×直径÷2。',steps:'三个小半圆直径和为 5＋7＋12＝24（m），小弧总长＝π×24÷2，与大半圆弧长相等。',answer:'周长不变。'}],
       'circle-motion':[
         {label:'母题·三圆捆扎',kind:'hard',prompt:'3 根直径 8 cm 的圆柱形木棍并排紧靠，用绳子从外面捆一周（忽略绳结）。绳长至少多少厘米？',signal:'外轮廓不是三个完整圆周。',hint:'上下各有两段直线，左右两个半圆合成一整圆。',steps:'直线总长 4×8＝32；圆弧总长 3.14×8＝25.12；合计 57.12。',answer:'绳长至少 57.12 cm。'},
         {label:'变式·相邻跑道',kind:'mix',prompt:'标准跑道两端弯道合成一个圆，相邻两条跑道中心线相距 1.22 m。若同终点，相邻起跑线应相差约多少米？',signal:'直道长度相同，只比较合成圆的周长差。',hint:'圆周长差＝2π×半径差。',steps:'2×3.14×1.22≈7.66（m）。',answer:'相邻起跑线约相差 7.66 m。'},
         {label:'变式·轮径与圈数',kind:'hard',prompt:'甲轮直径 60 cm，乙轮直径 75 cm。走相同距离时，甲轮转 250 圈，乙轮约转多少圈？',signal:'距离相同，周长与圈数成反向关系。',hint:'可先写 π×60×250＝π×75×圈数。',steps:'圈数＝60×250÷75＝200。',answer:'乙轮约转 200 圈。'}],
       'percent-meaning':[
-        {label:'变式·样本解释',kind:'reason',prompt:'小林前 20 次投篮命中 12 次，于是说：“我下一次投篮命中的可能性一定是 60%。”这句话严密吗？',signal:'已有命中率不能保证单次结果。',hint:'60% 描述的是前 20 次的统计结果。',steps:'12÷20＝60%，只能说明这组数据的命中率；下一次只有命中或不命中，不能说一定按 60% 发生。',answer:'不严密；60% 是此前的统计命中率，不保证下一次。'}],
+        {label:'变式·样本解释',kind:'reason',prompt:'小林前 20 次投篮命中 12 次，于是说：“我下一次投篮命中的可能性一定是 60%。”这句话严密吗？',signal:'已有命中率不能保证单次结果。',hint:'60% 描述的是前 20 次的统计结果。',steps:'12÷20＝60%，只能说明这组数据的命中率；下一次只有命中或不命中，不能说一定按 60% 发生。',answer:'不严密；60% 是此前的统计命中率，不保证下一次。'},
+        {label:'变式·百分率上限',kind:'reason',prompt:'下面哪一种百分率可能大于 100%：产品合格率、学生出勤率、树苗成活率、今年销量比去年增长的百分率？说明理由。',signal:'不要见到百分数就默认小于100%。',hint:'判断分子是否只是分母中的一部分。',steps:'合格、出勤、成活都是“部分÷总数”，通常不超过100%；增长率＝增加量÷原销量，增加量可能大于原销量。',answer:'今年销量比去年增长的百分率可能大于 100%。'}],
       'percent-three':[
         {label:'母题·退票分档',kind:'hard',prompt:'一张 808 元的车票，发车前 24—48 小时退票收 10% 手续费。此时退票可退回多少元？',signal:'先确定费率档，再区分手续费与退回金额。',hint:'退回金额＝票价×（1－手续费率）。',steps:'808×（1－10%）＝727.2（元）。',answer:'可退回 727.20 元。'},
         {label:'变式·成分嵌套',kind:'mix',prompt:'一件衣服面料重 250 g，其中棉占 96%；棉纤维中有 5% 在加工中损耗。最终保留棉纤维多少克？',signal:'第二个百分率的单位“1”是棉，不是整件面料。',hint:'连续求两个对应量。',steps:'250×96%×（1－5%）＝228（g）。',answer:'最终保留 228 g。'},
@@ -398,12 +408,14 @@
       'money-percent':[
         {label:'母题·优惠二选一',kind:'hard',prompt:'购买 620 元商品。方案 A：全场八五折；方案 B：每满 200 元减 35 元。哪个方案更省？',signal:'两种规则不能只比“折扣数字”，要算实付。',hint:'方案 B 可达到 3 个“满200”。',steps:'A：620×85%＝527；B：620－35×3＝515。',answer:'方案 B 更省，比方案 A 少付 12 元。'},
         {label:'变式·利息存期',kind:'mix',prompt:'把 8000 元存两年，年利率 2.1%，到期利息是多少元？本息共多少元？',signal:'年利率要乘存期。',hint:'利息＝本金×年利率×2。',steps:'8000×2.1%×2＝336（元）；8000＋336＝8336（元）。',answer:'利息 336 元，本息 8336 元。'},
-        {label:'变式·退票比较',kind:'reason',prompt:'同一张 600 元车票，甲在收 5% 手续费的时段退票，乙在收 20% 手续费的时段退票。乙比甲少退回多少元？',signal:'比较退回金额也可直接比较手续费差。',hint:'费率相差 15%。',steps:'600×（20%－5%）＝90（元）。',answer:'乙比甲少退回 90 元。'}],
+        {label:'变式·退票比较',kind:'reason',prompt:'同一张 600 元车票，甲在收 5% 手续费的时段退票，乙在收 20% 手续费的时段退票。乙比甲少退回多少元？',signal:'比较退回金额也可直接比较手续费差。',hint:'费率相差 15%。',steps:'600×（20%－5%）＝90（元）。',answer:'乙比甲少退回 90 元。'},
+        {label:'变式·分档计费',kind:'hard',prompt:'某项用量实行分档计费：0—180 单位每单位 5 元，超过 180 至 260 的部分每单位 7 元，超过 260 的部分每单位 9 元。本期用量 275 单位，应付多少元？',signal:'不能把全部 275 单位都按最高档单价计算。',hint:'把用量拆成 180、80、15 三段。',steps:'180×5＋（260－180）×7＋（275－260）×9＝900＋560＋135＝1595（元）。',answer:'应付 1595 元。'}],
       'data-standards':[
         {label:'母题·不能平均百分率',kind:'hard',prompt:'低年级 600 人，活动满意率 60%；高年级 400 人，满意率 50%。全校满意率是多少？为什么不能直接算（60%＋50%）÷2？',signal:'两组总体人数不同。',hint:'先求两组满意人数。',steps:'600×60%＋400×50%＝560（人）；560÷1000＝56%。两组权重不同，不能等权平均。',answer:'全校满意率为 56%。'},
         {label:'变式·平均相同分布不同',kind:'reason',prompt:'甲组成绩为 80、80、80、80、80；乙组为 60、70、80、90、100。两组平均分相同，能否说学习状况完全相同？',signal:'平均数不能反映全部分布。',hint:'比较波动和极端值。',steps:'两组平均数都是 80，但甲组集中，乙组差异大，稳定性不同。',answer:'不能；平均相同但分布与稳定性明显不同。'},
         {label:'变式·样本代表性',kind:'hard',prompt:'想了解全校 1200 名学生的午餐满意度，只在篮球社随机调查 30 人，得到满意率 90%。能否据此代表全校？怎样改进？',signal:'调查对象来自特殊群体，样本可能有偏。',hint:'样本应覆盖不同年级、班级和人群。',steps:'篮球社成员不能代表全校；可按年级分层，再从各班随机抽取足够人数。',answer:'不能直接代表；应扩大样本并采用分层随机抽样。'},
-        {label:'变式·制定达标线',kind:'open',prompt:'把 100 名学生的跳绳成绩从高到低排列，希望约 75% 的学生达标。怎样初步选择达标线？还要说明什么？',signal:'开放题要有方法和限制条件。',hint:'观察第 75 名附近，并处理并列成绩。',steps:'可把第 75 名附近成绩作为初步线；同时说明并列处理、测试条件和样本是否代表全年级。',answer:'合理方案之一：取第 75 名附近成绩，并说明并列与样本条件。'}],
+        {label:'变式·制定达标线',kind:'open',prompt:'把 100 名学生的跳绳成绩从高到低排列，希望约 75% 的学生达标。怎样初步选择达标线？还要说明什么？',signal:'开放题要有方法和限制条件。',hint:'观察第 75 名附近，并处理并列成绩。',steps:'可把第 75 名附近成绩作为初步线；同时说明并列处理、测试条件和样本是否代表全年级。',answer:'合理方案之一：取第 75 名附近成绩，并说明并列与样本条件。'},
+        {label:'变式·累计表现判断',kind:'reason',prompt:'小夏累计投篮 5 次时命中 5 次，10 次时命中 8 次，20 次时命中 16 次，40 次时命中 31 次。用哪个阶段的数据估计她目前的投篮水平更合适？为什么？',signal:'小样本的100%很亮眼，但波动也最大。',hint:'比较样本量和后续百分率是否趋于稳定。',steps:'各阶段命中率依次为100%、80%、80%、77.5%；40 次样本最多，且后期约稳定在80%附近。',answer:'用累计 40 次的 31÷40＝77.5% 更合适；它仍是估计，不保证下一次结果。'}],
       'integrated-model':[
         {label:'母题·信息筛选',kind:'open',prompt:'研究“相邻 400 m 跑道起跑线应错开多少”，已知直道长、弯道半径、跑道宽、运动员人数。哪些信息真正有用？写出模型。',signal:'不是给了数据就都要用。',hint:'相邻跑道的直道相同，会抵消。',steps:'关键是跑道宽，即半径差；两个半圆合成一圆，错开量＝2π×跑道宽。',answer:'核心数据是跑道宽；模型为 2π×跑道宽。'},
         {label:'变式·设计节水调查',kind:'open',prompt:'要判断家庭节水计划是否有效，请设计一个可执行的数据记录与比较方案。',signal:'开放题需写对象、数据、口径和判断标准。',hint:'实施前后要在相近条件下比较。',steps:'记录前后相同天数的总用水量、家庭人数与异常事件；算日均或人均用水量及节水率；多日稳定降低才支持有效。',answer:'符合“同口径记录＋计算指标＋说明异常与结论”的方案均可。'},
@@ -412,7 +424,7 @@
     };
 
     const auditedEvidence = {
-      'ordered-pairs':'新版教材核心','direction-distance':'教材核心＋已核真题','fraction-multiply':'教材核心＋已核真题','fraction-mixed':'教材核心＋已核真题','fraction-of-number':'教材核心＋已核真题','fraction-chain':'教材核心＋已核真题','fraction-division':'教材核心＋已核真题','find-whole':'教材核心＋已核真题','fraction-equation':'教材核心＋已核真题','engineering':'教材核心＋已核真题','negative-numbers':'新版教材核心','circle-basics':'教材核心＋已核真题','circumference':'教材核心＋已核真题','circle-area':'教材核心＋已核真题','composite-circle':'教材核心＋已核真题','circle-motion':'教材核心＋已核真题','percent-meaning':'教材核心＋已核真题','percent-three':'教材核心＋已核真题','change-rate':'新版重点＋真题迁移','successive-change':'新版重点','money-percent':'新版重点＋生活应用','data-standards':'新版重点＋真题迁移','integrated-model':'新版综合实践','pigeonhole':'新版拓展（非主考）'
+      'ordered-pairs':'新版教材核心','direction-distance':'教材核心＋已核真题','fraction-multiply':'教材核心＋已核真题','fraction-mixed':'教材核心＋已核真题','fraction-of-number':'教材核心＋已核真题','fraction-chain':'教材核心＋已核真题','fraction-division':'教材核心＋已核真题','find-whole':'教材核心＋已核真题','fraction-equation':'教材核心＋已核真题','engineering':'教材核心＋已核真题','negative-numbers':'新版教材核心','circle-basics':'教材核心＋已核真题','circumference':'教材核心＋已核真题','circle-area':'教材核心＋已核真题','composite-circle':'教材核心＋已核真题','circle-motion':'教材核心＋已核真题','percent-meaning':'教材核心＋已核真题','percent-three':'教材核心＋已核真题','change-rate':'新版重点＋已核真题','successive-change':'新版重点＋已核真题','money-percent':'教材应用＋已核真题','data-standards':'新版重点＋已核真题','integrated-model':'新版综合实践＋真题迁移','pigeonhole':'新版拓展（非主考）'
     };
     topics.forEach(topic=>{
       topic.patterns=examPatterns[topic.id]||[];
@@ -589,6 +601,7 @@
     document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
     dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
   </script>
+
 
 
 </body></html>
