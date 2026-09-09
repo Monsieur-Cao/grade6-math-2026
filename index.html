@@ -538,6 +538,8 @@
     function selectTopic(id,scroll){
       if(!topics.some(t=>t.id===id))return;
       state.currentTopic=id;
+      const nextHash='#'+id;
+      if(location.hash!==nextHash)history.replaceState(null,'',nextHash);
       renderContent();
       if(scroll)document.querySelector('#topics')?.scrollIntoView({behavior:'smooth',block:'start'});
     }
